@@ -242,4 +242,9 @@ class ClasePadre
     }
 
 
+
+    public function holaGonza()
+    {
+        return "hola gonza";
+    }
 }
