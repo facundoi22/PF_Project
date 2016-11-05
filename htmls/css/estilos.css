@@ -43,10 +43,18 @@ header{
 	display: inline-block;	
 }
 
+
+
 .cuatroCol {
 	width: 23%;
 	display: inline-block;	
 }
+
+.cuatroColx3 {
+	width: 69%;
+	display: inline-block;	
+}
+
 
 .cincoCol {
 	width: 19%;
@@ -468,8 +476,6 @@ footer .cincoCol:last-of-type li~li{
 	width:5%;
 	margin-left: 25%;
 }
-
-
 
 #registroModal >div >div:last-of-type form>input:last-of-type{
 	background-color:#e48d10;
