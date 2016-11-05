@@ -33,6 +33,13 @@ header{
 	height: 75px;
 }
 
+header h1 a {
+	color: rgba(0,0,0,0);
+	width: 700px;
+	height: 400px;
+	display: inline-block;
+}
+
 .dosCol {
 	width: 48%;
 	display: inline-block;	
@@ -43,17 +50,17 @@ header{
 	display: inline-block;	
 }
 
-
+.tresColx2 {
+	width: 60%;
+	display: inline-block;	
+}
 
 .cuatroCol {
 	width: 23%;
 	display: inline-block;	
 }
 
-.cuatroColx3 {
-	width: 69%;
-	display: inline-block;	
-}
+
 
 
 .cincoCol {
@@ -389,7 +396,7 @@ footer .cincoCol:last-of-type li~li{
 
 
 
-#registro >div >div  { display: none; }
+#registro>div >div  { display: none; }
 #registro>div >div:target{  display: block;	}
 
 
@@ -454,13 +461,13 @@ footer .cincoCol:last-of-type li~li{
 	border: inset 2px #FFF;	
 	border-radius: 15px;	
 	text-align: center;
-	background-image: url(../images/mail.png);
+	background-image: url(../images/tipo.png);
 	background-position: 5%;
 	background-repeat: no-repeat;
 }
 
-#registroModal >div >div:last-of-type input~input{
-	background-image: url(../images/tipo.png);
+#registroModal >div >div:last-of-type input~input~input{
+	background-image: url(../images/mail.png);
 }
 
 #registroModal >div >div:last-of-type input~input~input~input{

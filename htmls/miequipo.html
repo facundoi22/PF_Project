@@ -4,12 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/reset.css" rel="stylesheet" >
-		<!--<link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
-		<link href="css/font-awesome.css" rel="stylesheet" >
-		<link href='https://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
-		-->
-			<link href="css/estilos.css" rel="stylesheet" >
-			<link href="css/equipo.css" rel="stylesheet" >
+		<link href="css/estilos.css" rel="stylesheet" >
+		<link href="css/equipo.css" rel="stylesheet" >
 		<script>
 			document.createElement( "picture" );
 		</script>
@@ -22,7 +18,7 @@
 	<body>
 		<div id="equipo">
 			<header>
-				<h1 class="dosCol" >Próxima Fecha</h1>
+				<h1 class="dosCol" ><a href="index.html">Próxima Fecha</a></h1>
 				<form class="dosCol" action="busqueda.html" method="post">
 					<input type="submit" value="Buscar"/><input id="texto" type="text" name="texto" placeholder="Buscar"/>
 				</form>					
@@ -34,50 +30,82 @@
 				</div>
 				<div>
 					<h3 class="mayusculas">Está participando en la liga <span class="negrita">Da Vinci</span></h3>
-					<div class="cuatroColx3">
-						<table>
-							<thead>
-								<tr><td>Equipos</td><td>Ptos</td><td>PJ</td><td>PG</td><td>PE</td><td>PP</td><td>GF</td><td>GC</td><td>Dif</td></tr>
-							</thead>
-							<tbody>
-								<tr><td>Programadores</td><td>15</td><td>5</td><td>5</td><td>0</td><td>0</td><td>27</td><td>8</td><td>19</td></tr>
-								<tr><td>PHP Futbol Club</td><td>13</td><td>5</td><td>4</td><td>1</td><td>0</td><td>23</td><td>12</td><td>11</td></tr>
-								<tr><td>Varchar de 50</td><td>13</td><td>5</td><td>4</td><td>1</td><td>0</td><td>20</td><td>14</td><td>6</td></tr>
-								<tr><td>SQL Injection</td><td>12</td><td>5</td><td>4</td><td>0</td><td>1</td><td>25</td><td>15</td><td>10</td></tr>
-								<tr><td>Los Array de 1 indice</td><td>8</td><td>5</td><td>2</td><td>2</td><td>1</td><td>15</td><td>12</td><td>3</td></tr>
-								<tr><td>Sin Framework no programo</td><td>8</td><td>5</td><td>2</td><td>2</td><td>1</td><td>14</td><td>12</td><td>2</td></tr>
-								<tr><td>Control C Control V</td><td>8</td><td>5</td><td>2</td><td>2</td><td>1</td><td>15</td><td>12</td><td>3</td></tr>
-								<tr><td>Pisame la variable</td><td>5</td><td>5</td><td>1</td><td>1</td><td>3</td><td>11</td><td>10</td><td>1</td></tr>
-								<tr><td>Puerto 7</td><td>4</td><td>5</td><td>0</td><td>2</td><td>3</td><td>9</td><td>19</td><td>-10</td></tr>
-								<tr><td>LAMPaso</td><td>0</td><td>5</td><td>0</td><td>0</td><td>5</td><td>3</td><td>24</td><td>-21</td></tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="cuatroCol">
-						<h3> Proximo Partido - Fecha 6 </h3>
-						<p><span>PHP Futbol Club</span><span>VS</span><span>Array de 1 Indice</span></p>
-						<p>Fecha y Hora: 12/11/2016 - 21:00hs</p>
-						<p>Sede: Club Da Vinci</p>
-						<img src="images/mapa.jpg" alt="Ubicación del lugar"/>
+					<div>
+						<div class="tresColx2">
+							<table border="0">
+								<thead>
+									<tr><td>Equipos</td><td>Ptos</td><td>PJ</td><td>PG</td><td>PE</td><td>PP</td><td>GF</td><td>GC</td><td>Dif</td></tr>
+								</thead>
+								<tbody>
+									<tr><td>Programadores</td><td>15</td><td>5</td><td>5</td><td>0</td><td>0</td><td>27</td><td>8</td><td>19</td></tr>
+									<tr id="miEquipo"><td>PHP Futbol Club</td><td>13</td><td>5</td><td>4</td><td>1</td><td>0</td><td>23</td><td>12</td><td>11</td></tr>
+									<tr><td>Varchar de 50</td><td>13</td><td>5</td><td>4</td><td>1</td><td>0</td><td>20</td><td>14</td><td>6</td></tr>
+									<tr><td>SQL Injection</td><td>12</td><td>5</td><td>4</td><td>0</td><td>1</td><td>25</td><td>15</td><td>10</td></tr>
+									<tr><td>Los Array de 1 indice</td><td>8</td><td>5</td><td>2</td><td>2</td><td>1</td><td>15</td><td>12</td><td>3</td></tr>
+									<tr><td>Sin Framework no programo</td><td>8</td><td>5</td><td>2</td><td>2</td><td>1</td><td>14</td><td>12</td><td>2</td></tr>
+									<tr><td>Control C Control V</td><td>8</td><td>5</td><td>2</td><td>2</td><td>1</td><td>15</td><td>12</td><td>3</td></tr>
+									<tr><td>Pisame la variable</td><td>5</td><td>5</td><td>1</td><td>1</td><td>3</td><td>11</td><td>10</td><td>1</td></tr>
+									<tr><td>Puerto 7</td><td>4</td><td>5</td><td>0</td><td>2</td><td>3</td><td>9</td><td>19</td><td>-10</td></tr>
+									<tr><td>LAMPaso</td><td>0</td><td>5</td><td>0</td><td>0</td><td>5</td><td>3</td><td>24</td><td>-21</td></tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tresCol">
+							<h3> Proximo Partido - Fecha 6 </h3>
+							<img src="images/PHPFutbolClub100.png" alt="Logo del Equipo"/>
+							<p>VS</p>
+							<img src="images/Arrayde1Indice100.png" alt="Logo del Equipo"/>
+							<p>PHP Futbol Club</p>
+							<p>Array de 1 Indice</p>
+							<p>Fecha y Hora: 12/11/2016 - 21:00hs</p>
+							<p>Sede: Club Da Vinci</p>
+							<img src="images/mapa.jpg" alt="Ubicación del lugar"/>
+						</div>					
 					</div>					
 				</div>
 				<div>
-					<div class="dosCol">
-						<h3 class="mayusculas">Compañeros de Equipo</h3>
-						<ul>
-							<li>José F. Echassoc</li>
-							<li>Rómulo H. Aquitado</li>
-							<li>Elías Pereza</li>
-							<li>Brian De La Mano</li>
-							<li>Alberto Tronchado</li>
-							<li>Silvio Roscazo</li>
-							<li>Francisco Guaymllén</li>
-						</ul>
-					</div>
-					<div class="dosCol">
-						<h3> Último Partido - Fecha 5 </h3>
-						<p><span>PHP Futbol Club</span><span>4 -2</span><span>Puerto 7</span></p>
-						<a href="#" title="Ver Todos">Ver Resultados de Todos los Partidos Jugados</a>				
+					<div>
+						<div class="dosCol" id="companeros">
+							<h3 class="mayusculas">Compañeros de Equipo</h3>
+							<ul>
+								<li><img src="images/equipo/jugador1.jpg" alt="Foto del Jugador"/><span id="capitan">José F. Echassoc</span><a href="#mensajeModal" class="mayuscula">Enviar Mensaje</a></li>
+								<li><img src="images/equipo/jugador2.jpg" alt="Foto del Jugador"/><span>Rómulo H. Aquitado</span></li>
+								<li><img src="images/equipo/jugador3.jpg" alt="Foto del Jugador"/><span>Elías Pereza</span></li>
+								<li><img src="images/equipo/jugador4.jpg" alt="Foto del Jugador"/><span>Brian De La Mano</span></li>
+								<li><img src="images/equipo/jugador5.jpg" alt="Foto del Jugador"/><span>Alberto Tronchado</span></li>
+								<li><img src="images/equipo/jugador6.jpg" alt="Foto del Jugador"/><span>Silvio Roscazo</span></li>
+								<li><img src="images/equipo/jugador7.jpg" alt="Foto del Jugador"/><span>Francisco Guaymllén</span></li>
+							</ul>
+							<div> 
+								<div id="mensajeModal">
+									<div>			
+										<div>			
+											<h2> Enviar Mensaje </h2>
+											<a href='#' title='Volver'> Volver</a>
+									</div>
+										<div>			
+											<form action="miequipo.html#companeros" method="post">
+												<textarea rows='10'  cols='30' name="mensaje"></textarea>
+												<input type="submit" value="Enviar" />
+											</form>	
+										</div>
+									</div>
+								</div>				
+							</div>
+						</div>
+						<div class="dosCol">
+							<div>
+								<div>
+									<h3> Último Partido - Fecha 5 </h3>
+									<img src="images/PHPFutbolClub100.png" alt="Logo del Equipo"/>
+									<p>4 - 2</p>
+									<img src="images/Puerto7100.png" alt="Logo del Equipo"/>
+									<p>PHP Futbol Club</p>
+									<p>Puerto 7</p>
+									<a href="#" title="Ver Todos">Ver Resultados de Todos los Partidos Jugados</a>				
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</main>
