@@ -1,0 +1,75 @@
+
+#equipo header>form input:first-of-type{
+	margin-left:30%;
+}
+
+#equipo header>form input:last-of-type {
+	width: 50%;
+}
+
+
+#equipo main>div:first-of-type{
+	background-image: url(../images/equipo.jpg);
+	background-repeat: no-repeat;
+	background-color: #009c58;
+	background-position: right 25%;
+	margin-top: 75px;
+	height: 330px;
+}
+
+#equipo main>div:first-of-type> img{
+	border-radius: 50%;
+	margin-left: 50px;
+	margin-top: 50px;
+}
+
+#equipo main>div:first-of-type> h2{
+	color: #FFF;
+	font-size: 1.8em;
+	margin-left: 15px;
+	font-style: italic;
+}
+
+#equipo main > div ~ div {
+	padding: 0%;
+}
+
+#equipo main> div~div >h3 {
+	background-color:#e0e0e0;
+	vertical-align: top;
+	font-size: 2em;
+	line-height: 3em;
+	color: #e48d10;
+	background-image: url(../images/torneo.png);
+	background-repeat: no-repeat;
+	background-position: 5% 0%;
+	text-align: center;
+	
+}
+
+#equipo main> div~div >div table {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 5%;
+	background-color: #009c58;
+	text-align: center;
+}
+
+#equipo main> div~div >div table  thead,
+#equipo main> div~div >div table  tbody{
+	color: #FFF;
+	font-size: 1.2em;
+	line-height: 1.5em;
+}
+
+#equipo main> div~div >div table  tbody tr td:first-of-type{
+	text-align: left;
+	padding-left: 10%;
+}
+
+#equipo main> div~div >div table  tbody{
+	color: #000;
+	background-color: #e0e0e0;
+	border: 0px;
+}
+	
