@@ -380,13 +380,38 @@ footer .cincoCol:last-of-type li~li{
 .flechaDerechaCirculo:hover{background-color:#ccff99;}
 				
 				
-#arriba{width:100%;
+#arriba ,
+#publicidad {width:100%;
 		background-color:#f6f6f6;
 		vertical-align:top;
 		position:fixed; 
 		z-index: 10;
 		height:99px;
-		transition: height 1s ease-in-out;}
+		transition: height 1s ease-in-out;
+		text-align: left;
+}
+		
+#publicidad  {
+	background-color: rgba(0,0,0,0);
+	width: 1050px;
+}
+
+#publicidad a {
+	color: rgba(0,0,0,0);
+	vertical-align: top;
+	margin-left: 100px;
+	background-image: url(../images/icons/close.png) ;
+	background-position: right top;
+	background-repeat:	no-repeat; 
+	width: 32px;
+	height: 32px;
+	font-size: 23px;
+}
+		
+#publicidad a:hover {
+	background-position: right bottom;
+}
+
 		
 		
 #logoPrincipal{width:15%;

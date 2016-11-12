@@ -78,8 +78,7 @@ footer h2{
 	background-image: url(../images/logo.png);
 	background-repeat: no-repeat;
 	background-position: left;
-	color: rgba(0,0,0,0);	
-	
+	color: rgba(0,0,0,0);		
 }
 
 header>form>input:first-of-type{
@@ -411,11 +410,8 @@ footer .cincoCol:last-of-type li~li{
 	background-color:#009c58;
 	color: #FFF;
 	text-decoration: none;
-	padding:15px 0 15px 0;
 	margin-bottom:8%;
-	/* height:20%;
 	
-	vertical-align:middle; */
 }
 
 #registroModal >div >div h2{
