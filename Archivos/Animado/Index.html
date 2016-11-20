@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Banner Animado Próxima Fecha</title>
+	<style type="text/css">
+		body {
+		background-color: #F5F5F5;
+		color: #555;
+		font-size: 1.1em;
+		font-family: Agency FB;
+		}
+		#contenedor{
+			height:600px;
+			width:300px;
+			overflow:hidden;
+			position:absolute;
+			background-color:white;
+			cursor:pointer;
+		}
+		#imgFondo {	position:absolute;
+					top:0px;
+					filter: blur(1px);
+					z-index:10;
+					transition:opacity 1s ease-in-out;
+				}
+		#divConSpans{overflow:hidden;
+					width:0px;}
+		#frase1{z-index:102;
+				position:absolute;
+				top:-100px;
+				left:38px;
+				opacity:1;
+				transition:top 1s ease-in-out, opacity 0.5s ease-in-out;
+				}
+		#frase2{z-index:101;
+				position:absolute;
+				top:120px;
+				left:-230px;
+				opacity:1;
+				transition:left 1s ease-in-out, opacity 0.5s ease-in-out;
+				}
+		#frase3{z-index:103;
+				position:absolute;
+				top:250px;
+				left:500px;
+				opacity:1;
+				transition:left 1s ease-in-out, opacity 0.5s ease-in-out ;
+				}
+		#logo {	position:absolute;
+				width:100%;
+				top:350px;
+				z-index:110;
+				opacity:0;
+				transition:opacity 1.5s ease-out, top 5s ease-out;
+				}
+		#papelitos {position:absolute;
+					top:-380px;
+					z-index:20;
+					opacity:1;
+					transition:top 10s ease-in-out;
+					}
+		#papelitos2 {position:absolute;
+					top:-760px;
+					z-index:21;
+					opacity:1;
+					transition:top 10s ease-in-out;
+					}
+		#papelitos3 {position:absolute;
+					top:-1200px;
+					z-index:22;
+					opacity:1;
+					transition:top 10s ease-in-out;
+					}
+		#circuloBlanco{	position:absolute;
+						opacity:0;
+						z-index:133;
+						top:300px;
+						left:150px;
+						width:1px;
+						height:1px;
+						transition:transform 2s ease-in-out;
+						}
+		#botoningresar{	z-index:103;
+						position:absolute;
+						top:330px;
+						left:40px;
+						opacity:0;
+						transition:opacity 0.6s ease-in;
+						}
+</style>
+</head>
+<body>
+	<div id="contenedor">
+		<img src="img/frase1.png" alt="frase1" id="frase1" />
+		<img src="img/frase2.png" alt="frase2" id="frase2" />
+		<img src="img/frase3.png" alt="frase3" id="frase3" />
+		<img src="img/whiteCircle2.png" alt="circulo" id="circuloBlanco" />
+		<img src="img/logoPNG.png" alt="logo" id="logo" />
+		<img src="img/boton.png" alt="boton" id="botoningresar" />
+		<img src="img/Fondo4.jpg" alt="fondo futbol" id="imgFondo" />
+		<img src="img/papelitos2.png" alt="papelitos" id="papelitos" />
+		<img src="img/papelitos2.png" alt="papelitos 2" id="papelitos2" />
+		<img src="img/papelitos2.png" alt="papelitos 3" id="papelitos3" />
+	</div>	
+<script rel="javascript" type="text/javascript" src="js2.js"></script>
+</body>
+</html>
