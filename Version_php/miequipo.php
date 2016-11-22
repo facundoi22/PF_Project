@@ -25,6 +25,14 @@
 							<input id="INPUTbuscador" placeholder='Hacer otra búsqueda...' value="" name="contenidoAbuscar" />
 						</form>
 					</div>
+					<div id="DIVbtnRegistro">
+						<div>
+							<div id="btnRegistro">
+								<a href="index.php">CERRAR SESIÓN</a>
+							</div>
+						</div>
+					</div>
+
 				</div>
 				<div>
 					<form id="FORMbuscador" action="resultado.php" method="post">
