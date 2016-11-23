@@ -13,7 +13,9 @@ publicidad.onmouseout = function(){
 };
 
 publicidad.getElementsByTagName('a')[0].onclick = function(){
-		var removido = d.getElementsByTagName("body")[0].removeChild(d.getElementById("publicidad"));
+		var publicidad = 	d.getElementById("publicidad");
+		var padre = publicidad.parentNode;
+		padre.removeChild(publicidad);
 };
 
 publicidad.getElementsByTagName('img')[0].onclick = function(){
