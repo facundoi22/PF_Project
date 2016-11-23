@@ -2267,42 +2267,43 @@ form h3 {margin-bottom:15px;}
 
 /*otrassecciones equipo*/
 
-#equipo header>form input:first-of-type{
+#miequipo header>form input:first-of-type{
 	margin-left:30%;
 }
 
-#equipo header>form input:last-of-type {
+#miequipo header>form input:last-of-type {
 	width: 50%;
 }
 
 
-#equipo main>div:first-of-type{
+#miequipo main>div:first-of-type{
 	background-image: url(../images/equipo.jpg);
 	background-repeat: no-repeat;
 	background-color: #009c58;
 	background-position: right 20%;
 	margin-top: 75px;
 	height: 330px;
+	padding-left: 70px;
 }
 
-#equipo main>div:first-of-type> img{
+#miequipo main>div:first-of-type> img{
 	border-radius: 50%;
 	margin-left: 50px;
 	margin-top: 50px;
 }
 
-#equipo main>div:first-of-type> h2{
+#miequipo main>div:first-of-type> h2{
 	color: #FFF;
 	font-size: 1.8em;
 	margin-left: 15px;
 	font-style: italic;
 }
 
-#equipo main > div ~ div {
+#miequipo main > div ~ div {
 	padding: 0%;
 }
 
-#equipo main> div~div >h3 {
+#miequipo main> div~div >h3 {
 	background-color:#e0e0e0;
 	vertical-align: top;
 	font-size: 2em;
@@ -2314,13 +2315,13 @@ form h3 {margin-bottom:15px;}
 	text-align: center;
 
 }
-#equipo main> div~div >div{
+#miequipo main> div~div >div{
 	display: flex;
 	flex-direction: row ;
 	padding-top: 10px;
 }
 
-#equipo main> div~div >div>div table {
+#miequipo main> div~div >div>div table {
 	width: 90%;
 	margin-left: 30px;
 	margin-top: 5%;
@@ -2328,48 +2329,48 @@ form h3 {margin-bottom:15px;}
 	text-align: center;
 }
 
-#equipo main> div~div >div>div table  thead,
-#equipo main> div~div >div>div table  tbody,
-#equipo main> div~div ~div >div>div h3{
+#miequipo main> div~div >div>div table  thead,
+#miequipo main> div~div >div>div table  tbody,
+#miequipo main> div~div ~div >div>div h3{
 	color: #FFF;
 	font-size: 1.2em;
 	line-height: 1.5em;
 	background-color: #009c58;
 }
 
-#equipo main> div~div >div>div table  tbody tr td:first-of-type{
+#miequipo main> div~div >div>div table  tbody tr td:first-of-type{
 	text-align: left;
 	padding-left: 10%;
 }
 
-#equipo main> div~div >div>div table  tbody{
+#miequipo main> div~div >div>div table  tbody{
 	color: #000;
 	background-color: #e0e0e0;
 	border: 0px;
 
 }
 
-#equipo main> div~div >div>div table  tbody  tr {
+#miequipo main> div~div >div>div table  tbody  tr {
 	line-height: 2em;
 }
 
-#equipo main> div~div >div>div table  tbody  tr:nth-child(even) {
+#miequipo main> div~div >div>div table  tbody  tr:nth-child(even) {
 	background-color: #b2adad;
 }
 
-#equipo main> div~div >div>div table  tbody  #miEquipo {
+#miequipo main> div~div >div>div table  tbody  #miEquipo {
 	background-color: #706d6d;
 	color:#FFF;
 }
 
-#equipo main> div~div >div>div~div {
+#miequipo main> div~div >div>div~div {
 	background-color:#a6dba2;
 	margin-left: 50px;
 	margin-top: 40px;
 	vertical-align: top;
 }
 
-#equipo main> div~div >div>div~div h3{
+#miequipo main> div~div >div>div~div h3{
 	color: #FFF;
 	font-size: 1.5em;
 	line-height: 2em;
@@ -2377,12 +2378,12 @@ form h3 {margin-bottom:15px;}
 	margin-bottom:10px;
 }
 
-#equipo main> div~div >div>div~div img{
+#miequipo main> div~div >div>div~div img{
 	border-radius: 45%;
 	margin-left: 8%;
 }
 
-#equipo main> div~div >div>div~div p{
+#miequipo main> div~div >div>div~div p{
 	color:#FFF;
 	display:inline-block;
 	vertical-align: bottom;
@@ -2392,7 +2393,7 @@ form h3 {margin-bottom:15px;}
 	margin-left: 40px;
 }
 
-#equipo main> div~div >div>div~div p~p{
+#miequipo main> div~div >div>div~div p~p{
 	padding-bottom: 0px;
 	font-weight: normal;
 	margin-top: 10px;
@@ -2403,13 +2404,13 @@ form h3 {margin-bottom:15px;}
 	width: 49%;
 }
 
-#equipo main> div~div >div>div~div p~p~p{
+#miequipo main> div~div >div>div~div p~p~p{
 	padding-right: 40px;
 	text-align: right;
 }
 
 
-#equipo main> div~div >div>div~div p~p~p~p{
+#miequipo main> div~div >div>div~div p~p~p~p{
 	text-align: left;
 	width: 100%;
 	color: #FFF;
@@ -2417,22 +2418,22 @@ form h3 {margin-bottom:15px;}
 	padding-left:50px;
 }
 
-#equipo main> div~div >div>div~div img ,
-#equipo main> div~div~div >div>div~div  > div >div img {
+#miequipo main> div~div >div>div~div img ,
+#miequipo main> div~div~div >div>div~div  > div >div img {
 	border-radius: 50%;
 	margin-left: 60px;
 }
 
-#equipo #companeros ~ .dosCol >div >img {
+#miequipo #companeros ~ .dosCol >div >img {
 	margin-left: 20px;
 	border-radius: 50%;
 }
 
-#equipo #companeros ~ .dosCol p {
+#miequipo #companeros ~ .dosCol p {
 	margin-left:20px;
 }
 
-#equipo #companeros ~ .dosCol >div >div > p ~ p{
+#miequipo #companeros ~ .dosCol >div >div > p ~ p{
 	margin-left:0px;
 	padding-left:10px;
 	width: 180px;
@@ -2442,58 +2443,58 @@ form h3 {margin-bottom:15px;}
 }
 
 
-#equipo #companeros ~ .dosCol >div >div > p ~ p~ p {
+#miequipo #companeros ~ .dosCol >div >div > p ~ p~ p {
 	padding-right: 20px;
 	text-align: right;
 }
 
-#equipo #companeros ~ .dosCol >div >div ~ div > img{
+#miequipo #companeros ~ .dosCol >div >div ~ div > img{
 	border-radius: 0%;
 }
 
-#equipo main> div~div >div>div~div img~img {
+#miequipo main> div~div >div>div~div img~img {
 	margin-left: 40px;
 }
 
-#equipo main> div~div >div>div~div img:last-of-type {
+#miequipo main> div~div >div>div~div img:last-of-type {
 	border-radius: 0%;
 	margin-left: 50px;
 }
 
-#equipo main > div ~ div ~ div > div > div ~ div > div > div img {
+#miequipo main > div ~ div ~ div > div > div ~ div > div > div img {
 	margin-left: 0px;
 }
 
-#equipo main > div ~ div ~ div > div > div ~ div > div img:last-of-type {
+#miequipo main > div ~ div ~ div > div > div ~ div > div img:last-of-type {
 	border-radius: 50%;
 }
 
 
-#equipo main > div ~ div ~ div > div > div ~ div> div ~ div img:last-of-type {
+#miequipo main > div ~ div ~ div > div > div ~ div> div ~ div img:last-of-type {
 	border-radius: 0%;
 }
 
-#equipo main> div~div ~div >div>div h3,
-#equipo main> div~div ~div >div>div ul{
+#miequipo main> div~div ~div >div>div h3,
+#miequipo main> div~div ~div >div>div ul{
 	width: 550px;
 	margin-bottom: 0px;
 	margin-left: 45px;
 }
 
-#equipo main> div~div ~div >div>div h3 {
+#miequipo main> div~div ~div >div>div h3 {
 	line-height: 50px;
 	height: 50px;
 	margin-left: 30px;
 	margin-top: 0px;
 }
 
-#equipo main> div~div ~div >div>div ul{
+#miequipo main> div~div ~div >div>div ul{
 	background-color: #e0e0e0;
 	border: 0px;
 	margin-left: 52px;
 }
 
-#equipo main> div~div ~div >div>div ul li {
+#miequipo main> div~div ~div >div>div ul li {
 	color: #000;
 	font-size: 1.2em;
 	text-align: left;
@@ -2503,19 +2504,19 @@ form h3 {margin-bottom:15px;}
 	vertical-align: top;
 }
 
-#equipo main> div~div ~div >div>div ul li img {
+#miequipo main> div~div ~div >div>div ul li img {
 	border-radius:50%;
 }
 
 
-#equipo main> div~div ~div >div>div ul li span{
+#miequipo main> div~div ~div >div>div ul li span{
 	vertical-align: top;
 	line-height: 75px;
 	display: inline-block;
 	margin-left: 20px;
 }
 
-#equipo main> div~div ~div >div>div ul li a{
+#miequipo main> div~div ~div >div>div ul li a{
 
 	background-color:#e48d10;
 	border: outset 1px #FFF;
@@ -2537,7 +2538,7 @@ form h3 {margin-bottom:15px;}
 	margin-top: 25px;
 }
 
-#equipo #capitan {
+#miequipo #capitan {
 	background-image: url(../images/cinta.png);
 	background-repeat: no-repeat;
 	background-position: right center;
@@ -2545,47 +2546,47 @@ form h3 {margin-bottom:15px;}
 }
 
 
-#equipo main> div~div  >div>div ul li:nth-child(even) {
+#miequipo main> div~div  >div>div ul li:nth-child(even) {
 	background-color: #b2adad;
 
 }
 
-#equipo main > div ~ div ~ div > div ~ div > div{
+#miequipo main > div ~ div ~ div > div ~ div > div{
 	margin-left: 0px;
 	width: 40%;
 }
 
-#equipo main > div ~ div ~ div > div > div ~ div {
+#miequipo main > div ~ div ~ div > div > div ~ div {
 	margin: 0px;
 	margin-left: 40px;
 	width: 43%;
 	background-color: #FFF;
 }
 
-#equipo main > div ~ div ~ div > div > div ~ div > div{
+#miequipo main > div ~ div ~ div > div > div ~ div > div{
 	width: 400px;
 	height: 300px;
 	margin-left: 40px;
 	background-color: #a6dba2;
 }
 
-#equipo main > div ~ div ~ div > div > div  ~ div h3 {
+#miequipo main > div ~ div ~ div > div > div  ~ div h3 {
 	width: 100%;
 	margin-left: 0px;
 	background-color: rgba(0,0,0,0);
 }
 
-#equipo main > div ~ div  ~ div > div > div ~ div p ~ p {
+#miequipo main > div ~ div  ~ div > div > div ~ div p ~ p {
 	text-align: right;
 	padding-right: 40px;
 
 }
-#equipo main > div ~ div  ~ div > div > div ~ div p ~ p  ~ p {
+#miequipo main > div ~ div  ~ div > div > div ~ div p ~ p  ~ p {
 	text-align: left;
 	padding-left: 75px;
 }
 
-#equipo main > div ~ div  ~ div > div > div ~ div a{
+#miequipo main > div ~ div  ~ div > div > div ~ div a{
 
 	background-color:#e48d10;
 	border: outset 2px #FFF;
@@ -2607,10 +2608,10 @@ form h3 {margin-bottom:15px;}
 	margin-top: 25px;
 }
 
-#equipo main > div ~ div  ~ div > div > div ~ div  > div ~div {
+#miequipo main > div ~ div  ~ div > div > div ~ div  > div ~div {
 	text-align: center;
 }
-#equipo main > div ~ div  ~ div > div > div ~ div  > div ~div a{
+#miequipo main > div ~ div  ~ div > div > div ~ div  > div ~div a{
 	border: 0px;
 	background-color: rgba(0,0,0,0);
 	margin: 0px;
@@ -2619,7 +2620,7 @@ form h3 {margin-bottom:15px;}
 	width: 320px;
 }
 
-#equipo > main > div:last-of-type {
+#miequipo > main > div:last-of-type {
 	vertical-align: top;
 	height: 650px;
 	padding-left: 50px;

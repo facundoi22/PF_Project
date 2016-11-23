@@ -51,9 +51,7 @@ class Usuario
         } else {
             $rta = "El usuario o la password estan mal";
         }
-        $this->imprimir ( $this->usuario_id);
-        $this->imprimir ( $this->password);
-        $this->imprimir ( $rta);
+
         return $rta;
     }
 
@@ -71,7 +69,7 @@ class Usuario
     }
 
 	public function tieneEquipo() {
-        $query = "SELECT equipo_id FROM equipos WHERE usuario_id = :usuario_id AND ACTIVO = '1'";
+        $query = "SELECT equipo_id FROM jugadores WHERE jugador_id = :usuario_id ";
         $stmt = DBConnection::getStatement($query);
         $stmt->execute(['usuario_id'=> $this->usuario_id ]);
         return $stmt->fetch(PDO::FETCH_ASSOC);

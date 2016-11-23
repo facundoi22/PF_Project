@@ -2,7 +2,7 @@
 	<div id="arriba">
 		<a href="index.php" title="home" id="logoPrincipal"><img src="images/LOGOPF-Sin-Fondo.png" alt="Logo" style="margin:3px;" /></a>
 		<div>
-			<form id="FORMbuscador" action="modulos/resultado.php" method="post">
+			<form id="FORMbuscador" action="index.php?seccion=resultado" method="post">
 				<img src="images/Icons/lupa11.png" alt="Logo" style="height:20px;width:20px;" />&nbsp;
 				<input id="INPUTbuscador" placeholder='Buscar...' value="" name="contenidoAbuscar" />
 			</form>
@@ -10,11 +10,22 @@
 		<div id="DIVbtnRegistro">
 			<div>
 				<div id="btnRegistro">
-					<a href="#registroModal">REGISTRARSE</a>
+					<?php
+						$usuarioLogueado = isset($_SESSION['usuario']);
+						if ($usuarioLogueado ){
+							echo "<a href='php/desloguear.php'>CERRAR SESIÓN</a>";
+						} else {
+							echo "<a href='#registroModal'>REGISTRARSE</a>";
+						}
+					?>
+
 				</div>
 			</div>
 		</div>
 	</div>
+	<?php
+		if (! $usuarioLogueado ){
+	?>
 	<div id="registro" class="tresCol">
 		<div>
 			<div id="registroModal">
@@ -30,11 +41,12 @@
 							<input class='inputRegistro' type="text" name="apellido" placeholder="Apellido"/>
 							<input class='inputRegistro' type="text" name="mail" placeholder="Mail"/>
 							<input class='inputRegistro' type="password" name="clave" placeholder="Clave"/>
-							<input class='inputRegistro' type="password" name="confClave" placeholder="Confirmar Clave"/>
+							<input class='inputRegistro' type="password" name="confClave"
+								   placeholder="Confirmar Clave"/>
 							<div><input type="checkbox" name="terminos" id="terminos" value="y"/>
 								<label for="terminos"> Acepto los términos y condiciones </label></div>
 							<div class='btnIngresar'>
-								<input  type="submit" value="REGISTRARSE" />
+								<input type="submit" value="REGISTRARSE"/>
 							</div>
 						</form>
 					</div>
@@ -42,4 +54,7 @@
 			</div>
 		</div>
 	</div>
+	<?php
+	};
+	?>
 </header>
