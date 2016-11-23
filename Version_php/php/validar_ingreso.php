@@ -23,12 +23,11 @@
 	} else {
 		if ($error){
 			$_SESSION['error'] = $error;
-			header("Location: index.php?seccion=login");
+            header("Location: index.php?seccion=login");
 		} else {
 			if ( $usuario->tieneEquipo() )  {
-				header("Location: ../modulos/miequipo.php");
+                header("Location: ../modulos/miequipo.php");
 			} else {
-				echo "<h1>hola3</h1>";
 				header("Location: ../modulos/miUsuario.php");
 			}
 		}
