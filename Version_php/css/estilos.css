@@ -2742,7 +2742,7 @@ main > div > div form {
 	background-repeat:	no-repeat;
 	width: 32px;
 	height: 32px;
-	font-size: 27px;
+	font-size: 0px;
 }
 
 #publicidad a:hover {
