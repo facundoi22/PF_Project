@@ -422,7 +422,7 @@ footer .cincoCol:last-of-type li~li{
 
 #registroModal >div {
 	width: 45%;
-	height: 80%;
+	height: 90%;
 	margin-left: 27%;
 	margin-top: 3%;
 	z-index: 20;
@@ -441,7 +441,7 @@ footer .cincoCol:last-of-type li~li{
 #registroModal >div >div h2{
 	display: inline-block;
 	margin-left: 5%;
-	margin-bottom: 20px;
+	margin-bottom: 0px;
 	font-size: 1.5em;
 	line-height: 2em;
 
@@ -459,35 +459,22 @@ footer .cincoCol:last-of-type li~li{
 	margin-top: 2%;
 }
 
-#registroModal >div >div:last-of-type {
-	margin-top: 2%;
-}
-	/*
-#registroModal >div >div:last-of-type input ,
-#registroModal >div >div:last-of-type label {
-	width: 50%;
-	margin-top: 3%;
-	margin-left: 25%;
-	font-size: 1em;
-	line-height: 1.8em;
-}
- */
-
 #registroModal >div >div:last-of-type input{
-	/* border: inset 2px #FFF;	
-	border-radius: 15px;	
-	text-align: center; 
-	background-image: url(../images/mail.png);*/
+	background-image: url(../images/tipo.png);
 	background-position: 5%;
 	background-repeat: no-repeat;
 }
 
-#registroModal >div >div:last-of-type input~input{
-	background-image: url(../images/tipo.png);
+#registroModal >div >div:last-of-type input~input~input~input{
+	background-image: url(../images/mail.png);
 }
 
-#registroModal >div >div:last-of-type input~input~input~input{
+#registroModal >div >div:last-of-type input~input~input~input~input{
 	background-image: url(../images/candado.png);
+}
+
+#registroModal >div >div:last-of-type  div input{
+	background-image: none;
 }
 
 #registroModal >div >div:last-of-type label {
@@ -495,9 +482,13 @@ footer .cincoCol:last-of-type li~li{
 	margin-left: 0%;
 }
 
+#registroModal > div > div:last-of-type  div {
+	text-align: left;
+}
+
 #registroModal > div > div:last-of-type #terminos{
 	width:5%;
-	margin-left: 25%;
+	margin-left: 80px;
 }
 
 /*
@@ -751,6 +742,9 @@ footer .cincoCol:last-of-type li~li{
 	font-size: 0.8em;
 	line-height: 1.8em;
 }
+
+
+
 
 /* FIN Cosas de FACU */
 
@@ -2742,7 +2736,7 @@ main > div > div form {
 	background-repeat:	no-repeat;
 	width: 32px;
 	height: 32px;
-	font-size: 0px;
+	font-size: 23px;
 }
 
 #publicidad a:hover {

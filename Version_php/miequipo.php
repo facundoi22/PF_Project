@@ -33,13 +33,7 @@
 						</div>
 					</div>
 
-				</div>
-				<div>
-					<form id="FORMbuscador" action="resultado.php" method="post">
-						<img src="images/Icons/lupa11.png" alt="Logo" style="height:20px;width:20px;" />&nbsp;
-						<input id="INPUTbuscador" placeholder='Buscar...' value="" name="contenidoAbuscar" />
-					</form>
-				</div>
+				</div>				
 			</header>		
 			<main>
 				<div>

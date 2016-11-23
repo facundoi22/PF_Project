@@ -134,13 +134,12 @@ function Insertar_Comida($nombre, $tipo, $ingredientes){
 function CrearUsuario($vUsuario){
 	global $conexion;
 	$values = "null";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['mail']) ."'";
 	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['nombre']) ."'";
 	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['apellido']) ."'";
+	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['usuario']) ."'";
 	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['mail']) ."'";
 	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['password']) ."'";
 	$values .= ", 'Y'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['telefono']) ."'";
 	$values .= ", '" . date("Y-m-d") ."'";
 	
 	if( $conexion ) {

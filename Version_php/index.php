@@ -3,6 +3,14 @@
 	<?php
 		include( 'config.php' );
 		include('funciones.php' );
+	
+		$usuario = "";
+		session_start();
+		if (isset($_SESSION['usuario'])){
+			$usuario = $_SESSION['usuario'];
+			$_SESSION['usuario'] = "";
+		}
+	
 	?>
 	<head>
 		<meta charset="utf-8">
@@ -13,6 +21,8 @@
 	</head>
 
 	<body>
+	
+	
 		<div>
 			<header>
 				<div id="arriba">
@@ -41,6 +51,7 @@
 								</div>
 								<div>
 									<form id='formRegistro' action="registrar.php" method="post">
+										<input class='inputRegistro' type="text" name="usuario" placeholder="Usuario"/>
 										<input class='inputRegistro' type="text" name="nombre" placeholder="Nombre"/>
 										<input class='inputRegistro' type="text" name="apellido" placeholder="Apellido"/>
 										<input class='inputRegistro' type="text" name="mail" placeholder="Mail"/>
@@ -66,10 +77,10 @@
 					<div class="dosCol">
 						<div id="DivFormLogin">
 							<a id='btnFacebook' href="miequipo.php">Ingresar con Facebook</a>
-							<form action="miequipo.php" method="post">
+							<form action="validar_ingreso.php" method="post">						
 								<div class="DIVinputs">
 									<img src="images/mail.png" alt="icono Mail" style="height:20px;width:20px;" />&nbsp;
-									<input class='inputFormHome' type="text" name="mail" placeholder="E-mail"/>
+									<input class='inputFormHome' type="text" name="usuario" placeholder="Usuario" <?php echo("value='$usuario'")?>/>
 								</div>
 								<div class="DIVinputs">
 									<img src="images/candadoVerde.png" alt="Icono Candado" style="height:20px;width:20px;" />&nbsp;
@@ -80,6 +91,13 @@
 								</div>
 							</form>
 							<a href="#">Olvidé Mi Contraseña</a>
+							<?php
+								if (isset($_SESSION['errorLogin'])){
+									echo ("<h3> ". $_SESSION['errorLogin'] ." </h3>");
+									$_SESSION['errorLogin'] ="";
+								}
+								session_destroy();
+							?>
 						</div>
 					</div>
 				</div>
