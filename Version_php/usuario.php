@@ -17,10 +17,29 @@
 	<body>
 		<div id="equipo">
 			<header>
-				<h1 class="dosCol" ><a href="index.php">Próxima Fecha</a></h1>
-				<form class="dosCol" action="resultado.html" method="post">
-					<input type="submit" value="Buscar"/><input id="texto" type="text" name="texto" placeholder="Buscar"/>
-				</form>					
+				<div id="arriba">
+					<a href="index.php" title="home" id="logoPrincipal"><img src="images/LOGOPF-Sin-Fondo.png" alt="Logo" style="margin:3px;" /></a>
+					<div>
+						<form method="post" id="FORMbuscador" action="resultado.php">
+							<img src="images/Icons/lupa11.png" alt="Logo" style="height:20px;width:20px;" />
+							<input id="INPUTbuscador" placeholder='Hacer otra búsqueda...' value="" name="contenidoAbuscar" />
+						</form>
+					</div>
+					<div id="DIVbtnRegistro">
+						<div>
+							<div id="btnRegistro">
+								<a href="index.php">CERRAR SESIÓN</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div>
+					<form id="FORMbuscador" action="resultado.php" method="post">
+						<img src="images/Icons/lupa11.png" alt="Logo" style="height:20px;width:20px;" />&nbsp;
+						<input id="INPUTbuscador" placeholder='Buscar...' value="" name="contenidoAbuscar" />
+					</form>
+				</div>
 			</header>		
 			<main>
 				<div>

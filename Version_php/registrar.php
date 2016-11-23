@@ -24,7 +24,8 @@
 	
 	// Si hay algún campo en error, vuelvo al formulario, indicando que hay errores;
 	if ( $_SESSION['camposError'] ){
-		header("Location: index.php?error=1#registroModal");
+		//header("Location: index.php?error=1#registroModal");
+		header("Location: usuario.php");
 	} else {
 		$reserva_id = Insertar_Reserva($inputs);
 		header("Location: usuario.php");

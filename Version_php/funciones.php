@@ -131,38 +131,24 @@ function Insertar_Comida($nombre, $tipo, $ingredientes){
 } 
 
 // Función que inserta una reserva creada;
-function Insertar_Reserva($vReserva){
+function CrearUsuario($vUsuario){
 	global $conexion;
 	$values = "null";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vReserva['nombre']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vReserva['apellido']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vReserva['telefono']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vReserva['fecha']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vReserva['hora']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vReserva['cantidad']) ."'";
-	$values .= ", 1";
-	if( $conexion ) {
-		$script = "INSERT INTO RESERVAS VALUES ($values) ";
-		$insert = ejecutar_script( $script);
-		$reserva_id = mysqli_insert_id( $conexion );
-	};
+	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['mail']) ."'";
+	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['nombre']) ."'";
+	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['apellido']) ."'";
+	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['mail']) ."'";
+	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['password']) ."'";
+	$values .= ", 'Y'";
+	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['telefono']) ."'";
+	$values .= ", '" . date("Y-m-d") ."'";
 	
-	if ($reserva_id == 0){
-		$reserva_id = "error";
-	} else {
-		if (isset($vReserva['preferencia'])){
-			$preferencia = $vReserva['preferencia'];
-			
-			foreach( $preferencia as $i => $preferencia){
-				$values = "$reserva_id, '" . $preferencia ."'"	;
-				if( $conexion ) {
-					$script = "INSERT INTO RESERVAS_PREF VALUES ($values) ";
-					$insert = ejecutar_script( $script);
-				};
-			};
-		};
+	if( $conexion ) {
+		$script = "INSERT INTO USUARIOS VALUES ($values) ";
+		$insert = ejecutar_script( $script);
+		$usuario_id = mysqli_insert_id( $conexion );
 	};
-	return $reserva_id;
+	return $usuario_id;
 }
 
 /* Funcion que valida el  valor pasado en $campo en base al $nombre del campo */

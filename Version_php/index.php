@@ -66,7 +66,7 @@
 					<div class="dosCol">
 						<div id="DivFormLogin">
 							<a id='btnFacebook' href="miequipo.php">Ingresar con Facebook</a>
-							<form action="miequipo.html" method="post">
+							<form action="miequipo.php" method="post">
 								<div class="DIVinputs">
 									<img src="images/mail.png" alt="icono Mail" style="height:20px;width:20px;" />&nbsp;
 									<input class='inputFormHome' type="text" name="mail" placeholder="E-mail"/>
