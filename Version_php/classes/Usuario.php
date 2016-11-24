@@ -56,18 +56,6 @@ class Usuario
     }
 
 
-    /**
-     * Verifica si el usuario instanciado tiene el rol pasado por parámetro
-     * @param $rol
-     * @return mixed
-     */
-    public function tieneRol($rol ) {
-        $query = "SELECT usuario_id FROM usuarios WHERE usuario_id = :usuario_id AND role_id = :role_id";
-        $stmt = DBConnection::getStatement($query);
-        $stmt->execute(['usuario_id'=> $this->usuario_id  , 'role_id'=>$rol]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
-
 	public function tieneEquipo() {
         $query = "SELECT equipo_id FROM jugadores WHERE jugador_id = :usuario_id ";
         $stmt = DBConnection::getStatement($query);

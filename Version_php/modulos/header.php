@@ -11,7 +11,8 @@
 			<div>
 				<div id="btnRegistro">
 					<?php
-						$usuarioLogueado = isset($_SESSION['usuario']);
+
+						$usuarioLogueado = (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"]));
 						if ($usuarioLogueado ){
 							echo "<a href='php/desloguear.php'>CERRAR SESIÓN</a>";
 						} else {

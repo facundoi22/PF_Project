@@ -2,13 +2,16 @@
 	require_once('../config.php');
 	$inputs = $_POST;
 	session_start( );
-	$_SESSION['usuario'] = $_POST['usuario'];
-	
-	$error =0;
-	$errorActual = "";
-    $usuario = New Usuario($_POST['usuario'], $_POST['password']);
+    if (isset($_POST["usuario"]) && !empty($_POST["usuario"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
+        $_SESSION['usuario'] = $_POST['usuario'];
+        $error =0;
+	    $errorActual = "";
+        $usuario = New Usuario($_POST['usuario'], $_POST['password']);
+        $error = $usuario->validarUsuario();
+    } else {
+        $error = "No ha ingresado el usuario o la contraseña";
+    }
 
-	$error = $usuario->validarUsuario();
 	if(isset($_POST['ajax'])) {
 		if ($error){
 			echo json_encode([
@@ -26,11 +29,9 @@
             header("Location: ../index.php");
 		} else {
 			if ( $usuario->tieneEquipo() )  {
-                //header("Location: ../modulos/miequipo.php");
                 header("Location: ../index.php?seccion=miequipo");
             } else {
                 header("Location: ../index.php?seccion=miusuario");
-                //header("Location: ../modulos/miusuario.php");
 			}
 		}
 	} 	

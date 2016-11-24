@@ -5,7 +5,7 @@
 		</div>
 		<div class="dosCol">
 			<div id="DivFormLogin">
-				<a id='btnFacebook' href="modulos/miequipo.php">Ingresar con Facebook</a>
+				<a id='btnFacebook' href="#">Ingresar con Facebook</a>
 				<form action="php/validar_ingreso.php" method="POST">
 					<div class="DIVinputs">
 						<img src="images/mail.png" alt="icono Mail" style="height:20px;width:20px;" />&nbsp;
