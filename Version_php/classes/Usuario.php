@@ -7,9 +7,15 @@ class Usuario
 {
     protected $usuario_id;
     protected $nombre;
+    protected $apellido;
+    protected $email;
+    protected $activo;
+    protected $telefono;
+    protected $ultimaVez;
+
     protected $password;
-    protected $role_id;
-    protected $activa;
+    protected $equipo;
+
 
     /**
      * Usuario constructor.
@@ -22,15 +28,11 @@ class Usuario
         if(!is_null($pwd)) {
             $this->password= SHA1($pwd);
         }
+        $this->setUsuario();
+        $this->setEquipo();
     }
 
 
-    public static function imprimir($aImprimir)
-    {
-        echo "<pre>";
-        print_r($aImprimir);
-        echo "</pre>";
-    }
 
     /**
      * Valida el usuario instanciado existe en la base de datos y está activo;
@@ -38,30 +40,62 @@ class Usuario
      */
     public function validarUsuario(){
         $rta = "";
-        $query = "SELECT ACTIVO FROM USUARIOS WHERE USUARIO_ID = :usuario_id AND PASSWORD = :password";
+        $query = "SELECT PASSWORD, ACTIVO FROM USUARIOS WHERE USUARIO_ID = :usuario_id ";
         $stmt = DBConnection::getStatement($query);
-        $stmt->execute(['usuario_id'=> $this->usuario_id  , 'password'=>$this->password]);
-        $this->imprimir ( $stmt->errorInfo());
+        $stmt->execute(['usuario_id'=> $this->usuario_id  ]);
         if($datos = $stmt->fetch(PDO::FETCH_ASSOC)){
-            if ($datos['ACTIVO'] == '1'){
-                $rta = "";
+            if ($datos['PASSWORD'] == $this->password){
+                if ($datos['ACTIVO'] == '1'){
+                    $rta = "";
+                } else {
+                    $rta = "El usuario no se encuentra activo";
+                }
             } else {
-                $rta = "El usuario no se encuentra activo";
+                $rta = "La password es errónea";
             }
+
         } else {
-            $rta = "El usuario o la password estan mal";
+            $rta = "El usuario no existe";
         }
 
         return $rta;
     }
 
-
-	public function tieneEquipo() {
-        $query = "SELECT equipo_id FROM jugadores WHERE jugador_id = :usuario_id ";
-        $stmt = DBConnection::getStatement($query);
-        $stmt->execute(['usuario_id'=> $this->usuario_id ]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+    public function setEquipo($equipo = null)
+    {
+        if ($equipo) {
+            $this->equipo = New Equipo($equipo );
+        } else {
+            $query = "SELECT EQUIPO_ID FROM JUGADORES WHERE JUGADOR_ID = :usuario_id ";
+            $stmt = DBConnection::getStatement($query);
+            $stmt->execute(['usuario_id' => $this->usuario_id]);
+            if ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $this->equipo = New Equipo($datos['EQUIPO_ID']);
+            }
+        };
     }
 
+    public function setUsuario()
+    {
+        $query = "SELECT NOMBRE, APELLIDO, EMAIL, ACTIVO, TELEFONO, ULTIMA_VEZ_ONLINE FROM USUARIOS WHERE USUARIO_ID = :usuario_id ";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['usuario_id' => $this->usuario_id]);
+        if ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $this->nombre = $datos['NOMBRE'];
+            $this->apellido= $datos['APELLIDO'];
+            $this->email = $datos['EMAIL'];
+            $this->activo = $datos['ACTIVO'];
+            $this->telefono = $datos['TELEFONO'];
+            $this->ultimaVez = $datos['ULTIMA_VEZ_ONLINE'];
+        };
+    }
+
+	public function tieneEquipo() {
+	    return !empty($this->equipo);
+    }
+
+    public function getEquipo(){
+        return $this->equipo;
+    }
 
 }

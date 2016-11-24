@@ -133,16 +133,14 @@ function Insertar_Comida($nombre, $tipo, $ingredientes){
 // Función que inserta una reserva creada;
 function CrearUsuario($vUsuario){
 	global $conexion;
-	$values = "null";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['nombre']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['apellido']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['usuario']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['mail']) ."'";
-	$values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['password']) ."'";
-	$values .= ", 'Y'";
-	$values .= ", '" . date("Y-m-d") ."'";
-	
-	if( $conexion ) {
+    $values = mysqli_real_escape_string($conexion,$vUsuario['usuario']) ."'";
+    $values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['password']) ."'";
+    $values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['nombre']) ."'";
+    $values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['apellido']) ."'";
+    $values .= ", '" . mysqli_real_escape_string($conexion,$vUsuario['mail']) ."'";
+	$values .= ", 'Y', null, '" . date("Y-m-d") ."'";
+
+    if( $conexion ) {
 		$script = "INSERT INTO USUARIOS VALUES ($values) ";
 		$insert = ejecutar_script( $script);
 		$usuario_id = mysqli_insert_id( $conexion );
