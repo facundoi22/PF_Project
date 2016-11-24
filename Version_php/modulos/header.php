@@ -11,8 +11,13 @@
 			<div>
 				<div id="btnRegistro">
 					<?php
+						Session::start();
+						if (Session::has('logueado') && Session::get('logueado')=='S') {
+							$usuarioLogueado = true;
+						}else{
+							$usuarioLogueado = false;
+						}
 
-						$usuarioLogueado = (isset($_SESSION["usuario"]) && !empty($_SESSION["usuario"]));
 						if ($usuarioLogueado ){
 							echo "<a href='php/desloguear.php'>CERRAR SESIÓN</a>";
 						} else {

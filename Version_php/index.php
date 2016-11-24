@@ -3,13 +3,18 @@
 	<?php
 		include( 'config.php' );
 		include('funciones.php' );
-	
+
+		Session::start();
+
 		$usuario = "";
+/*
 		session_start();
 		if (isset($_SESSION['usuario'])){
 			$usuario = $_SESSION['usuario'];
+		}*/
+		if (Session::has("usuario")){
+			$usuario = Session::get("usuario");
 		}
-
 
 
 		$seccionActual = 'home';
