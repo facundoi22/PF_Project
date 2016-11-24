@@ -22,12 +22,14 @@
 			$seccionActual = $_GET['seccion'];
 		} ;
 		switch($seccionActual){
+			case 'resultado':
 			case 'home':
+				break;
 			case 'miequipo':
 			case 'miusuario':
-			case 'resultado':
-			case 'login':
-			case 'panel':
+				if (!Session::has("usuario")){
+					$seccionActual = 'home';
+				};
 				break;
 			default: $seccionActual = 'home';
 		}

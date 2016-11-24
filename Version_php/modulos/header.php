@@ -41,7 +41,7 @@
 						<a href='#' title='Volver'> Volver</a>
 					</div>
 					<div>
-						<form id='formRegistro' action="../php/registrar.php" method="post">
+						<form id='formRegistro' action="php/registrar.php" method="post">
 							<input class='inputRegistro' type="text" name="usuario" placeholder="Usuario"/>
 							<input class='inputRegistro' type="text" name="nombre" placeholder="Nombre"/>
 							<input class='inputRegistro' type="text" name="apellido" placeholder="Apellido"/>

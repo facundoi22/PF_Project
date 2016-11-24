@@ -98,4 +98,23 @@ class Usuario
         return $this->equipo;
     }
 
+    public static function CrearUsuario($vUsuario){
+        $usuario= [
+            'usuario_id' => $vUsuario['usuario'],
+            'password'   =>  SHA1($vUsuario['clave']),
+            'nombre'     => ucfirst($vUsuario['nombre']),
+            'apellido'   => ucfirst($vUsuario['apellido']),
+            'email'      => ucfirst($vUsuario['email']),
+            'activo'     => '1',
+            'telefono'   => $vUsuario['telefono'],
+            'ultima_vez' => date("Y-m-d")
+        ];
+
+        $script = "INSERT INTO USUARIOS  VALUES (:usuario_id, :password, :nombre , :apellido, :email, :activo, :telefono, :ultima_vez)";
+        $stmt = DBConnection::getStatement($script );
+        if($stmt->execute($usuario)) {
+            return $vUsuario['usuario'];
+        }
+    }
+
 }

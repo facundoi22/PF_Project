@@ -39,10 +39,6 @@
             header("Location: ../index.php");
 		} else {
             Session::set('logueado','S');
-			if ( $usuario->tieneEquipo() )  {
-                header("Location: ../index.php?seccion=miequipo");
-            } else {
-                header("Location: ../index.php?seccion=miusuario");
-			}
+			header("Location: ../index.php?seccion=miusuario");
 		}
 	} 	

@@ -195,38 +195,12 @@ function ValidarCampoEspecifico($campo, $expReg, $texto){
 	return $rta;
 };
 
-// Función que valida el usuario que ingresa al sistema;
-function ValidarUsuario($usuario, $password){
-	global $conexion;
-	$rta="";
-	if( $conexion ) {
-		$script = "SELECT ACTIVA FROM USUARIOS WHERE USUARIO_ID = '$usuario' AND PASSWORD = '". SHA1($password) . "'";
-		$select = ejecutar_script( $script);
-		if($datos = mysqli_fetch_assoc($select)){
-			if ($datos['ACTIVA'] == '1'){
-				$rta = "";					
-			} else {
-				$rta = "El usuario no se encuentra activo";
-			}
-		} else {
-			$rta = "El usuario o la contraseña son inválidos";
-		}
-		mysqli_free_result($select);	
-		};
-	return $rta;
-}
 
-// Funnción que verifica si un usuario tiene un rol
-function usuario_Tiene_Rol($usuario , $rol ) {
-	global $conexion;
-	$rta=0;
-	if( $conexion ) {
-		$script = "SELECT USUARIO_ID FROM USUARIOS WHERE USUARIO_ID = '$usuario' AND ROLE_ID = '". $rol . "'";
-		$select = ejecutar_script( $script);
-		$rta = mysqli_fetch_assoc($select);
-		mysqli_free_result($select);	
-	};
-	return $rta;	
+function imprimir($aImprimir)
+{
+    echo "<pre>";
+    print_r($aImprimir);
+    echo "</pre>";
 }
 
 ?>
