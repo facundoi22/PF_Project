@@ -5,6 +5,7 @@
 					<h3 class="mayusculas negrita">¿Que querés hacer?</h3>
 					<a href="#registorModal">Crear Un Equipo</a>
 					<a href="#">Buscar un Equipo</a>
+					<a href="#">Ver Equipos</a>
 				</div>
 				<div id="registro" class="tresCol">
 					<div>
