@@ -61,4 +61,15 @@ class Session
     {
         return isset($_SESSION[$prop]);
     }
+
+
+    /**
+     * @param $prop
+     * @return bool
+     */
+    public static function clear($prop)
+    {
+        self::start();
+        unset($_SESSION[$prop]);
+    }
 }

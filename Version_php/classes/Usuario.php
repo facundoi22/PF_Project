@@ -117,4 +117,11 @@ class Usuario
         }
     }
 
+    public static function existeUsuario ($usuario_id){
+        $query = "SELECT 'X' FROM USUARIOS WHERE USUARIO_ID = :usuario_id ";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['usuario_id' => $usuario_id]);
+        return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
+    }
+
 }
