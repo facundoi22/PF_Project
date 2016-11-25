@@ -22,14 +22,12 @@
 			$seccionActual = $_GET['seccion'];
 		} ;
 		switch($seccionActual){
-			case 'resultado':
 			case 'home':
-				break;
 			case 'miequipo':
 			case 'miusuario':
-				if (!Session::has("usuario")){
-					$seccionActual = 'home';
-				};
+			case 'resultado':
+			case 'login':
+			case 'panel':
 				break;
 			default: $seccionActual = 'home';
 		}
@@ -39,7 +37,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link href="css/reset.css" rel="stylesheet" >
-		<link href="css/estilos.css" rel="stylesheet" >
+		<link rel="stylesheet" href="css/bootstrap-theme.css" />
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<link href="css/estilos.css" rel="stylesheet">
 		<title>Próxima Fecha</title>
 	</head>
 
