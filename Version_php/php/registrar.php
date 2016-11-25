@@ -6,40 +6,26 @@
 	$error =0;
 	$errorActual = "";
 	
-	/*Creo dos variables de Sesión
-	campos: Guarda todos los campos que se envian salvo la foto.
-	camposError: Guarda los campos que tienen error, incluyendo la foto.*/
-/*session_start( );
-$_SESSION['campos'] = array();
-$_SESSION['camposError'] = array();*/
-    Session::start();
+	Session::start();
 
-$campos =array();
-$camposError =array();
+    $formValidator = new FormValidator( $inputs);
 
-	// Valido los inputs;
-	foreach( $inputs as $nombreCampo => $valor){
-        $campos[$nombreCampo] = $valor;
-		//$_SESSION['campos'][$nombreCampo] = $valor;
-		$errorActual = ValidarCampo($nombreCampo, $valor);
-		if ($errorActual){
-		    $camposError[$nombreCampo] = $errorActual;
-			//$_SESSION['camposError'][$nombreCampo] = $errorActual;
-		}		
-	}
-	imprimir($inputs);
+	imprimir($formValidator->getCampos());
+	imprimir($formValidator->getCamposError());
+
+
 	// Si hay algún campo en error, vuelvo al formulario, indicando que hay errores;
 	//if ( $_SESSION['camposError'] ){
-    if ( !empty($camposError) ){
-        Session::set("camposError",$camposError);
-        Session::set("campos",$campos);
+    if ( !empty($formValidator->getCamposError()) ){
+        Session::set("camposError",$formValidator->getCamposError());
+        Session::set("campos",$formValidator->getCampos());
 		header("Location: ../index.php?error=1#registroModal");
-		//header("Location: miusuario.php");
 	} else {
-        Session::set("campos",$campos);
+        Session::set("campos",$formValidator->getCampos());
 		$usuario_id = Usuario::CrearUsuario($inputs);
         Session::set('usuario',$usuario_id);
         Session::set('logueado','S');
         header("Location: ../index.php?seccion=miusuario");
-	} 	
+	}
+
 ?>

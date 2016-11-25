@@ -31,6 +31,21 @@
 	</div>
 	<?php
 		if (! $usuarioLogueado ){
+			if (Session::has("camposError")){
+				$camposError = Session::get("camposError");
+				$camposViejos = Session::get("campos");
+				$usuario=$camposViejos['usuario'];
+				$nombre=$camposViejos['nombre'];
+				$apellido=$camposViejos['apellido'];
+				$email=$camposViejos['email'];
+				Session::clear("camposError");
+				Session::clear("campos");
+			} else {
+				$usuario="";
+				$nombre="";
+				$apellido="";
+				$email="";
+			};
 	?>
 	<div id="registro" class="tresCol">
 		<div>
@@ -42,14 +57,13 @@
 					</div>
 					<div>
 						<form id='formRegistro' action="php/registrar.php" method="post">
-							<input class='inputRegistro' type="text" name="usuario" placeholder="Usuario"/>
-							<input class='inputRegistro' type="text" name="nombre" placeholder="Nombre"/>
-							<input class='inputRegistro' type="text" name="apellido" placeholder="Apellido"/>
-							<input class='inputRegistro' type="text" name="mail" placeholder="Mail"/>
+							<input <?php echo "value='$usuario'"?> class='inputRegistro' type="text" name="usuario" placeholder="Usuario"/>
+							<input <?php echo "value='$nombre'"?> class='inputRegistro' type="text" name="nombre" placeholder="Nombre"/>
+							<input <?php echo "value='$apellido'"?> class='inputRegistro' type="text" name="apellido" placeholder="Apellido"/>
+							<input <?php echo "value='$email'"?> class='inputRegistro' type="text" name="email" placeholder="Mail"/>
 							<input class='inputRegistro' type="password" name="clave" placeholder="Clave"/>
-							<input class='inputRegistro' type="password" name="confClave"
-								   placeholder="Confirmar Clave"/>
-							<div><input type="checkbox" name="terminos" id="terminos" value="y"/>
+							<input class='inputRegistro' type="password" name="confClave" placeholder="Confirmar Clave"/>
+							<div><input type="checkbox" name="terminos" id="terminos" value="Y"/>
 								<label for="terminos"> Acepto los términos y condiciones </label></div>
 							<div class='btnIngresar'>
 								<input type="submit" value="REGISTRARSE"/>

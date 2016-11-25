@@ -1,11 +1,7 @@
 <?php	
 	require_once('../config.php');
 	$inputs = $_POST;
-	/*session_start();
-    $_SESSION['autentificacion']='N';
-    if (isset($_POST["usuario"]) && !empty($_POST["usuario"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
-        $_SESSION['usuario'] = $_POST['usuario'];
-	*/
+
 	Session::start();
     if (isset($_POST["usuario"]) && !empty($_POST["usuario"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
         Session::set('usuario',$_POST["usuario"]);
