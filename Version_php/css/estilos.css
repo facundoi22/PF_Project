@@ -32,6 +32,10 @@ header{
 	height: 75px;
 }
 
+
+
+
+
 .dosCol {
 	width: 48%;
 	display: inline-block;	
@@ -363,8 +367,7 @@ footer li {
 
 footer a{
 	text-decoration: none;
-	color: #FFFF;
-}
+	}
 
 
 footer .cincoCol:last-of-type {
@@ -963,6 +966,8 @@ footer .cincoCol:last-of-type li~li{
 	color:grey;
 	font-size:14px;
 }
+
+#footer a {color:white;}
 
 #footer .cincoCol a:hover{/*border-bottom:2px solid white; subline; */
 	color:orange;}
@@ -1821,6 +1826,9 @@ nav > ul > li > a  > span {vertical-align:middle;
 	display:inline-block;
 	margin-bottom:30px;}
 
+/* 
+
+Lo comenté el 24/11 porque no se usa y jode cuando queres dar estilo 
 
 #ventanaDetalle{position:fixed;
 	top:0;
@@ -1866,7 +1874,7 @@ nav > ul > li > a  > span {vertical-align:middle;
 
 #ventanaDetalle img {width:48%;
 	display:inline-block;
-}
+} */
 
 
 #ventanaDatos{position:fixed;
@@ -2358,7 +2366,7 @@ form h3 {margin-bottom:15px;}
 	background-color: #b2adad;
 }
 
-#miequipo main> div~div >div>div table  tbody  #miEquipo {
+#miequipo main> div~div >div>div table  tbody  #EquipoResaltado {
 	background-color: #706d6d;
 	color:#FFF;
 }
@@ -2743,3 +2751,118 @@ main > div > div form {
 #publicidad a:hover {
 	background-position: right bottom;
 }
+
+
+/** nuevo **/
+
+
+.oculto{display:none;}
+
+#miusuario{margin-top:99px;}
+
+#miusuario h2{font-size: 30px;
+			 color:#e48d10}
+
+#footer h2{font-size: 60px;
+			color:rgba(0,0,0,0);} 
+#footer h3{font-size: 20px;}
+
+#footer{height:100%;}
+
+
+
+
+#miusuario #primerafilamiusuario{margin:30px 0px 0px 0px;
+								/* border:1px solid red; */
+								background-color:#f6f6f6;}
+
+#miusuario #primerafilamiusuario img {border-radius:50%;
+									width:180px;
+									height:180px;}
+									
+#miusuario #primerafilamiusuario div:first-of-type{background-color:#009c58;
+												text-align:center;
+												padding-top:40px;
+												padding-bottom:40px;
+												}
+
+#accionesEquipo div:first-of-type {color:#009c58;}
+
+ #datosusuario  .nombreUser{font-size:50px;
+							color:#009c58;}
+
+#datosusuario {padding-left:4%;
+				font-size:16px;
+				}
+				
+#datosusuario li span {color:#e48d10;}
+
+#datosusuario li  ul {padding-left:10px;}
+
+#accionesEquipo h3{margin-top:0px;}
+#accionesEquipo{vertical-align:top;}
+
+#miusuario #crearEquipo, #buscarEquipo, #verEquipos  {width:100%;
+													height:100%;
+													/* background-color:#e48d10; */
+													display:block;
+													text-align:center;
+													border-radius:10px;
+													color:orange;
+													font-size:18px;
+													font-weight:bold;
+													padding:3% 0px;}
+													
+#miusuario #crearEquipo:hover, #buscarEquipo:hover, #verEquipos:hover  {background-color:#ccff99;
+																		text-decoration:none;}
+
+																		
+#miusuario  #registroModal {background-color:white;
+							width:50%;
+							margin:auto;}	
+
+
+#registroEquipo>div {  
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	right:0px;
+	bottom: 0px;
+	z-index:20;
+	background-color: rgba(000,000,000,0.4);			
+}	
+#registroEquipo>div >div {background-color:white;
+						width:50%;
+						margin:auto;
+						}	
+						
+#registroEquipo>div >div ~div{padding:20px 0px 50px 0px;}
+						
+#registroEquipo>div >div  form {margin:auto;
+							width:75%;
+							text-align:center;}					
+
+#registroEquipo>div >div label {display:block;
+						  text-align:left;
+						  width: 100%;
+						  height: 100%;
+					      padding: 0.8em 2em 0.8em 2em;}
+						  
+#registroEquipo>div >div label input{display:block;
+							  text-align:left;
+							  width:100%;
+							  padding: 8px 30px 8px 30px;
+							  }
+
+							  
+#subirFotoPerfil{position:absolute;
+				 top:90%;
+				 left:70%;
+				 color:#9bff79;
+				/*  font-weight:bold; */}
+				
+#subirFotoPerfil:hover{color:#41ff00;
+						cursor:pointer;
+						}
+
+#miusuario #datosusuario+div {padding-top:30px;}																	
