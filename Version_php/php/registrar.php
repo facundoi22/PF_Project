@@ -10,9 +10,6 @@
 
     $formValidator = new FormValidator( $inputs);
 
-	imprimir($formValidator->getCampos());
-	imprimir($formValidator->getCamposError());
-
 
 	// Si hay algún campo en error, vuelvo al formulario, indicando que hay errores;
 	//if ( $_SESSION['camposError'] ){
