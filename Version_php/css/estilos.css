@@ -424,10 +424,11 @@ footer .cincoCol:last-of-type li~li{
 }
 
 #registroModal >div {
-	width: 45%;
-	height: 90%;
+	width: 50%;
+	height: 95%;
 	margin-left: 27%;
-	margin-top: 3%;
+	margin-top: 10px;
+
 	z-index: 20;
 	background-color:#e0e0e0;
 	border-radius:3px;
@@ -555,6 +556,7 @@ footer .cincoCol:last-of-type li~li{
 	height: 400px;
 	width:100%;
 	background-size: cover;
+	display: flex;
 	/* filter: blur(1px);  */
 }
 
@@ -566,7 +568,7 @@ footer .cincoCol:last-of-type li~li{
 	background-color: rgba(0, 156, 88, 0.9);
 	width:70%;
 	margin-left: 30%;
-	height: 100%;
+	height: 80%;
 	vertical-align: top;
 	margin-top: 8%;
 	border-radius:6px;
@@ -620,7 +622,7 @@ footer .cincoCol:last-of-type li~li{
 	border-radius:6px;
 	margin-top: 2%;
 	/* margin-left: 20%; */
-	width: 70%;
+	width: 38%;
 	height:100%;
 	box-shadow: 0px 3px 0px #e48d10;
 	text-align:right;
@@ -676,7 +678,7 @@ footer .cincoCol:last-of-type li~li{
 	color: #FFF;
 	width: 80%;
 	display: inline-block;
-	height: 30%;
+	height: 15%;
 	/* margin-left: 10%; */
 	margin-top: 5%;
 	font-size: 1.2em;
@@ -2865,4 +2867,25 @@ main > div > div form {
 						cursor:pointer;
 						}
 
-#miusuario #datosusuario+div {padding-top:30px;}																	
+#miusuario #datosusuario+div {padding-top:30px;}
+
+/*#registroModal > div > div:last-of-type div*/
+#registroModal >div > div:last-of-type > form > .DivErrores {
+	display:inline-block;
+	width: 58%;
+}
+
+#DivFormLogin form {
+	margin-top: 10px;
+}
+#DivFormLogin h3 {
+	font-size: 18px;
+	color: #F00;
+	background-color: #FFF;
+	font-weight: bold;
+	line-height:30px;
+}
+
+#fotoExpandida .dosCol {
+	vertical-align: bottom;
+}

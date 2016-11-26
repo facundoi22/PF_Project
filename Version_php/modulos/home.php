@@ -21,11 +21,10 @@
 				</form>
 				<a href="#">Olvidé Mi Contraseña</a>
 				<?php
-				if (isset($_SESSION['errorLogin'])){
-					echo ("<h3> ". $_SESSION['errorLogin'] ." </h3>");
-					$_SESSION['errorLogin'] ="";
+				if (Session::has('errorLogin')){
+					echo ("<h3> ". Session::get('errorLogin') ." </h3>");
+					Session::clear('errorLogin');
 				}
-				session_destroy();
 				?>
 			</div>
 		</div>
@@ -61,8 +60,12 @@
 	</div>
 
 </main>
-<div id="publicidad" style="bottom: 0px; left: 0px; height:60px; left: 0px;">
-	<img src="images/publicidad_1.png" alt="publicidad"/>
-	<a href="#" title="Cerrar">Cerrar</a>
-</div>
-<script src='js/publicidad.js'></script>
+<?php if (!Session::has("publicidad")){
+	Session::set("publicidad", "Y");
+	echo "<div id='publicidad' style='bottom: 0px; left: 0px; height:60px; left: 0px;'>";
+	echo "<img src='images/publicidad_1.png' alt='publicidad'/>";
+	echo "<a href='#' title='Cerrar'>Cerrar</a>";
+	echo "</div>";
+	echo "<script src='js/publicidad.js'></script>";
+};
+?>

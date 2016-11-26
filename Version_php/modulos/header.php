@@ -65,6 +65,17 @@
 							<input class='inputRegistro' type="password" name="confClave" placeholder="Confirmar Clave"/>
 							<div><input type="checkbox" name="terminos" id="terminos" value="Y"/>
 								<label for="terminos"> Acepto los términos y condiciones </label></div>
+							<?php
+							if (! $usuarioLogueado && isset($camposError)){
+								echo("<div class='DivErrores'><ul>");
+								foreach ($camposError as $error => $descr) {
+									echo ("<li style='color:#F00'>".ucfirst($error).": ".$descr."</li>");
+								}
+								echo("</ul></div>");
+							}
+							?>
+
+
 							<div class='btnIngresar'>
 								<input type="submit" value="REGISTRARSE"/>
 							</div>

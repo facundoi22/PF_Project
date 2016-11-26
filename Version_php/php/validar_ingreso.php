@@ -5,9 +5,6 @@
 	Session::start();
     if (isset($_POST["usuario"]) && !empty($_POST["usuario"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
         Session::set('usuario',$_POST["usuario"]);
-
-	    $error =0;
-	    $errorActual = "";
         $usuario = New Usuario($_POST['usuario'], $_POST['password']);
         $error = $usuario->validarUsuario();
     } else {
@@ -27,7 +24,7 @@
 		}
 	} else {
 		if ($error){
-		    Session::set('error', $error);
+		    Session::set('errorLogin', $error);
 		    Session::set('usuario', null);
             Session::set('logueado','N');
 			//$_SESSION['error'] = $error;

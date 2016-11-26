@@ -121,12 +121,6 @@ class Torneo
 		echo "</table>";
     }
 
-    public static function imprimir($aImprimir)
-    {
-        echo "<pre>";
-        print_r($aImprimir);
-        echo "</pre>";
-    }
 
 
 }
