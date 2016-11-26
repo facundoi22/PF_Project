@@ -1796,6 +1796,8 @@ form h3 {margin-bottom:15px;}
 	font-size: 1.8em;
 	margin-left: 15px;
 	font-style: italic;
+	text-align: center;
+	width: 250px;
 }
 
 #miequipo main > div ~ div {
@@ -2031,9 +2033,12 @@ form h3 {margin-bottom:15px;}
 	margin-left: 20px;
 }
 
-
-
 #miequipo main> div~div ~div >div>div ul li a~a{
+	text-decoration: none;
+	color:#000;
+}
+
+#miequipo main> div~div ~div >div>div ul li a~a~a{
 
 	background-color:#e48d10;
 	border: outset 1px #FFF;
