@@ -117,9 +117,17 @@ class Equipo
                 $boton = "";
             }
 
-            echo "<li><img src='images/usuarios/" . $datos['JUGADOR_ID'] . ".jpg' alt='Foto del Jugador " . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "'/><span ".$idCapitan.">" . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "</span>".$boton ."</li>";
+            echo "<li><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><img src='images/usuarios/" . $datos['JUGADOR_ID'] . ".jpg' alt='Foto del Jugador " . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "'/></a><span ".$idCapitan.">" . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "</span>".$boton ."</li>";
         }
         echo "</ul>";
+    }
+
+
+    public static function existeEquipo ($equipo_id){
+        $query = "SELECT 'X' FROM EQUIPOS WHERE EQUIPO_ID = :equipo_id ";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['equipo_id' => $equipo_id]);
+        return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
     }
 
 }

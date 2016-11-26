@@ -12,8 +12,7 @@
 
 
 	// Si hay algún campo en error, vuelvo al formulario, indicando que hay errores;
-	//if ( $_SESSION['camposError'] ){
-    if ( !empty($formValidator->getCamposError()) ){
+	if ( !empty($formValidator->getCamposError()) ){
         Session::set("camposError",$formValidator->getCamposError());
         Session::set("campos",$formValidator->getCampos());
 		header("Location: ../index.php?error=1#registroModal");

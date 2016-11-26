@@ -14,7 +14,9 @@ class Usuario
     protected $ultimaVez;
 
     protected $password;
-    protected $equipo;
+    protected $equipos;
+    protected $torneos;
+    protected $torneosPropios;
 
 
     /**
@@ -29,7 +31,9 @@ class Usuario
             $this->password= SHA1($pwd);
         }
         $this->setUsuario();
-        $this->setEquipo();
+        $this->setEquipos();
+        $this->setTorneos();
+        $this->setTorneosPropios();
     }
 
 
@@ -61,19 +65,43 @@ class Usuario
         return $rta;
     }
 
-    public function setEquipo($equipo = null)
+    public function setEquipo($equipo)
     {
-        if ($equipo) {
-            $this->equipo = New Equipo($equipo );
-        } else {
-            $query = "SELECT EQUIPO_ID FROM JUGADORES WHERE JUGADOR_ID = :usuario_id ";
-            $stmt = DBConnection::getStatement($query);
-            $stmt->execute(['usuario_id' => $this->usuario_id]);
-            if ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                $this->equipo = New Equipo($datos['EQUIPO_ID']);
-            }
+        $this->equipos[] = New Equipo($equipo);
+    }
+
+    public function setEquipos(){
+        $this->equipos = [];
+        $query = "SELECT EQUIPO_ID FROM JUGADORES WHERE JUGADOR_ID = :usuario_id ";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['usuario_id' => $this->usuario_id]);
+        while ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $this->equipos[] = New Equipo($datos['EQUIPO_ID']);
+
         };
     }
+
+    public function setTorneos(){
+        $this->torneos = [];
+        $query = "SELECT DISTINCT A.TORNEO_ID FROM TORNEOS A, EQUIPOS_TORNEO B , JUGADORES C WHERE A.TORNEO_ID = B.TORNEO_ID AND B.EQUIPO_ID = C.EQUIPO_ID AND C.JUGADOR_ID = :usuario_id ";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['usuario_id' => $this->usuario_id]);
+        while ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $this->torneos[] = New Torneo($datos['TORNEO_ID']);
+        };
+    }
+
+    public function setTorneosPropios(){
+        $this->torneosPropios = [];
+        $query = "SELECT DISTINCT A.TORNEO_ID FROM TORNEOS A, ORGANIZADORES B WHERE A.TORNEO_ID = B.TORNEO_ID AND B.ACTIVO = 1 AND B.ORGANIZADOR_ID =  :usuario_id ";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['usuario_id' => $this->usuario_id]);
+        while ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            $this->torneosPropios[] = New Torneo($datos['TORNEO_ID']);
+
+        };
+    }
+
 
     public function setUsuario()
     {
@@ -91,11 +119,44 @@ class Usuario
     }
 
 	public function tieneEquipo() {
-	    return !empty($this->equipo);
+	    return !empty($this->equipos[0]);
     }
 
-    public function getEquipo(){
-        return $this->equipo;
+    public function tieneTorneo() {
+        return !empty($this->torneos[0]);
+    }
+
+    public function tieneTorneoPropio() {
+        return !empty($this->torneosPropios[0]);
+    }
+
+    public function getEquipos(){
+        return $this->equipos;
+    }
+
+    public function getTorneos(){
+        return $this->torneos;
+    }
+
+    public function getTorneosPropios(){
+        return $this->torneosPropios;
+    }
+
+    public function getUsuarioID(){
+        return $this->usuario_id;
+    }
+
+
+    public function getNombre(){
+        return $this->nombre;
+    }
+
+
+    public function getApellido(){
+        return $this->apellido;
+    }
+    public function getNombreCompleto(){
+        return $this->nombre . " " . $this->apellido;
     }
 
     public static function CrearUsuario($vUsuario){
@@ -122,6 +183,14 @@ class Usuario
         $stmt = DBConnection::getStatement($query);
         $stmt->execute(['usuario_id' => $usuario_id]);
         return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
+    }
+
+
+    public static    function imprimir($aImprimir)
+    {
+        echo "<pre>";
+        print_r($aImprimir);
+        echo "</pre>";
     }
 
 }

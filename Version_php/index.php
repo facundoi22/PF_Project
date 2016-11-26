@@ -7,11 +7,6 @@
 		Session::start();
 
 		$usuario = "";
-/*
-		session_start();
-		if (isset($_SESSION['usuario'])){
-			$usuario = $_SESSION['usuario'];
-		}*/
 		if (Session::has("usuario")){
 			$usuario = Session::get("usuario");
 		}
@@ -28,6 +23,7 @@
 			case 'resultado':
 			case 'login':
 			case 'panel':
+			case 'error404':
 				break;
 			default: $seccionActual = 'home';
 		}

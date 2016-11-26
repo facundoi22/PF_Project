@@ -84,7 +84,7 @@ class Torneo
         $stmt = DBConnection::getStatement($query);
         $stmt->execute(['torneo_id' => $this->torneo_id]);
         while ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $this->equipso[] = New Equipo($datos['EQUIPO_ID']);
+            $this->equipos[] = New Equipo($datos['EQUIPO_ID']);
         };
     }
 
@@ -115,7 +115,8 @@ class Torneo
                 $resaltado = "";
             };
             echo "<tr  id='". $resaltado."'>";
-            echo "<td>". $datos['NOMBRE'] . "</td ><td>15</td><td>5</td><td>5</td><td>0</td><td>0</td><td>27</td><td>8</td><td>19</td></tr>";
+            echo "<td><a href='index.php?seccion=miequipo&equipo_id=".$datos['EQUIPO_ID']."' title='Ver Equipo'>". $datos['NOMBRE'] . "</a></td ><td>15</td><td>5</td><td>5</td><td>0</td><td>0</td><td>27</td><td>8</td><td>19</td></tr>";
+
         }       ;
         echo "</tbody>";
 		echo "</table>";

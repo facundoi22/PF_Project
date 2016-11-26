@@ -321,7 +321,7 @@ main>div~div~div li {
 	width: 80%;
 }
 
-main>div:last-of-type {
+#home main>div:last-of-type {
 	padding-top: 2%;
 	text-align: center;
 	height: 150px;
@@ -564,7 +564,8 @@ footer .cincoCol:last-of-type li~li{
 	text-align: left;
 	background-image: url(../images/mail.png);}
 
-#DivFormLogin{
+#DivFormLogin ,
+#DivBienvenido{
 	background-color: rgba(0, 156, 88, 0.9);
 	width:70%;
 	margin-left: 30%;
@@ -822,10 +823,6 @@ footer .cincoCol:last-of-type li~li{
 	vertical-align:middle;
 	display:inline-block}
 
-.tituloResBusq{font-weight:bold;
-	color:orange;
-	font-size:26px;
-	height:45px;}
 
 .descripcionResBusq{color:#666666;
 	height:45px;
@@ -1001,13 +998,6 @@ footer .cincoCol:last-of-type li~li{
 	font-size:25px;
 }
 
-#tituloBanner {font-size:30px;
-	text-align:center;
-	border-bottom:1px solid #C90035;
-	padding:6px;
-	margin: 0px 8px 0px 8px;
-	display:block;
-}
 
 
 #categoria {font-size:30px;
@@ -1281,237 +1271,8 @@ form h3 {margin-bottom:15px;}
 
 
 
-#ventanaCarrito{position:fixed;
-	top:0;
-	left:0;
-	background:rgba(255,255,255,0.85);
-	width:100%;
-	height:100%;
-}
-
-#ventanaCarrito table {margin:1% 5% 1% 5%;
-	border-collapse:collapse;
-	border-spacing:0;
-}
-
-
-
-#ventanaCarrito table th {background-color:grey;
-	color:white;
-	font-weight:bold;
-	padding:5px;
-}
-
-
-#ventanaCarrito table tr {height:100px;}
-
-#ventanaCarrito table td {width:16.6666%;
-	text-align:center;}
-
-#ventanaCarrito img {width:80px;
-	display:inline-block;
-}
-
-
-#ventanaCarrito > div{ width: 900px;
-	margin: 20px auto;
-	box-shadow: 0 0 5px black;
-	padding: 9px 20px 20px 20px;
-	background: white;
-	min-height: 440px;
-}
-
-
-
-#ventanaCarrito h2 {text-align:center;
-	padding-top:20px;}
-
-#divPaso2 h2 {margin-bottom: 8%;
-	margin-top: 2%;}
-
-
-#ventanaCarrito > div div{display:inline-block;}
-
-#botonesCarrito {width:100%;}
-
-#botonesCarrito  div {margin:1% 5% 1% 5%;
-	width:40%;}
-
-
-
-
-#ventanaGracias{position:fixed;
-	top:0;
-	left:0;
-	background:rgba(255,255,255,0.85);
-	width:100%;
-	height:100%;
-	text-align:center;
-}
-
-#ventanaGracias > div{ width: 400px;
-	margin: 20px auto;
-	box-shadow: 0 0 5px black;
-	padding: 9px 20px 20px 20px;
-	background: white;
-
-	text-align:center;
-}
-
-#ventanaGracias  img{ width:90%;
-	margin: auto;
-	padding: 9px 10px 10px 10px;
-	text-align:center;
-}
-
-#ventanaGracias  p  + p {font-weight:bold;
-	margin-top:20px;}
-
-
-#ventanaGracias  div > div{height:20px;
-	width:100%;
-	background-color: #66cc00;
-	margin: 20px 0px 10px 0px;
-	padding:12px 0px 12px 0px;
-	font-weight:bold;
-	color:white;
-	border-radius:3px;}
-
-#ventanaGracias  div > div:hover{background-color: #00e600;}
-
-
-
-
-
-
-
-
-#ventanaResumen{position:fixed;
-	top:0;
-	left:0;
-	background:rgba(255,255,255,0.85);
-	width:100%;
-	height:100%;
-	text-align:center;
-}
-
-#ventanaResumen> div{ width: 500px;
-	margin: 20px auto;
-	box-shadow: 0 0 5px black;
-	padding: 9px 20px 20px 20px;
-	background: white;
-	text-align:center;
-}
-
-#ventanaResumen  img{ width:90%;
-	margin: auto;
-	padding: 9px 10px 10px 10px;
-	text-align:center;
-}
-
-
-
-#ventanaResumen  div  #divVacio{ color: red;
-	padding: 12px 0px 3px 0px;
-	font-weight:bold;
-}
-
-#ventanaResumen  div  #BotonVerde{height:20px;
-	width:100%;
-	background-color: #66cc00;
-	margin: 20px 0px 10px 0px;
-	padding:12px 0px 12px 0px;
-	font-weight:bold;
-	color:white;
-	border-radius:3px;}
-
-#ventanaResumen  div  #BotonVerde:hover{background-color: #00e600;
-	transition:all 1s ease;}
-
-
-#ventanaResumen  div #div_cerrar2 {background-color:white;
-	margin:0px 0px 20px 0px;
-	padding:0px;
-	text-align:right !important;}
-
-#ventanaResumen  div > #div_cerrar2 .cruz{background-color:white;
-	background-size: cover;
-	display:inline-block;
-	width:30px;
-	height:30px;
-	margin:0px;
-	padding:0px;
-	text-align:right!important;}
-
-
-
-
-#ventanaResumen table {margin:1% 5% 1% 5%;
-	border-collapse:collapse;
-	width: 450px;
-}
-
-
-#ventanaResumen table td {width:25%;
-	text-align:center;
-	color:#4d4d4d;}
-
-
-#ventanaResumen table .grisesito {color:black;
-	text-align:center;
-	font-weight:bold;
-}
-
-
-
-#ventanaResumen table tr {height:60px;
-	border-bottom:1px solid grey;
-	border-top:1px solid grey;}
-
-#ventanaResumen table .casillafinal {font-weight:bold;
-	color:black;
-}
-
-
-#divVacioForm {	color:red;
-	text-align:center;
-	font-weight:bold;
-	margin-bottom: 10px;
-	margin-top: 5px;}
-
-
-.cruz{background-image:url(../img/cruz_cerrar2_gris.png);
-	background-size: cover;
-	display:inline-block;
-	width:30px;
-	height:30px;
-	margin:0px;
-	padding:0px;}
-
-.cruz:hover{background-image:url(../img/cruz_cerrar2.png);}
-
 .precio{font-size:20px;}
 
-.mosaico{width:32%;
-	display:inline-block;
-	text-align:center;
-	border-bottom: 1px grey solid;
-	height:30%;
-	padding:15px 0px 15px 0px;
-	position:relative;}
-
-.titulo{font-size:18px;
-	color:#cc0000;
-	font-weight:bold;
-	padding-bottom:15px;
-	padding-top:15px;
-	/*transition:all 3s ease;
-    -moz-transition-property: font-size;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-property: font-size;
-    -webkit-transition-duration: 0.5s;
-    -o-transition-property: font-size;
-    -o-transition-duration: 0.5s;*/}
 
 .precio{font-size:18px;
 	color:#555555;
@@ -1528,23 +1289,6 @@ form h3 {margin-bottom:15px;}
 
 
 
-.cartelDentroMosaico{position:absolute;
-	bottom:0px;
-	width:100%;
-	height:40px;
-	background-color:black;
-	color:white;
-	padding-top:20px;
-	font-weight:bold;
-	display:none;
-	-moz-transition-property: display;
-	-moz-transition-duration: 1s;
-	-moz-transition-timing-function: ease-out;
-	-webkit-transition-property: display;
-	-webkit-transition-duration: 1s;
-	-o-transition-property: display;
-	-o-transition-duration: 1s;
-}
 
 /*otrassecciones busqueda.css*/
 /* FIN Cosas de FACU */
@@ -1616,10 +1360,6 @@ form h3 {margin-bottom:15px;}
 	vertical-align:middle;
 	display:inline-block}
 
-.tituloResBusq{font-weight:bold;
-	color:orange;
-	font-size:26px;
-	height:45px;}
 
 .descripcionResBusq{color:#666666;
 	height:45px;
@@ -1725,14 +1465,6 @@ form h3 {margin-bottom:15px;}
 	vertical-align:top;
 	padding:30px 10px 10px 10px;
 	font-size:25px;
-}
-
-#tituloBanner {font-size:30px;
-	text-align:center;
-	border-bottom:1px solid #C90035;
-	padding:6px;
-	margin: 0px 8px 0px 8px;
-	display:block;
 }
 
 
@@ -2008,239 +1740,13 @@ form h3 {margin-bottom:15px;}
 }
 
 
-
-
-#ventanaCarrito{position:fixed;
-	top:0;
-	left:0;
-	background:rgba(255,255,255,0.85);
-	width:100%;
-	height:100%;
-}
-
-#ventanaCarrito table {margin:1% 5% 1% 5%;
-	border-collapse:collapse;
-	border-spacing:0;
-}
-
-
-
-#ventanaCarrito table th {background-color:grey;
-	color:white;
-	font-weight:bold;
-	padding:5px;
-}
-
-
-#ventanaCarrito table tr {height:100px;}
-
-#ventanaCarrito table td {width:16.6666%;
-	text-align:center;}
-
-#ventanaCarrito img {width:80px;
-	display:inline-block;
-}
-
-
-#ventanaCarrito > div{ width: 900px;
-	margin: 20px auto;
-	box-shadow: 0 0 5px black;
-	padding: 9px 20px 20px 20px;
-	background: white;
-	min-height: 440px;
-}
-
-
-
-#ventanaCarrito h2 {text-align:center;
-	padding-top:20px;}
-
 #divPaso2 h2 {margin-bottom: 8%;
 	margin-top: 2%;}
 
 
-#ventanaCarrito > div div{display:inline-block;}
-
-#botonesCarrito {width:100%;}
-
-#botonesCarrito  div {margin:1% 5% 1% 5%;
-	width:40%;}
-
-
-
-
-#ventanaGracias{position:fixed;
-	top:0;
-	left:0;
-	background:rgba(255,255,255,0.85);
-	width:100%;
-	height:100%;
-	text-align:center;
-}
-
-#ventanaGracias > div{ width: 400px;
-	margin: 20px auto;
-	box-shadow: 0 0 5px black;
-	padding: 9px 20px 20px 20px;
-	background: white;
-
-	text-align:center;
-}
-
-#ventanaGracias  img{ width:90%;
-	margin: auto;
-	padding: 9px 10px 10px 10px;
-	text-align:center;
-}
-
-#ventanaGracias  p  + p {font-weight:bold;
-	margin-top:20px;}
-
-
-#ventanaGracias  div > div{height:20px;
-	width:100%;
-	background-color: #66cc00;
-	margin: 20px 0px 10px 0px;
-	padding:12px 0px 12px 0px;
-	font-weight:bold;
-	color:white;
-	border-radius:3px;}
-
-#ventanaGracias  div > div:hover{background-color: #00e600;}
-
-
-
-
-
-
-
-
-#ventanaResumen{position:fixed;
-	top:0;
-	left:0;
-	background:rgba(255,255,255,0.85);
-	width:100%;
-	height:100%;
-	text-align:center;
-}
-
-#ventanaResumen> div{ width: 500px;
-	margin: 20px auto;
-	box-shadow: 0 0 5px black;
-	padding: 9px 20px 20px 20px;
-	background: white;
-	text-align:center;
-}
-
-#ventanaResumen  img{ width:90%;
-	margin: auto;
-	padding: 9px 10px 10px 10px;
-	text-align:center;
-}
-
-
-
-#ventanaResumen  div  #divVacio{ color: red;
-	padding: 12px 0px 3px 0px;
-	font-weight:bold;
-}
-
-#ventanaResumen  div  #BotonVerde{height:20px;
-	width:100%;
-	background-color: #66cc00;
-	margin: 20px 0px 10px 0px;
-	padding:12px 0px 12px 0px;
-	font-weight:bold;
-	color:white;
-	border-radius:3px;}
-
-#ventanaResumen  div  #BotonVerde:hover{background-color: #00e600;
-	transition:all 1s ease;}
-
-
-#ventanaResumen  div #div_cerrar2 {background-color:white;
-	margin:0px 0px 20px 0px;
-	padding:0px;
-	text-align:right !important;}
-
-#ventanaResumen  div > #div_cerrar2 .cruz{background-color:white;
-	background-size: cover;
-	display:inline-block;
-	width:30px;
-	height:30px;
-	margin:0px;
-	padding:0px;
-	text-align:right!important;}
-
-
-
-
-#ventanaResumen table {margin:1% 5% 1% 5%;
-	border-collapse:collapse;
-	width: 450px;
-}
-
-
-#ventanaResumen table td {width:25%;
-	text-align:center;
-	color:#4d4d4d;}
-
-
-#ventanaResumen table .grisesito {color:black;
-	text-align:center;
-	font-weight:bold;
-}
-
-
-
-#ventanaResumen table tr {height:60px;
-	border-bottom:1px solid grey;
-	border-top:1px solid grey;}
-
-#ventanaResumen table .casillafinal {font-weight:bold;
-	color:black;
-}
-
-
-#divVacioForm {	color:red;
-	text-align:center;
-	font-weight:bold;
-	margin-bottom: 10px;
-	margin-top: 5px;}
-
-
-.cruz{background-image:url(../images/cruz_cerrar2_gris.png);
-	background-size: cover;
-	display:inline-block;
-	width:30px;
-	height:30px;
-	margin:0px;
-	padding:0px;}
-
-.cruz:hover{background-image:url(../images/cruz_cerrar2.png);}
 
 .precio{font-size:20px;}
 
-.mosaico{width:32%;
-	display:inline-block;
-	text-align:center;
-	border-bottom: 1px grey solid;
-	height:30%;
-	padding:15px 0px 15px 0px;
-	position:relative;}
-
-.titulo{font-size:18px;
-	color:#cc0000;
-	font-weight:bold;
-	padding-bottom:15px;
-	padding-top:15px;
-	/*transition:all 3s ease;
-    -moz-transition-property: font-size;
-    -moz-transition-duration: 0.5s;
-    -webkit-transition-property: font-size;
-    -webkit-transition-duration: 0.5s;
-    -o-transition-property: font-size;
-    -o-transition-duration: 0.5s;*/}
 
 .precio{font-size:18px;
 	color:#555555;
@@ -2257,23 +1763,6 @@ form h3 {margin-bottom:15px;}
 
 
 
-.cartelDentroMosaico{position:absolute;
-	bottom:0px;
-	width:100%;
-	height:40px;
-	background-color:black;
-	color:white;
-	padding-top:20px;
-	font-weight:bold;
-	display:none;
-	-moz-transition-property: display;
-	-moz-transition-duration: 1s;
-	-moz-transition-timing-function: ease-out;
-	-webkit-transition-property: display;
-	-webkit-transition-duration: 1s;
-	-o-transition-property: display;
-	-o-transition-duration: 1s;
-}
 
 /*otrassecciones equipo*/
 
@@ -2321,7 +1810,7 @@ form h3 {margin-bottom:15px;}
 	color: #e48d10;
 	background-image: url(../images/torneoEscudo.png);
 	background-repeat: no-repeat;
-	background-position: 5% 0%;
+	background-position: 5% 50%;
 	text-align: center;
 
 }
@@ -2344,7 +1833,7 @@ form h3 {margin-bottom:15px;}
 #miequipo main> div~div ~div >div>div h3{
 	color: #FFF;
 	font-size: 1.2em;
-	line-height: 1.5em;
+	line-height: 3em;
 	background-color: #009c58;
 }
 
@@ -2352,6 +1841,16 @@ form h3 {margin-bottom:15px;}
 	text-align: left;
 	padding-left: 10%;
 }
+
+#miequipo main > div ~ div > div > div table tbody tr td:first-of-type a {
+	text-decoration: none;
+	color: #000;
+}
+
+#miequipo main > div ~ div > div > div table tbody #EquipoResaltado a{
+	color: #FFF;
+}
+
 
 #miequipo main> div~div >div>div table  tbody{
 	color: #000;
@@ -2361,7 +1860,7 @@ form h3 {margin-bottom:15px;}
 }
 
 #miequipo main> div~div >div>div table  tbody  tr {
-	line-height: 2em;
+	line-height: 3em;
 }
 
 #miequipo main> div~div >div>div table  tbody  tr:nth-child(even) {
@@ -2415,8 +1914,9 @@ form h3 {margin-bottom:15px;}
 }
 
 #miequipo main> div~div >div>div~div p~p~p{
-	padding-right: 40px;
+	padding-right: 60px;
 	text-align: right;
+	padding-left: 0px;
 }
 
 
@@ -2426,6 +1926,7 @@ form h3 {margin-bottom:15px;}
 	color: #FFF;
 	line-height: 2em;
 	padding-left:50px;
+	margin-bottom: 0px;
 }
 
 #miequipo main> div~div >div>div~div img ,
@@ -2440,11 +1941,11 @@ form h3 {margin-bottom:15px;}
 }
 
 #miequipo #companeros ~ .dosCol p {
-	margin-left:20px;
+	margin-left:30px;
 }
 
 #miequipo #companeros ~ .dosCol >div >div > p ~ p{
-	margin-left:0px;
+	margin-left:20px;
 	padding-left:10px;
 	width: 180px;
 	display:inline-block;
@@ -2454,8 +1955,9 @@ form h3 {margin-bottom:15px;}
 
 
 #miequipo #companeros ~ .dosCol >div >div > p ~ p~ p {
-	padding-right: 20px;
+	padding-right: 40px;
 	text-align: right;
+	margin-left:0px;
 }
 
 #miequipo #companeros ~ .dosCol >div >div ~ div > img{
@@ -2469,14 +1971,16 @@ form h3 {margin-bottom:15px;}
 #miequipo main> div~div >div>div~div img:last-of-type {
 	border-radius: 0%;
 	margin-left: 50px;
+	padding-bottom:10px;
 }
 
 #miequipo main > div ~ div ~ div > div > div ~ div > div > div img {
-	margin-left: 0px;
+	margin-left: 35px;
 }
 
 #miequipo main > div ~ div ~ div > div > div ~ div > div img:last-of-type {
 	border-radius: 50%;
+	margin-left: 40px;
 }
 
 
@@ -2496,12 +2000,13 @@ form h3 {margin-bottom:15px;}
 	height: 50px;
 	margin-left: 30px;
 	margin-top: 0px;
+	text-align: center;
 }
 
 #miequipo main> div~div ~div >div>div ul{
 	background-color: #e0e0e0;
 	border: 0px;
-	margin-left: 52px;
+	margin-left: 30px;
 }
 
 #miequipo main> div~div ~div >div>div ul li {
@@ -2526,7 +2031,9 @@ form h3 {margin-bottom:15px;}
 	margin-left: 20px;
 }
 
-#miequipo main> div~div ~div >div>div ul li a{
+
+
+#miequipo main> div~div ~div >div>div ul li a~a{
 
 	background-color:#e48d10;
 	border: outset 1px #FFF;
@@ -2603,12 +2110,12 @@ form h3 {margin-bottom:15px;}
 	border-radius: 0%;
 	text-decoration: none;
 	color: #FFF;
-	width: 250px;
+	width: 350px;
 	display: inline-block;
-	height: 60px;
-	margin-left:20px;
-	font-size: 0.8em;
-	line-height: 2em;
+	height: 40px;
+	margin-left:25px;
+	font-size: 0.9em;
+	line-height: 2.5em;
 	text-align: center;
 	text-transform: uppercase;
 	box-shadow: 0px 0px 0px black;
@@ -2774,10 +2281,15 @@ main > div > div form {
 
 
 
-#miusuario #primerafilamiusuario{margin:30px 0px 0px 0px;
-								/* border:1px solid red; */
-								background-color:#f6f6f6;}
+#miusuario #primerafilamiusuario{
+	margin:30px 0px 0px 0px;
+	/* border:1px solid red; */
+	background-color:#f6f6f6;
+	min-height:300px;
 
+}
+
+#DivBienvenido >img,
 #miusuario #primerafilamiusuario img {border-radius:50%;
 									width:180px;
 									height:180px;}
@@ -2888,4 +2400,51 @@ main > div > div form {
 
 #fotoExpandida .dosCol {
 	vertical-align: bottom;
+}
+
+
+#error404 main {
+	height:500px;
+}
+
+#error404 main > div:first-of-type {
+padding-left: 100px;
+}
+#error404 main > div:last-of-type {
+	padding-top: 120px;
+	text-align: center;
+	height: 150px;
+}
+
+#DivBienvenido  {
+	padding-top: 1px;
+	width: 350px;
+}
+
+
+#DivBienvenido h2 {
+	color: #FFF;
+}
+
+#DivBienvenido >img{
+	width:150px;
+	height:150px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#DivBienvenido >img ~ a{
+
+	background-color: orange;
+	color: white;
+	border-radius: 6px;
+	border: outset 6px #e48d10;
+	margin-top: 30px;
+	margin-left: 0px;
+	width: 200px;
+	height: 50px;
+	font-size: 20px;
+	line-height: 30px;
+	vertical-align: middle;
 }

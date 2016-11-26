@@ -4,7 +4,6 @@
 
 	Session::start();
     if (isset($_POST["usuario"]) && !empty($_POST["usuario"]) && isset($_POST["password"]) && !empty($_POST["password"])) {
-        Session::set('usuario',$_POST["usuario"]);
         $usuario = New Usuario($_POST['usuario'], $_POST['password']);
         $error = $usuario->validarUsuario();
     } else {
@@ -25,13 +24,13 @@
 	} else {
 		if ($error){
 		    Session::set('errorLogin', $error);
-		    Session::set('usuario', null);
-            Session::set('logueado','N');
-			//$_SESSION['error'] = $error;
-            //$_SESSION['usuario']="";
-            header("Location: ../index.php");
+		    Session::clear('usuario');
+            Session::clear('logueado');
+	        header("Location: ../index.php");
 		} else {
+            Session::clear('errorLogin');
+            Session::set('usuario',$usuario);
             Session::set('logueado','S');
-			header("Location: ../index.php?seccion=miusuario");
-		}
+            header("Location: ../index.php?seccion=miusuario&usuario_id=".$usuario->getUsuarioID());
+        }
 	} 	

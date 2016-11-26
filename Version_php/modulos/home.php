@@ -4,29 +4,45 @@
 			<h2 class="mayusculas">organiza o busca torneos deportivos</h2>
 		</div>
 		<div class="dosCol">
+			<?php if (Session::has("usuario")) {
+			$usuarioActual = Session::get("usuario");
+			echo "<div id='DivBienvenido'>";
+				echo "<h2>Bienvenido " . $usuarioActual->getNombre() ."</h2>";
+
+				if(file_exists('images/usuarios/'.$usuario->getUsuarioId() . '.jpg')){
+					echo "<img src='images/usuarios/".$usuario->getUsuarioId() . ".jpg' alt='foto perfil' />";
+				}else {
+					echo "<img src='images/icons/UserJugador.png' alt='foto perfil' />";
+				}
+
+				echo "<a href='index.php?seccion=miusuario&usuario_id=".$usuarioActual->getUsuarioID()."' title='Ingresar'>Ver mi usuario </a>";
+
+			echo "</div>";
+			 }else{
+			 ?>
 			<div id="DivFormLogin">
 				<a id='btnFacebook' href="#">Ingresar con Facebook</a>
 				<form action="php/validar_ingreso.php" method="POST">
 					<div class="DIVinputs">
-						<img src="images/mail.png" alt="icono Mail" style="height:20px;width:20px;" />&nbsp;
-						<input class='inputFormHome' type="text" name="usuario" placeholder="Usuario" <?php echo("value='$usuario'")?>/>
+						<img src="images/mail.png" alt="icono Mail" style="height:20px;width:20px;"/>&nbsp;
+						<input class='inputFormHome' type="text" name="usuario" placeholder="Usuario"/>
 					</div>
 					<div class="DIVinputs">
-						<img src="images/candadoVerde.png" alt="Icono Candado" style="height:20px;width:20px;" />&nbsp;
+						<img src="images/candadoVerde.png" alt="Icono Candado" style="height:20px;width:20px;"/>&nbsp;
 						<input class='inputFormHome' type="password" name="password" placeholder="Clave"/>
 					</div>
 					<div class='btnIngresar'>
-						<input  type="submit" value="INGRESAR" />
+						<input type="submit" value="INGRESAR"/>
 					</div>
 				</form>
 				<a href="#">Olvidé Mi Contraseña</a>
 				<?php
-				if (Session::has('errorLogin')){
-					echo ("<h3> ". Session::get('errorLogin') ." </h3>");
+				if (Session::has('errorLogin')) {
+					echo("<h3> " . Session::get('errorLogin') . " </h3>");
 					Session::clear('errorLogin');
-				}
-				?>
-			</div>
+				};
+				echo "</div>";
+			 } ?>
 		</div>
 	</div>
 	<div class="filaCompleta">
