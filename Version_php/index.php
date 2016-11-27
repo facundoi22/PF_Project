@@ -2,7 +2,6 @@
 <html lang="es">
 	<?php
 		include( 'config.php' );
-		include('funciones.php' );
 
 		Session::start();
 

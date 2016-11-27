@@ -65,6 +65,19 @@ class Usuario
         return $rta;
     }
 
+    public function validarAdmin(){
+        if($this->validarUsuario()){
+            return "Error en el usuario y/o contraseña";
+        } else {
+            if($this->usuario_id !== "pf_admin"){
+                return  "Error en el usuario y/o contraseña";
+            }else {
+                return "";
+            }
+        }
+    }
+
+
     public function setEquipo($equipo)
     {
         $this->equipos[] = New Equipo($equipo);
@@ -188,11 +201,47 @@ class Usuario
     }
 
 
-    public static    function imprimir($aImprimir)
+    public static function imprimirUsuariosEnTabla()
+    {
+        echo"<table border='1' cellspacing='0' cellpadding='5' class='table table-condensed'>";
+        echo "<tr><th>USUARIO</th><th>NOMBRE</th><th>EMAIL</th><th>ESTADO</th><th>ACCIONES</th></tr>";
+
+
+        $query = "SELECT USUARIO_ID, NOMBRE, EMAIL, ACTIVO, CASE ACTIVO WHEN 1  THEN 'Activo' ELSE 'Inactivo' END AS ACTIVOSTRING FROM USUARIOS ORDER BY USUARIO_ID";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute();
+        while ($a = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr><td>$a[USUARIO_ID]</td><td>$a[NOMBRE]</td><td>$a[EMAIL]</td><td>$a[ACTIVOSTRING]</td>";
+            if ($a['ACTIVO'] == 1) {
+                echo "<td><a class='fa fa-trash fa-2x' title='Inactivar $a[USUARIO_ID]' href='php/usuario.desactivar.php?id=$a[USUARIO_ID]'>Inactivar</a></td>";
+            } else {
+                echo "<td><a class='fa fa-pencil fa-2x' title='Activar $a[USUARIO_ID]' href='php/usuario.activar.php?id=$a[USUARIO_ID]'>Activar</a></td>";
+            }
+            echo "</tr>";
+        };
+        echo "</table>";
+
+    }
+
+    public static function ActualizarEstado($usuario_id, $activo){
+        $query = "UPDATE USUARIOS SET ACTIVO = :activo WHERE USUARIO_ID = :usuario_id";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['activo' => $activo, 'usuario_id' => $usuario_id]);
+        if (!$stmt->fetch(PDO::FETCH_ASSOC)){
+            throw new UsuarioNoGrabadoException("Error al grabar el usuario.");
+        }
+
+    }
+
+
+
+    public static function imprimir($aImprimir)
     {
         echo "<pre>";
         print_r($aImprimir);
         echo "</pre>";
     }
+
+
 
 }

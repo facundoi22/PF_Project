@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Implementación de la clase Equipo
  */
@@ -149,8 +150,7 @@ class Equipo
     public static function imprimirEquiposEnUl()
     {
         echo "<ul id='ulTotalBusqueda'>";
-        $query = "SELECT A.EQUIPO_ID, A.NOMBRE  , SUBSTR(GROUP_CONCAT(C.NOMBRE ,' ', C.APELLIDO , ' ') ,1,50)AS JUGADORES FROM EQUIPOS A, JUGADORES B , USUARIOS C WHERE A.EQUIPO_ID = B.EQUIPO_ID  AND B.JUGADOR_ID = C.USUARIO_ID AND A.ACTIVO = 1 AND C.ACTIVO = 1 GROUP BY A.EQUIPO_ID , A.NOMBRE
-";
+        $query = "SELECT A.EQUIPO_ID, A.NOMBRE  , SUBSTR(GROUP_CONCAT(C.NOMBRE ,' ', C.APELLIDO , ' ') ,1,50)AS JUGADORES FROM EQUIPOS A, JUGADORES B , USUARIOS C WHERE A.EQUIPO_ID = B.EQUIPO_ID  AND B.JUGADOR_ID = C.USUARIO_ID AND A.ACTIVO = 1 AND C.ACTIVO = 1 GROUP BY A.EQUIPO_ID , A.NOMBRE";
         $stmt = DBConnection::getStatement($query);
         $stmt->execute();
         while ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
@@ -164,4 +164,40 @@ class Equipo
             };
 		echo "</ul>";
     }
+
+    public static function imprimirEquiposEnTabla()
+    {
+        echo"<table border='1' cellspacing='0' cellpadding='5' class='table table-condensed'>";
+        echo "<tr><th>ID</th><th>NOMBRE</th><th>CAPITAN</th><th>ESTADO</th><th>ACCIONES</th></tr>";
+        $query = "SELECT EQUIPO_ID, NOMBRE, CAPITAN_ID, ACTIVO, CASE ACTIVO WHEN 1  THEN 'Activo' ELSE 'Inactivo' END AS ACTIVOSTRING FROM EQUIPOS ORDER BY EQUIPO_ID";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute();
+        while ($a = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo "<tr><td>$a[EQUIPO_ID]</td><td>$a[NOMBRE]</td><td>$a[CAPITAN_ID]</td><td>$a[ACTIVOSTRING]</td>";
+            if ($a['ACTIVO'] == 1) {
+                echo "<td><a title='Inactivar $a[EQUIPO_ID]' href='php/equipo.desactivar.php?id=$a[EQUIPO_ID]'>Inactivar</a></td>";
+            } else {
+                echo "<td><a title='Activar $a[EQUIPO_ID]' href='php/equipo.activar.php?id=$a[EQUIPO_ID]'>Activar</a></td>";
+            }
+            echo "</tr>";
+        };
+        echo "</table>";
+    }
+
+
+
+    public static function ActualizarEstado($equipo_id, $activo)
+    {
+        $query = "UPDATE EQUIPOS SET ACTIVO = :activo WHERE EQUIPO_ID = :equipo_id";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['activo' => $activo, 'equipo_id' => $equipo_id]);
+        echo "hola";
+        if (!$stmt->fetch(PDO::FETCH_ASSOC)){
+            throw new EquipoNoGrabadoException("Error al grabar el equipo.");
+        }
+
+    }
+
+
+
 }
