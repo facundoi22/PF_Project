@@ -8,7 +8,7 @@ $capitan = $_POST['capitan'];
 
 
 
-$equipo_id = Equipo::insertarEquipo($nombre, $capitan);
+$equipo_id = Equipo::CrearEquipo($nombre, $capitan);
 
 if (isset($_FILES['foto']['tmp_name']) ){
     $archivo_tmp = $_FILES['foto']['tmp_name'];
@@ -32,19 +32,6 @@ if (isset($_FILES['foto']['tmp_name']) ){
     $nombre_nuevo = "../images/equipos/$equipo_id"."_logo_200.jpg";
     imagejpeg( $copia , $nombre_nuevo);
 
-    // Copia 150 px
-    $alto_max= 150;
-    $ancho_max = round( $ancho *  $alto_max / $alto );
-
-    $copia = imagecreatetruecolor( $ancho_max, $alto_max );
-
-    imagecopyresampled( $copia, $original,
-        0,0, 0,0,
-        $ancho_max,$alto_max,
-        $ancho,$alto);
-
-    $nombre_nuevo = "../images/equipos/$equipo_id"."_logo_150.jpg";
-    imagejpeg( $copia , $nombre_nuevo);
 
     // Copia 100 px
     $alto_max= 100;
