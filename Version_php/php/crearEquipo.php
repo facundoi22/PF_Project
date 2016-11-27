@@ -62,14 +62,7 @@ if (isset($_FILES['foto']['tmp_name']) ){
 
 }
 
+header('Location: ../index.php?seccion=miequipo&equipo_id='.$equipo_id);
 
-
-if( isset($_POST['ajax'])) {
-    echo json_encode([
-        'status' => 0
-    ]);
-} else {
-    header('Location: ../../index.php?seccion=miequipo&equipo_id='.$equipo_id);
-};
 
 ?>
