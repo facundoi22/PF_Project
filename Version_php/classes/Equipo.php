@@ -190,12 +190,10 @@ class Equipo
     {
         $query = "UPDATE EQUIPOS SET ACTIVO = :activo WHERE EQUIPO_ID = :equipo_id";
         $stmt = DBConnection::getStatement($query);
-        $stmt->execute(['activo' => $activo, 'equipo_id' => $equipo_id]);
-        echo "hola";
-        if (!$stmt->fetch(PDO::FETCH_ASSOC)){
-            throw new EquipoNoGrabadoException("Error al grabar el equipo.");
-        }
-
+        $param = ['activo' => $activo,
+                'equipo_id' => $equipo_id];
+        $stmt->execute($param);
+        $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 

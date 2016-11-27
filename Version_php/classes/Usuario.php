@@ -227,10 +227,7 @@ class Usuario
         $query = "UPDATE USUARIOS SET ACTIVO = :activo WHERE USUARIO_ID = :usuario_id";
         $stmt = DBConnection::getStatement($query);
         $stmt->execute(['activo' => $activo, 'usuario_id' => $usuario_id]);
-        if (!$stmt->fetch(PDO::FETCH_ASSOC)){
-            throw new UsuarioNoGrabadoException("Error al grabar el usuario.");
-        }
-
+        $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
 
