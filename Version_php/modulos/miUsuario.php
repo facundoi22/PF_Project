@@ -106,7 +106,7 @@ if (isset($_GET['usuario_id'])){
 			</a>
 		</div>
 		<div class='col-md-3'>
-			<a id='verEquipos' href="#">Ver Equipos<img src='images/verEquipo-200px.png' alt='icono ver equipos' /></a>
+			<a id='verEquipos' href="index.php?seccion=equipos">Ver Equipos<img src='images/verEquipo-200px.png' alt='icono ver equipos' /></a>
 		</div>
 	</div>
 	<div id="registro">
@@ -121,8 +121,9 @@ if (isset($_GET['usuario_id'])){
 					<div id='cuerpoRegistroEquipo'>
 						<form id='formRegistro' action="php/crearEquipo.php" method="post" enctype="multipart/form-data">
 							<label>Nombre<input type="text" name="nombre"/></label>
-							<label>Capitán<input type="text" name="capitan"/></label>
-							<label>Escudo<input id="archivo" type="file" name="foto" accept="image/*" /></label>
+							<!--<label>Capitán<input type="text" name="capitan"/></label>-->
+							<input type="hidden" name="capitan" value="<?php echo $usuario->getUsuarioID()?>"/>
+							<label>Escudo<input id="archivo" type="file" name="foto" accept="image/jpeg" /></label>
 							<input type="hidden" name="ajax" />
 							<div class='btnIngresar'>
 								<input  type="submit" value="Crear Equipo" />
