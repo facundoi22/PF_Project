@@ -2460,3 +2460,37 @@ padding-left: 100px;
 	line-height: 30px;
 	vertical-align: middle;
 }
+
+
+
+#EquiposActuales ,
+#EquiposActuales h2 {
+	background-color: orange;
+	padding: 0px;
+	text-align: center;
+}
+
+
+#EquiposActuales h2 a{
+	text-decoration: none;
+	color: #FFF;
+
+}
+
+#equipos #slider{
+	padding: 0px;
+}
+
+#equipos #slider div{
+	width: 100%;
+}
+
+#equipos #slider div h2{
+	margin: 0px;
+	margin-top: 100px;
+	line-height: 100px;
+}
+
+#equipos main > div ~ div {
+	padding-top: 0px;
+}
