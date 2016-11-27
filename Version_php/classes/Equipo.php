@@ -165,7 +165,7 @@ class Equipo
         $stmt->execute();
         while ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
             echo "<li class='liresultadobusqueda' >";
-            echo "<div class='marcoEscudo' ><img src = 'images/equipos/". $datos['EQUIPO_ID']."_logo_100.jpg' alt = 'Logo Equipo ".$datos['EQUIPO_ID']."' /></div >";
+            echo "<div class='marcoEscudo' ><div><img src = 'images/equipos/". $datos['EQUIPO_ID']."_logo_100.jpg' alt = 'Logo Equipo ".$datos['EQUIPO_ID']."' /></div ></div>";
 			echo "<div class='agruparDivs' ><div class='tituloResBusq' > ". $datos['NOMBRE'] ."</div >";
             echo "<div class='italicaResBusq' > Jugadores: ". $datos['JUGADORES'] . "...</div ></div >";
             echo "<div class='divflechaCirculo'>";

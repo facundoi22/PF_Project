@@ -2581,8 +2581,17 @@ padding-left: 100px;
 #equipos .marcoEscudo {
 	height: 110px;
 	width:130px;
+
+}
+
+#equipos .marcoEscudo div {
+	overflow: hidden;
+	height:100px;
+	width:100px;
+	margin-left: 10px;
 }
 
 #equipos .marcoEscudo img{
 	height:100px;
 }
+
