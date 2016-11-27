@@ -119,7 +119,7 @@ if (isset($_GET['usuario_id'])){
 						<!--a href='#' title='Volver' id='cruzCerrar'><span class='oculto'>Volver</span></a-->
 					</div>
 					<div id='cuerpoRegistroEquipo'>
-						<form id='formRegistro' action="../php/crearEquipo.php" method="post" enctype="multipart/form-data">
+						<form id='formRegistro' action="php/crearEquipo.php" method="post" enctype="multipart/form-data">
 							<label>Nombre<input type="text" name="nombre"/></label>
 							<label>Capitán<input type="text" name="capitan"/></label>
 							<label>Escudo<input id="archivo" type="file" name="foto" accept="image/*" /></label>
