@@ -13,11 +13,39 @@ if (Equipo::existeEquipo($equipo_id)) {
 
 	<main>
 		<?php
-		echo "<div style='background-image: url(images/equipos/" . $equipo_id . "_equipo.jpg)'>";
+		echo "<div style='background-image: url(images/equipos/" . $equipo_id . "_portada.jpg)'>";
 		echo "<img src='images/equipos/" . $equipo_id . "_logo_200.jpg' alt='Logo del Equipo'/>";
 		echo "<h2 class='mayusculas negrita'>" . $equipo->getNombre() . "</h2>";
+		echo "<div><a href='#registroEquipo' title'actualizar portada'>Actualizar Portada</a></div>";
 		echo "</div>";
+	?>
 
+		<div id="registro">
+			<div>
+				<div id="registroEquipo">
+					<div>
+						<div id='cabeceraRegistroEquipo'>
+							<h2 class='mayusculas'>Actualizá la Portada</h2>
+							<a href='#' title='Volver' id='cruzCerrar'><span class='oculto'>Volver</span></a>
+						</div>
+						<div id='cuerpoRegistroEquipo'>
+							<form id='formRegistro' action="php/actualizarPortada.php" method="post" enctype="multipart/form-data">
+								<input type="hidden" name="equipo" value="<?php echo $equipo_id?>"/>
+								<label>Portada<input id="archivo" type="file" name="foto" accept="image/jpeg" /></label>
+								<input type="hidden" name="ajax" />
+								<div class='btnIngresar'>
+									<input  type="submit" value="Actualizar Portada" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<?php
 		if ($equipo->participaEnTorneo()) {
 			$torneo = $equipo->getTorneo();
 			?>
@@ -69,7 +97,10 @@ if (Equipo::existeEquipo($equipo_id)) {
 						</div>
 					</div>
 				</div>
+
 				<div class="dosCol">
+					<?php if ($equipo->participaEnTorneo()) {
+					?>
 					<div>
 						<div>
 							<h3> Último Partido - Fecha 5 </h3>
@@ -81,7 +112,8 @@ if (Equipo::existeEquipo($equipo_id)) {
 							<a href="#" title="Ver Todos">Ver Resultados de Todos los Partidos Jugados</a>
 						</div>
 					</div>
-					<div>
+					<?php } ?>
+					<div id="Fravega">
 						<a href="#" title="Fravega"><img style="margin: 0px" src="images/fravega.png"
 														 alt="Fravega"/></a>
 					</div>

@@ -1,7 +1,6 @@
 <?php
 include('../config.php');
 $inputs = $_POST;
-Session::start();
 
 $nombre = $_POST['nombre'];
 $capitan = $_POST['capitan'];
@@ -9,7 +8,7 @@ $capitan = $_POST['capitan'];
 
 
 $equipo_id = Equipo::CrearEquipo($nombre, $capitan);
-Usuario::imprimir($_FILES);
+
 if (isset($_FILES['foto']['tmp_name']) && !empty($_FILES['foto']['tmp_name'])){
     $archivo_tmp = $_FILES['foto']['tmp_name'];
 

@@ -150,7 +150,14 @@ class Equipo
                 $boton = "";
             }
 
-            echo "<li><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><img src='images/usuarios/" . $datos['JUGADOR_ID'] . ".jpg' alt='Foto del Jugador " . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "'/></a><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><span ".$idCapitan.">" . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "</span>".$boton ."</a></li>";
+            if(file_exists('images/usuarios/'.$datos['JUGADOR_ID'] . '.jpg')){
+                $rutaImagen = "images/usuarios/".$datos['JUGADOR_ID']. ".jpg";
+            }else {
+                $rutaImagen = "images/usuarios/UserJugador.jpg";
+            }
+
+
+            echo "<li><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><img src='$rutaImagen' alt='Foto del Jugador " . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "'/></a><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><span ".$idCapitan.">" . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "</span>".$boton ."</a></li>";
         }
         echo "</ul>";
     }
