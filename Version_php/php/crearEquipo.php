@@ -9,8 +9,8 @@ $capitan = $_POST['capitan'];
 
 
 $equipo_id = Equipo::CrearEquipo($nombre, $capitan);
-
-if (isset($_FILES['foto']['tmp_name']) ){
+Usuario::imprimir($_FILES);
+if (isset($_FILES['foto']['tmp_name']) && !empty($_FILES['foto']['tmp_name'])){
     $archivo_tmp = $_FILES['foto']['tmp_name'];
 
 
