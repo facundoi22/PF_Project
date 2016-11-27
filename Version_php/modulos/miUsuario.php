@@ -29,7 +29,7 @@ if (isset($_GET['usuario_id'])){
 				echo "<img src='images/icons/UserJugador.png' alt='foto perfil' />";
 			}
 			if (Session::has("usuario") && Session::get("usuario")->getUsuarioId() == $usuario_id){
-				echo "<a id='subirFotoPerfil'>subir foto</a>";
+				echo "<span id='cartelOcultoSubirFoto'>Subir Foto</span><a id='subirFotoPerfil'><span class='oculto'>Subir Foto</span></a>";
 			}
 			?>
 		</div>
@@ -41,7 +41,8 @@ if (isset($_GET['usuario_id'])){
 						<?php
 						if($usuario->tieneEquipo()){
 							foreach ($usuario->getEquipos() as $equipo) {
-								echo "<li>" . $equipo->getNombre() ." <a style='padding-left:40px' href='index.php?seccion=miequipo&equipo_id=".$equipo->getEquipoID()."' title=''Ver Equipo'>Ver Equipo</a></li>";
+								/* echo "<li>" . $equipo->getNombre() ." <a style='padding-left:40px' href='index.php?seccion=miequipo&equipo_id=".$equipo->getEquipoID()."' title=''Ver Equipo'>Ver Equipo</a></li>"; */
+								echo "<li><a class='negrita' href='index.php?seccion=miequipo&equipo_id=".$equipo->getEquipoID()."' title=''Ver Equipo'>" . $equipo->getNombre() ."</a></li>";
 							}
 						}else{
 							echo "<li>Todavía no sos parte de ningún equipo.</li>";
@@ -72,10 +73,10 @@ if (isset($_GET['usuario_id'])){
 				</li>
 			</ul>
 		</div>
-		<div class='col-md-1'>
+		<div id='divContieneEditar' class='col-md-1'>
 			<?php
 			if (Session::has("usuario") && Session::get("usuario")->getUsuarioId() == $usuario_id){
-				echo"<a href='#'>editar datos</a>";
+				echo"<span id='cartelOcultoEditarPerfil'>Editar Perfil</span><a id='editarPerfil'><span class='oculto'>Editar Perfil</span></a>";  
 		 	} else{
 		 		if(Session::has("equipo_idActual")){
 					$equipo_idActual = Session::get("equipo_idActual");
@@ -112,11 +113,12 @@ if (isset($_GET['usuario_id'])){
 		<div>
 			<div id="registroEquipo">
 				<div>
-					<div>
+					<div id='cabeceraRegistroEquipo'>
 						<h2 class='mayusculas'>Crear tu equipo</h2>
-						<a href='#' title='Volver'> Volver</a>
+						<a href='#' title='Volver' id='cruzCerrar'><span class='oculto'>Volver</span></a>
+						<!--a href='#' title='Volver' id='cruzCerrar'><span class='oculto'>Volver</span></a-->
 					</div>
-					<div>
+					<div id='cuerpoRegistroEquipo'>
 						<form id='formRegistro' action="../php/crearEquipo.php" method="post" enctype="multipart/form-data">
 							<label>Nombre<input type="text" name="nombre"/></label>
 							<label>Capitán<input type="text" name="capitan"/></label>

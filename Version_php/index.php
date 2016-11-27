@@ -24,6 +24,7 @@
 			case 'login':
 			case 'panel':
 			case 'error404':
+			case 'equipos':
 				break;
 			default: $seccionActual = 'home';
 		}
@@ -50,5 +51,6 @@
 		require('modulos/footer.php');
 		?>
 		</div>
+		<script type="text/javascript" src="js/jsPF.js"></script>
 	</body>
 </html>
