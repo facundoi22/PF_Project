@@ -62,30 +62,26 @@ class Equipo
         };
     }
 
-    public function getEquipoId(){
+    public function getEquipoId()
+    {
         return $this->equipo_id;
     }
-    public function getJugadores(){
+    public function getJugadores()
+    {
         return $this->jugadores;
     }
 
-    public function getNombre(){
+    public function getNombre()
+    {
         return $this->nombre;
     }
 
 
-    public static function imprimir($aImprimir)
-    {
-        echo "<pre>";
-        print_r($aImprimir);
-        echo "</pre>";
-    }
-
     /**
      * @return null|Torneo
      */
-    public function getTorneo(){
-
+    public function getTorneo()
+    {
         $query = "SELECT TORNEO_ID FROM EQUIPOS_TORNEO WHERE EQUIPO_ID = :equipo_id ";
         $stmt = DBConnection::getStatement($query);
         $stmt->execute(['equipo_id' => $this->equipo_id]);
@@ -95,15 +91,16 @@ class Equipo
         return null;
     }
 
-    public function participaEnTorneo(){
-
+    public function participaEnTorneo()
+    {
         $query = "SELECT 'X' FROM EQUIPOS_TORNEO WHERE EQUIPO_ID = :equipo_id ";
         $stmt = DBConnection::getStatement($query);
         $stmt->execute(['equipo_id' => $this->equipo_id]);
         return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
     }
 
-    public function printJugadoresEnUL(){
+    public function printJugadoresEnUL()
+    {
         echo"<ul>";
         $query = "SELECT A.JUGADOR_ID, B.NOMBRE , B.APELLIDO FROM JUGADORES A, USUARIOS B WHERE A.JUGADOR_ID = B.USUARIO_ID AND A.EQUIPO_ID = :equipo_id ";
         $stmt = DBConnection::getStatement($query);
@@ -123,11 +120,31 @@ class Equipo
     }
 
 
-    public static function existeEquipo ($equipo_id){
+    public static function existeEquipo ($equipo_id)
+    {
         $query = "SELECT 'X' FROM EQUIPOS WHERE EQUIPO_ID = :equipo_id ";
         $stmt = DBConnection::getStatement($query);
         $stmt->execute(['equipo_id' => $equipo_id]);
         return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
     }
 
+
+    public static function imprimirEquiposEnUl()
+    {
+        echo "<ul id='ulTotalBusqueda'>";
+        $query = "SELECT A.EQUIPO_ID, A.NOMBRE  , SUBSTR(GROUP_CONCAT(C.NOMBRE ,' ', C.APELLIDO , ' ') ,1,50)AS JUGADORES FROM EQUIPOS A, JUGADORES B , USUARIOS C WHERE A.EQUIPO_ID = B.EQUIPO_ID  AND B.JUGADOR_ID = C.USUARIO_ID AND A.ACTIVO = 1 AND C.ACTIVO = 1 GROUP BY A.EQUIPO_ID , A.NOMBRE
+";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute();
+        while ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            echo "<li class='liresultadobusqueda' >";
+            echo "<div class='marcoEscudo' ><img src = 'images/equipos/". $datos['EQUIPO_ID']."_logo_150.jpg' alt = 'Logo Equipo ".$datos['EQUIPO_ID']."' style = 'margin:3px;' /></div >";
+			echo "<div class='agruparDivs' ><div class='tituloResBusq' > ". $datos['NOMBRE'] ."</div >";
+            echo "<div class='italicaResBusq' > Equipos: ". $datos['JUGADORES'] . "...</div ></div >";
+            echo "<div class='divflechaCirculo'>";
+            echo "<a href='index.php?seccion=miequipo&equipo_id=".$datos['EQUIPO_ID']."' title='Ver Equipo' ><img  class='flechaDerechaCirculo' src = 'images/icons/flechaderecha.png' alt = 'Ver Equipo' /></a >";
+            echo "</div></li>";
+            };
+		echo "</ul>";
+    }
 }
