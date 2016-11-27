@@ -2576,3 +2576,13 @@ padding-left: 100px;
 
 
 
+
+
+#equipos .marcoEscudo {
+	height: 110px;
+	width:130px;
+}
+
+#equipos .marcoEscudo img{
+	height:100px;
+}
