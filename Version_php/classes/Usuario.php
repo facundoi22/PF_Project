@@ -175,6 +175,8 @@ class Usuario
         $stmt = DBConnection::getStatement($script );
         if($stmt->execute($usuario)) {
             return $vUsuario['usuario'];
+        } else {
+            throw new UsuarioNoGrabadoException("Error al grabar el usuario.");
         }
     }
 

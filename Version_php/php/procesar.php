@@ -1,6 +1,5 @@
 <?php	
 	include('config.php');
-	include('funciones.php');
 	$inputs = $_POST;
 	
 	$error =0;

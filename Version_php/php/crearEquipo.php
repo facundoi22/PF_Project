@@ -1,27 +1,75 @@
 <?php
 include('../config.php');
-include('../funciones.php');
 $inputs = $_POST;
-
-$error =0;
-$errorActual = "";
-
 Session::start();
 
-$formValidator = new FormValidator( $inputs);
+$nombre = $_POST['nombre'];
+$capitan = $_POST['capitan'];
 
 
-// Si hay algún campo en error, vuelvo al formulario, indicando que hay errores;
-if ( !empty($formValidator->getCamposError()) ){
-    Session::set("camposError",$formValidator->getCamposError());
-    Session::set("campos",$formValidator->getCampos());
-    header("Location: ../index.php?error=1#registroModal");
-} else {
-    Session::set("campos",$formValidator->getCampos());
-    $usuario_id = Usuario::CrearUsuario($inputs);
-    Session::set('usuario',$usuario_id);
-    Session::set('logueado','S');
-    header("Location: ../index.php?seccion=miusuario");
+
+$equipo_id = Equipo::insertarEquipo($nombre, $capitan);
+
+if (isset($_FILES['foto']['tmp_name']) ){
+    $archivo_tmp = $_FILES['foto']['tmp_name'];
+
+
+    $original = imagecreatefromjpeg($archivo_tmp);
+    $ancho = imagesx( $original );
+    $alto = imagesy( $original );
+
+    // Copia 200 px
+    $alto_max= 200;
+    $ancho_max = round( $ancho *  $alto_max / $alto );
+
+    $copia = imagecreatetruecolor( $ancho_max, $alto_max );
+
+    imagecopyresampled( $copia, $original,
+        0,0, 0,0,
+        $ancho_max,$alto_max,
+        $ancho,$alto);
+
+    $nombre_nuevo = "../images/equipos/$equipo_id"."_logo_200.jpg";
+    imagejpeg( $copia , $nombre_nuevo);
+
+    // Copia 150 px
+    $alto_max= 150;
+    $ancho_max = round( $ancho *  $alto_max / $alto );
+
+    $copia = imagecreatetruecolor( $ancho_max, $alto_max );
+
+    imagecopyresampled( $copia, $original,
+        0,0, 0,0,
+        $ancho_max,$alto_max,
+        $ancho,$alto);
+
+    $nombre_nuevo = "../images/equipos/$equipo_id"."_logo_150.jpg";
+    imagejpeg( $copia , $nombre_nuevo);
+
+    // Copia 100 px
+    $alto_max= 100;
+    $ancho_max = round( $ancho *  $alto_max / $alto );
+
+    $copia = imagecreatetruecolor( $ancho_max, $alto_max );
+
+    imagecopyresampled( $copia, $original,
+        0,0, 0,0,
+        $ancho_max,$alto_max,
+        $ancho,$alto);
+
+    $nombre_nuevo = "../images/equipos/$equipo_id"."_logo_100.jpg";
+    imagejpeg( $copia , $nombre_nuevo);
+
 }
+
+
+
+if( isset($_POST['ajax'])) {
+    echo json_encode([
+        'status' => 0
+    ]);
+} else {
+    header('Location: ../../index.php?seccion=miequipo&equipo_id='.$equipo_id);
+};
 
 ?>

@@ -36,6 +36,32 @@ class Equipo
 
 
 
+    public static function CrearEquipo($nombre , $capitan){
+        $usuario= [
+            'nombre' => $nombre,
+            'capitan_id'   =>  $capitan
+        ];
+
+        $script = "INSERT INTO EQUIPOS VALUES (null, :nombre, :capitan_id, 1)";
+        $stmt = DBConnection::getStatement($script );
+        if($stmt->execute($usuario)) {
+            return DBConnection::getConnection()->lastInsertId();
+        } else {
+            throw new EquipoNoGrabadoException("Error al grabar el equipo.");
+        }
+    }
+
+
+    public static function existeEquipo($equipo_id){
+        $query = "SELECT 'X' FROM EQUIPOS WHERE EQUIPO_ID = :equipo_id ";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute(['equipo_id' => $equipo_id]);
+        return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
+    }
+
+
+
+
     public function setEquipo($equi)
     {
         $this->equipo_id = $equi;
@@ -119,14 +145,6 @@ class Equipo
         echo "</ul>";
     }
 
-
-    public static function existeEquipo ($equipo_id)
-    {
-        $query = "SELECT 'X' FROM EQUIPOS WHERE EQUIPO_ID = :equipo_id ";
-        $stmt = DBConnection::getStatement($query);
-        $stmt->execute(['equipo_id' => $equipo_id]);
-        return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
-    }
 
 
     public static function imprimirEquiposEnUl()
