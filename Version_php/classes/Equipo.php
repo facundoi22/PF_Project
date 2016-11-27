@@ -37,15 +37,25 @@ class Equipo
 
 
     public static function CrearEquipo($nombre , $capitan){
-        $usuario= [
+        $equipo= [
             'nombre' => $nombre,
             'capitan_id'   =>  $capitan
         ];
 
         $script = "INSERT INTO EQUIPOS VALUES (null, :nombre, :capitan_id, 1)";
         $stmt = DBConnection::getStatement($script );
-        if($stmt->execute($usuario)) {
-            return DBConnection::getConnection()->lastInsertId();
+        if($stmt->execute($equipo)) {
+            $idEquipo = DBConnection::getConnection()->lastInsertId();
+            $jugador= [
+                'equipo_id' => $idEquipo,
+                'jugador_id'   =>  $capitan
+            ];
+
+
+            $script = "INSERT INTO JUGADORES VALUES (:equipo_id, :jugador_id)";
+            $stmt = DBConnection::getStatement($script );
+            $stmt->execute($jugador);
+            return $idEquipo;
         } else {
             throw new EquipoNoGrabadoException("Error al grabar el equipo.");
         }
@@ -155,9 +165,9 @@ class Equipo
         $stmt->execute();
         while ($datos = $stmt->fetch(PDO::FETCH_ASSOC)) {
             echo "<li class='liresultadobusqueda' >";
-            echo "<div class='marcoEscudo' ><img src = 'images/equipos/". $datos['EQUIPO_ID']."_logo_150.jpg' alt = 'Logo Equipo ".$datos['EQUIPO_ID']."' style = 'margin:3px;' /></div >";
+            echo "<div class='marcoEscudo' ><img src = 'images/equipos/". $datos['EQUIPO_ID']."_logo_100.jpg' alt = 'Logo Equipo ".$datos['EQUIPO_ID']."' /></div >";
 			echo "<div class='agruparDivs' ><div class='tituloResBusq' > ". $datos['NOMBRE'] ."</div >";
-            echo "<div class='italicaResBusq' > Equipos: ". $datos['JUGADORES'] . "...</div ></div >";
+            echo "<div class='italicaResBusq' > Jugadores: ". $datos['JUGADORES'] . "...</div ></div >";
             echo "<div class='divflechaCirculo'>";
             echo "<a href='index.php?seccion=miequipo&equipo_id=".$datos['EQUIPO_ID']."' title='Ver Equipo' ><img  class='flechaDerechaCirculo' src = 'images/icons/flechaderecha.png' alt = 'Ver Equipo' /></a >";
             echo "</div></li>";
