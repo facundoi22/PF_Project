@@ -52,6 +52,9 @@
 			<li class="tresCol"><img src='images/buscarligas.png' alt='icono liga' /><div>Inscríbete en <span class="mayusculas negrita">campeonatos</span></div></li>
 		</ul>
 	</div>
+	<div id='EquiposActuales'>
+		<h2><a href="index.php?seccion=equipos"> Mirá los equipos que ya participan! </a></h2>
+	</div>
 	<div>
 		<h2>¿Que puedo hacer en PróximaFecha.com?</h2>
 		<div class="dosCol">
@@ -74,6 +77,7 @@
 	<div id='DivCreaCam'>
 		<a id='btnCreaCam' class="mayusculas" href="#"> Crea tu <span class="negrita">campeonato </span></a>
 	</div>
+
 
 </main>
 <?php if (!Session::has("publicidad")){

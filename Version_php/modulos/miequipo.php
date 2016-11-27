@@ -14,7 +14,7 @@ if (Equipo::existeEquipo($equipo_id)) {
 	<main>
 		<?php
 		echo "<div style='background-image: url(images/equipos/" . $equipo_id . "_equipo.jpg)'>";
-		echo "<img src='images/equipos/" . $equipo_id . "_logo_200.png' alt='Logo del Equipo'/>";
+		echo "<img src='images/equipos/" . $equipo_id . "_logo_200.jpg' alt='Logo del Equipo'/>";
 		echo "<h2 class='mayusculas negrita'>" . $equipo->getNombre() . "</h2>";
 		echo "</div>";
 
@@ -32,9 +32,9 @@ if (Equipo::existeEquipo($equipo_id)) {
 					</div>
 					<div class="tresCol">
 						<h3> Proximo Partido - Fecha 6 </h3>
-						<img src="images/equipos/1_logo_100.png" alt="Logo del Equipo"/>
+						<img src="images/equipos/1_logo_100.jpg" alt="Logo del Equipo"/>
 						<p>VS</p>
-						<img src="images/equipos/9_logo_100.png" alt="Logo del Equipo"/>
+						<img src="images/equipos/9_logo_100.jpg" alt="Logo del Equipo"/>
 						<p>PHP Futbol Club</p>
 						<p>Array de 1 Indice</p>
 						<p>Fecha y Hora: 12/11/2016 - 21:00hs</p>
@@ -73,9 +73,9 @@ if (Equipo::existeEquipo($equipo_id)) {
 					<div>
 						<div>
 							<h3> Último Partido - Fecha 5 </h3>
-							<img src="images/equipos/1_logo_100.png" alt="Logo del Equipo"/>
+							<img src="images/equipos/1_logo_100.jpg" alt="Logo del Equipo"/>
 							<p>4 - 2</p>
-							<img src="images/equipos/6_logo_100.png" alt="Logo del Equipo"/>
+							<img src="images/equipos/6_logo_100.jpg" alt="Logo del Equipo"/>
 							<p>PHP Futbol Club</p>
 							<p>Puerto 7</p>
 							<a href="#" title="Ver Todos">Ver Resultados de Todos los Partidos Jugados</a>
