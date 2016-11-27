@@ -35,7 +35,6 @@ class Equipo
     }
 
 
-
     public static function CrearEquipo($nombre , $capitan){
         $usuario= [
             'nombre' => $nombre,
