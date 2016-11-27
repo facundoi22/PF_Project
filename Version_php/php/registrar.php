@@ -19,9 +19,10 @@
 	} else {
         Session::set("campos",$formValidator->getCampos());
 		$usuario_id = Usuario::CrearUsuario($inputs);
-        Session::set('usuario',$usuario_id);
+        $usuario = New Usuario($usuario_id);
+        Session::set('usuario',$usuario);
         Session::set('logueado','S');
-        header("Location: ../index.php?seccion=miusuario");
+        header("Location: ../index.php?seccion=miusuario&usuario_id=$usuario_id");
 	}
 
 ?>
