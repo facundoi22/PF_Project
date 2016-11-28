@@ -3,7 +3,7 @@
 		<a href="index.php" title="home" id="logoPrincipal"><img src="images/LOGOPF-Sin-Fondo.png" alt="Logo" style="margin:3px;" /></a>
 		<div>
 			<form id="FORMbuscador" action="index.php?seccion=resultado" method="post">
-				<img src="images/Icons/lupa11.png" alt="Logo" style="height:20px;width:20px;" />&nbsp;
+				<img src="images/icons/lupa11.png" alt="Logo" style="height:20px;width:20px;" />&nbsp;
 				<input id="INPUTbuscador" placeholder='Buscar...' value="" name="contenidoAbuscar" />
 			</form>
 		</div>

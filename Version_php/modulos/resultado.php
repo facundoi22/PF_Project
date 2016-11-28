@@ -1,6 +1,6 @@
 			<main>
 				<div id="slider">
-					<div id='divIzq'><img src="images/Icons/LupaBlanca.png" alt="lupa de búsqueda" style="height:65px;width:65px;margin:3px;" /><p>BUSQUEDA:<span> TORNEO SAN MARTIN</span></p></div><div id='divDer'><p>RESULTADOS TOTALES: <span>15</span></p></div>
+					<div id='divIzq'><img src="images/icons/LupaBlanca.png" alt="lupa de búsqueda" style="height:65px;width:65px;margin:3px;" /><p>BUSQUEDA:<span> TORNEO SAN MARTIN</span></p></div><div id='divDer'><p>RESULTADOS TOTALES: <span>15</span></p></div>
 				</div>
 				<div>
 					<ul id='ulTotalBusqueda'>
@@ -23,7 +23,7 @@
 								<div class="italicaResBusq">Equipos: SQL Injection - Foreach - Varchar de 50 - ControlC ControlV -  ...</div>
 							</div>
 							<div class="divflechaCirculo">
-								<a href='#'><img  class='flechaDerechaCirculo' src="images/Icons/flechaderecha.png" alt="flecha derecha" /></a>
+								<a href='#'><img  class='flechaDerechaCirculo' src="images/icons/flechaderecha.png" alt="flecha derecha" /></a>
 							</div>
 						<li class="liresultadobusqueda">
 							<div class="marcoEscudo"><img src="images/EscudosDeFutbol/basquet.jpg" alt="Logo" style="margin:3px;" /></div>
@@ -33,7 +33,7 @@
 								<div class="italicaResBusq">Equipos: YourSister - Los Cabeza de Termópilas - Caos Armonico -  Jam...</div>
 							</div>
 							<div class="divflechaCirculo">
-								<a href='#'><img  class='flechaDerechaCirculo' src="images/Icons/flechaderecha.png" alt="flecha derecha" /></a>
+								<a href='#'><img  class='flechaDerechaCirculo' src="images/icons/flechaderecha.png" alt="flecha derecha" /></a>
 							</div>
 						</li>
 						<li class="liresultadobusqueda">
@@ -44,7 +44,7 @@
 								<div class="italicaResBusq">Jugadores: Ediberto San Martin -  Hugo Sha- Pablo Class - Germán Ran...</div>
 							</div>
 							<div class="divflechaCirculo">
-								<a href='#'><img  class='flechaDerechaCirculo' src="images/Icons/flechaderecha.png" alt="flecha derecha" /></a>
+								<a href='#'><img  class='flechaDerechaCirculo' src="images/icons/flechaderecha.png" alt="flecha derecha" /></a>
 							</div>
 						</li>
 						<li class="liresultadobusqueda">
@@ -55,7 +55,7 @@
 								<div class="italicaResBusq">Equipos: Las Irritadas -  Buenas Amigas - Hemerotecas - Piden Pista - R...</div>
 							</div>
 							<div class="divflechaCirculo">
-								<a href='#'><img  class='flechaDerechaCirculo' src="images/Icons/flechaderecha.png" alt="flecha derecha" /></a>
+								<a href='#'><img  class='flechaDerechaCirculo' src="images/icons/flechaderecha.png" alt="flecha derecha" /></a>
 							</div>
 						</li>
 					</ul>
