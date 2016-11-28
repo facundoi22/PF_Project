@@ -14,7 +14,7 @@ Session::start();
 
 	<div id="todo">
 		<div id="logo">
-			<img src="../images/LOGOPF-Sin-Fondo.png" alt="Logo" />
+			<img src="images/LOGOPF-Sin-Fondo.png" alt="Logo" />
 			<h1>Administración ProximaFecha.com</h1>
 		</div>
 		<?php
