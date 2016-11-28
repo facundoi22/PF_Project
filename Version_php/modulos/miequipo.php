@@ -16,7 +16,7 @@ if (Equipo::existeEquipo($equipo_id)) {
 		echo "<div style='background-image: url(images/equipos/" . $equipo_id . "_portada.jpg)'>";
 		echo "<img src='images/equipos/" . $equipo_id . "_logo_200.jpg' alt='Logo del Equipo'/>";
 		echo "<h2 class='mayusculas negrita'>" . $equipo->getNombre() . "</h2>";
-		echo "<div><a href='#registroEquipo' title'actualizar portada'>Actualizar Portada</a></div>";
+		echo "<div><a href='#registroEquipo' title='actualizar portada'>Actualizar Portada</a></div>";
 		echo "</div>";
 	?>
 
@@ -78,7 +78,9 @@ if (Equipo::existeEquipo($equipo_id)) {
 					<h3 class="mayusculas">Integrantes del Equipo</h3>
 					<?php
 					$equipo->printJugadoresEnUL();
-					?>
+					if (! $equipo->participaEnTorneo() && $equipo->getCapitanID() == Session::get("usuario")->getUsuarioID()) {
+						echo "<div><a href='#AgregarCompanero' title='Agregar Compañero'>Agregar Compañero</a></div>";
+					}	?>
 
 					<div>
 						<div id="mensajeModal">
@@ -121,8 +123,40 @@ if (Equipo::existeEquipo($equipo_id)) {
 			</div>
 		</div>
 	</main>
-	</div>
+
 	<?php
+	if (! $equipo->participaEnTorneo() && $equipo->getCapitanID() == Session::get("usuario")->getUsuarioID()) {
+		?>
+		<div id="registroAgregar">
+			<div>
+				<div id="AgregarCompanero">
+					<div>
+						<div id='cabeceraAgregarCompanero'>
+							<h2 class='mayusculas'>Elige un usuario</h2>
+							<a href='#' title='Volver' id='cruzCerrarAgregar'><span class='oculto'>Volver</span></a>
+						</div>
+						<div id='cuerpoAgregarCompanero'>
+							<form class='formRegistro' action="php/agregarJugador.php" method="post">
+								<input type="hidden" name="equipo" value="<?php echo $equipo_id?>"/>
+								<label>Jugador<input id="jugador" type="text" name="jugador"/></label>
+								<input type="hidden" name="ajax" />
+								<div class='btnIngresar'>
+									<input  type="submit" value="Agregar Compañero" />
+								</div>
+							</form>
+							<?php
+							if(Session::has("errorAgregarJugador")){
+								echo("<div class='DivErrores'>");
+								echo("<h2 style='color:#F00'>" . Session::get("errorAgregarJugador") . "</h2>");
+								echo("</div>");
+							}
+							?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php };
 } else {
 	header("Location: index.php?seccion=error404");
 }

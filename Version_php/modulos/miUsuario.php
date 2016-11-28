@@ -42,7 +42,7 @@ if (isset($_GET['usuario_id'])){
 						if($usuario->tieneEquipo()){
 							foreach ($usuario->getEquipos() as $equipo) {
 								/* echo "<li>" . $equipo->getNombre() ." <a style='padding-left:40px' href='index.php?seccion=miequipo&equipo_id=".$equipo->getEquipoID()."' title=''Ver Equipo'>Ver Equipo</a></li>"; */
-								echo "<li><a class='negrita' href='index.php?seccion=miequipo&equipo_id=".$equipo->getEquipoID()."' title=''Ver Equipo'>" . $equipo->getNombre() ."</a></li>";
+								echo "<li><a class='negrita' href='index.php?seccion=miequipo&equipo_id=".$equipo->getEquipoID()."' title='Ver Equipo'>" . $equipo->getNombre() ."</a></li>";
 							}
 						}else{
 							echo "<li>Todavía no sos parte de ningún equipo.</li>";

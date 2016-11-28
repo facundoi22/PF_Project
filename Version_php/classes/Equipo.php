@@ -69,6 +69,27 @@ class Equipo
         return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
     }
 
+    public function existeJugador($jugador_id){
+        $datos = ['equipo_id' => $this->equipo_id,
+            'jugador_id' => $jugador_id
+        ];
+
+        $query = "SELECT 'X' FROM JUGADORES WHERE EQUIPO_ID = :equipo_id AND JUGADOR_ID = :jugador_id";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute($datos);
+        return ($stmt->fetch(PDO::FETCH_ASSOC)) ;
+    }
+
+    public function insertarJugador($jugador_id){
+        $datos = ['equipo_id' => $this->equipo_id,
+            'jugador_id' => $jugador_id
+        ];
+        $query = "INSERT INTO JUGADORES VALUE (:equipo_id , :jugador_id)";
+        $stmt = DBConnection::getStatement($query);
+        $stmt->execute($datos );
+        $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
 
 
 
@@ -110,6 +131,11 @@ class Equipo
     public function getNombre()
     {
         return $this->nombre;
+    }
+
+    public function getCapitanID()
+    {
+        return $this->capitan_id;
     }
 
 
@@ -157,7 +183,7 @@ class Equipo
             }
 
 
-            echo "<li><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><img src='$rutaImagen' alt='Foto del Jugador " . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "'/></a><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><span ".$idCapitan.">" . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "</span>".$boton ."</a></li>";
+            echo "<li><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><img src='$rutaImagen' alt='Foto del Jugador " . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "'/></a><a href='index.php?seccion=miusuario&usuario_id=".$datos['JUGADOR_ID']."' title='Ver'><span ".$idCapitan.">" . $datos['NOMBRE'] . " " . $datos['APELLIDO'] . "</span></a>".$boton ."</li>";
         }
         echo "</ul>";
     }
@@ -184,7 +210,7 @@ class Equipo
 
     public static function imprimirEquiposEnTabla()
     {
-        echo"<table border='1' cellspacing='0' cellpadding='5' class='table table-condensed'>";
+        echo"<table  class='table table-condensed'>";
         echo "<tr><th>ID</th><th>NOMBRE</th><th>CAPITAN</th><th>ESTADO</th><th>ACCIONES</th></tr>";
         $query = "SELECT EQUIPO_ID, NOMBRE, CAPITAN_ID, ACTIVO, CASE ACTIVO WHEN 1  THEN 'Activo' ELSE 'Inactivo' END AS ACTIVOSTRING FROM EQUIPOS ORDER BY EQUIPO_ID";
         $stmt = DBConnection::getStatement($query);

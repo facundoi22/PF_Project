@@ -203,7 +203,7 @@ class Usuario
 
     public static function imprimirUsuariosEnTabla()
     {
-        echo"<table border='1' cellspacing='0' cellpadding='5' class='table table-condensed'>";
+        echo"<table  class='table table-condensed'>";
         echo "<tr><th>USUARIO</th><th>NOMBRE</th><th>EMAIL</th><th>ESTADO</th><th>ACCIONES</th></tr>";
 
 
