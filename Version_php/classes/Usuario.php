@@ -207,11 +207,11 @@ class Usuario
         echo "<tr><th>USUARIO</th><th>NOMBRE</th><th>EMAIL</th><th>ESTADO</th><th>ACCIONES</th></tr>";
 
 
-        $query = "SELECT USUARIO_ID, NOMBRE, EMAIL, ACTIVO, CASE ACTIVO WHEN 1  THEN 'Activo' ELSE 'Inactivo' END AS ACTIVOSTRING FROM USUARIOS ORDER BY USUARIO_ID";
+        $query = "SELECT USUARIO_ID, NOMBRE, APELLIDO, EMAIL, ACTIVO, CASE ACTIVO WHEN 1  THEN 'Activo' ELSE 'Inactivo' END AS ACTIVOSTRING FROM USUARIOS ORDER BY USUARIO_ID";
         $stmt = DBConnection::getStatement($query);
         $stmt->execute();
         while ($a = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            echo "<tr><td>$a[USUARIO_ID]</td><td>$a[NOMBRE]</td><td>$a[EMAIL]</td><td>$a[ACTIVOSTRING]</td>";
+            echo "<tr><td>$a[USUARIO_ID]</td><td>$a[NOMBRE] $a[APELLIDO]</td><td>$a[EMAIL]</td><td>$a[ACTIVOSTRING]</td>";
             if ($a['ACTIVO'] == 1) {
                 echo "<td><a class='fa fa-trash fa-2x' title='Inactivar $a[USUARIO_ID]' href='php/usuario.desactivar.php?id=$a[USUARIO_ID]'>Inactivar</a></td>";
             } else {
