@@ -10,9 +10,11 @@ if (isset($_FILES['foto']['tmp_name']) && !empty($_FILES['foto']['tmp_name'])){
     $ancho = imagesx( $original );
     $alto = imagesy( $original );
 
-    $alto_max= 675;
+	
+	$alto_max= 675;
     $ancho_max = round( $ancho *  $alto_max / $alto );
 
+	
     $copia = imagecreatetruecolor( $ancho_max, $alto_max );
 
     imagecopyresampled( $copia, $original,
