@@ -16,7 +16,9 @@ if (Equipo::existeEquipo($equipo_id)) {
 		echo "<div style='background-image: url(images/equipos/" . $equipo_id . "_portada.jpg)'>";
 		echo "<img src='images/equipos/" . $equipo_id . "_logo_200.jpg' alt='Logo del Equipo'/>";
 		echo "<h2 class='mayusculas negrita'>" . $equipo->getNombre() . "</h2>";
-		echo "<div><a href='#registroEquipo' title='actualizar portada'>Actualizar Portada</a></div>";
+		if ( $equipo->getCapitanID() == Session::get("usuario")->getUsuarioID()) {
+			echo "<div><a href='#registroEquipo' title='actualizar portada'>Actualizar Portada</a></div>";
+		};
 		echo "</div>";
 	?>
 
@@ -90,7 +92,7 @@ if (Equipo::existeEquipo($equipo_id)) {
 									<a href='#' title='Volver'> Volver</a>
 								</div>
 								<div>
-									<form action="index.php?seccion=miequipo" method="post">
+									<form action="index.php?seccion=miequipo&equipo_id=<?php echo $equipo->getEquipoId()?>" method="post">
 										<textarea rows='10' cols='30' name="mensaje"></textarea>
 										<input type="submit" value="Enviar"/>
 									</form>
