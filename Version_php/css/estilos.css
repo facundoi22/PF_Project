@@ -1791,25 +1791,47 @@ form h3 {margin-bottom:15px;}
 	background-repeat: no-repeat;
 	background-color: #009c58;
 	background-position: right 20%;
-	margin-top: 75px;
+	margin-top: 100px;
 	height: 330px;
-	padding-left: 70px;
+	padding-left: 0px;
 }
 
-#miequipo main>div:first-of-type> img{
+#miequipo main>div:first-of-type> div {
+	width: 35%;
+	display:inline-block;
+	height: 300px;
+	text-align: center;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+
+#miequipo main>div:first-of-type> div ~div{
+	background-color: transparent;
+	width: 45%;
+	padding-right: 5px;
+    margin-left: 250px;
+    padding-top: 10px;
+}
+		
+
+
+#miequipo main>div:first-of-type> div > img{
 	border-radius: 50%;
-	margin-left: 50px;
 	margin-top: 50px;
 }
 
-#miequipo main>div:first-of-type> h2{
+#miequipo main>div:first-of-type> div >h2{
 	color: #FFF;
 	font-size: 1.8em;
-	margin-left: 15px;
+	margin-left: 0px;
 	font-style: italic;
 	text-align: center;
-	width: 250px;
+	width: 100%;
 	margin-bottom:0px;
+	margin-top: 0px;
+	padding-top: 10px;
+	vertical-align: bottom;
 }
 
 #miequipo main>div:first-of-type> div a{
@@ -1825,6 +1847,7 @@ form h3 {margin-bottom:15px;}
 	border-radius: 10px;
 	border: outset 1px #fff;
 	box-shadow: 2px 2px 2px #000;
+	vertical-align: bottom;
 }
 
 
