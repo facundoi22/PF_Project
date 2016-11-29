@@ -14,8 +14,10 @@ if (Equipo::existeEquipo($equipo_id)) {
 	<main>
 		<?php
 		echo "<div style='background-image: url(images/equipos/" . $equipo_id . "_portada.jpg)'>";
+		echo "<div>";
 		echo "<img src='images/equipos/" . $equipo_id . "_logo_200.jpg' alt='Logo del Equipo'/>";
 		echo "<h2 class='mayusculas negrita'>" . $equipo->getNombre() . "</h2>";
+		echo "</div>";
 		if ( $equipo->getCapitanID() == Session::get("usuario")->getUsuarioID()) {
 			echo "<div><a href='#registroEquipo' title='actualizar portada'>Actualizar Portada</a></div>";
 		};
