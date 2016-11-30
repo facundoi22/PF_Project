@@ -1,8 +1,8 @@
 <?php
 	
 	date_default_timezone_set( "America/Argentina/Buenos_Aires" );
-	ini_set( 'display_errors' , 0); 
-	error_reporting( 0 );
+	ini_set( 'display_errors' , 1); 
+	error_reporting( E_ALL );
 	ini_set('upload_max_filesize','100M');
 
     function __autoload($className)
