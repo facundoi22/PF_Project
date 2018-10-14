@@ -1,0 +1,12 @@
+Alumno: Facundo Salerno
+Materia: Programación III
+Profesor: Santiago Gallino
+Cursada: 2° Cuatrimestre 2016
+Caracter de Entrega: Final
+
+Usuarios disponibles:
+usaurio   | password
+facundoS  | 1234
+pabloP    | 1234
+juanF     | 1234
+santiagoA | 1234

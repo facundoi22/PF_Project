@@ -1,0 +1,502 @@
+@font-face {
+    font-family: 'optimusprincepsregular';
+    src: url('../fonts/optimusprinceps-webfont.eot');
+    src: url('../fonts/optimusprinceps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/optimusprinceps-webfont.woff2') format('woff2'),
+         url('../fonts/optimusprinceps-webfont.woff') format('woff'),
+         url('../fonts/optimusprinceps-webfont.ttf') format('truetype'),
+         url('../fonts/optimusprinceps-webfont.svg#optimusprincepsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{	
+	background-color:#e0e0e0;
+} 
+
+body >div,
+footer {
+	width:100%;
+	max-width:1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+header{
+	background-color: #e0e0e0;
+	position:fixed; 
+	z-index: 10;
+	top: 0px;
+	left: 5%;
+	width: 1250px;
+	height: 75px;
+}
+
+header h1 a {
+	color: rgba(0,0,0,0);
+	width: 700px;
+	height: 75px;
+	display: inline-block;
+}
+
+.dosCol {
+	width: 48%;
+	display: inline-block;	
+}
+
+.tresCol {
+	width: 30%;
+	display: inline-block;	
+}
+
+.tresColx2 {
+	width: 60%;
+	display: inline-block;	
+}
+
+.cuatroCol {
+	width: 23%;
+	display: inline-block;	
+}
+
+
+
+
+.cincoCol {
+	width: 19%;
+	height: 100%;
+	display: inline-block;	
+	vertical-align: top;	
+	color: #FFF;
+	margin-top: 2%;
+	font-size: 0.8em;
+}
+
+
+
+
+header >h1,
+header>form,
+header>div {
+	width: 30%;
+	display: inline-block;
+	height: 100%;
+	vertical-align:bottom;
+}
+
+
+header>h1 ,
+header>form>input:first-of-type,
+footer h2{
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	color: rgba(0,0,0,0);	
+	
+}
+
+header>form>input:first-of-type{
+	background-image: url(../images/lupa.png);
+	background-color: #FFF;
+	border: solid 1px #FFF;	
+	border-radius: 25% 0% 0% 25%;	
+}
+
+header>form{
+	padding-top: 1%;
+	padding-left:3%;
+}
+
+header>form>input{
+	height: 50%;
+	vertical-align: middle;
+	padding:0%;
+	margin:0%;
+	height:50%;
+	
+}
+
+header>form>input:last-of-type{
+	padding-left: -1px;
+	border: solid 1px #FFF;	
+	border-radius: 0% 10% 10% 0% ;		
+}
+
+header>div{
+	vertical-align: middle;
+	padding-top: 1%;
+}
+
+header>div>a{
+	background-color:#e48d10;
+	border: outset 1px #FFF;	
+	border-radius: 10%;	
+	text-decoration: none;
+	color: #FFF;
+	width: 50%;
+	display: inline-block;
+	height: 50%;
+	margin-left:25%;
+	vertical-align: bottom;
+	font-size: 1.5em;
+	text-align: center;
+	box-shadow: 10px 5px 5px black;
+}
+
+main {
+	background-color: #FFF;
+}
+
+main>div:first-of-type{
+	background-image: url(../images/portada.jpg);
+	background-repeat: no-repeat;
+	background-color: #e0e0e0;
+	margin-top: 75px;
+	height: 330px;
+}
+
+
+main>div>div>h2 {
+	font-size: 3em;
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 15%;
+	vertical-align: middle;
+	font-weight: bold;
+	color: #FFF;
+	
+}
+
+main>div>div~div>div{
+	background-color: #009c58;
+	width:70%;
+	margin-left: 30%;
+	height: 100%;
+	vertical-align: top;
+	margin-top: 5%;
+}
+
+main>div>div~div>div>a:first-of-type{
+	background-color:#3b5998;
+	background-image: url(../images/fb.png);
+	background-position: 4%;
+	background-repeat: no-repeat;
+	border: inset 2px #FFF;	
+	border-radius: 10px;	
+	text-decoration: none;
+	color: #FFF;
+	width: 80%;
+	display: inline-block;
+	height: 30%;
+	margin-left: 10%;
+	margin-top: 5%;
+	font-size: 1.4em;
+	line-height: 2em;
+	box-shadow: 10px 5px 5px black;
+	text-align: center;
+	padding-top: 1%;
+	padding-left: 15%;
+}
+
+main>div>div form{
+	margin-top: 5%;
+	border-top: inset 2px #FFF;	
+	padding-top: 5%;
+	margin-left: 10%;
+	
+}
+	
+main>div>div form input{
+	width: 85%;
+	margin-top: 2%;
+	font-size: 1.3em;
+	border: inset 2px #FFF;	
+	border-radius: 15px;	
+	text-align: center;
+	background-image: url(../images/mail.png);
+	background-position: 5%;
+	background-repeat: no-repeat;
+	line-height: 1.5em;
+}
+
+main>div>div form input~input{
+	background-image: url(../images/candado.png);
+}
+
+main>div>div form input~input~input{
+	background-image: none;
+	background-color: #e48d10;
+	color: #FFF;
+	border-radius:10px;
+	border: outset 2px #e48d10;	
+	margin-top: 5%;
+	margin-left: 45%;
+	width: 40%;
+	box-shadow: 10px 5px 5px black;
+}
+
+
+main>div>div~div>div >a:last-of-type{
+	text-decoration: none;
+	text-align: center;
+	display: inline-block;
+	width: 50%;
+	margin-left: 25%;
+	margin-top: 3%;
+	color: #a4f8c6;
+	font-size: 0.9em;
+	line-height: 1.5em;
+}
+
+main>div~div{
+	padding-top: 5%;
+}
+
+main>div~div>ul li{
+	width: 32%;
+	display: inline-block;
+	height: 20%;
+	padding-top: 17%;
+	background-image: url(../images/torneos.png);
+	background-position: -10% 30% ;
+	background-repeat: no-repeat;
+	color: #e48d10;
+	font-size: 1.5em;
+	text-align: center;
+}	
+
+main>div~div li~li{
+	background-position: center 30%;
+}
+
+main>div~div li~li~li{
+	background-position: 110% 30%;
+	
+}
+ 
+.negrita {
+	font-weight: bold;
+}
+
+.mayusculas{
+	text-transform: uppercase;
+}
+
+main>div~div~div{
+	color: #e48d10;	
+	padding-top: 5%;
+}
+
+
+main>div~div~div h2,
+main>div~div~div h3,
+main>div~div~div li{
+	background-image: none;	
+	display: inline-block;
+	height: 10%;
+	color: #e48d10;
+	font-size: 1em;
+	margin-left: 5%;
+	margin-bottom: 2%;
+}
+
+main>div~div~div h2{
+	font-size: 2em;
+	width: 80%;
+	text-align: left;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-style: italic;
+	
+}
+
+main>div~div~div>.dosCol ~.dosCol{
+	vertical-align: top;
+	width: 50%;
+}
+
+
+main>div~div~div h3 ,
+main>div~div~div li {
+	font-size:  1.5em;
+	margin-top: 2%;
+	width: 80%;
+}
+
+main>div:last-of-type {
+	padding-top: 2%;
+	text-align: center;
+	height: 150px;
+}
+
+main>div:last-of-type a {
+	background-color:#48ff42;
+	border: outset 1px #FFF;	
+	border-radius: 0%;	
+	text-decoration: none;
+	color: #FFF;
+	width: 35%;
+	display: inline-block;
+	height: 80px;
+	font-size: 2em;
+	line-height: 2.5em;
+	box-shadow: 10px 5px 5px black;
+	
+}
+
+footer {
+	height: 200px;
+	background-color: #009c58;
+	
+}
+
+
+footer h2{
+	height: 100%;
+	vertical-align:top;
+	background-position: 0% 10%;
+}
+
+footer h3{
+	font-weight: bold;
+}
+
+footer li {
+	margin-top: 5%;
+}
+
+footer a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+
+footer .cincoCol:last-of-type {
+	padding-left: 10%;
+}
+footer .cincoCol:last-of-type li{
+	background-image: url(../images/fb_naranja.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 30px;
+	width: 30px;
+}
+
+footer .cincoCol:last-of-type a{
+	color: rgba(0,0,0,0);		
+	height: 100%; 
+	width: 100%;
+	display:inline-block;
+}
+
+footer .cincoCol:last-of-type li~li{
+	background-image: url(../images/twitter.png);
+}
+
+
+
+#registro>div >div  { display: none; }
+#registro>div >div:target{  display: block;	}
+
+
+#registro >div >div{  
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	right:0px;
+	bottom: 0px;
+	z-index:20;
+	background-color: rgba(000,000,000,0.6);			
+}
+
+#registroModal >div {
+	width: 40%;
+	height: 80%;
+	margin-left: 27%;
+	margin-top: 3%;
+	z-index: 20;
+	background-color:#e0e0e0;
+}
+
+#registroModal >div >div:first-of-type{
+	background-color:#009c58;
+	color: #FFF;
+	text-decoration: none;
+}
+
+#registroModal >div >div h2{
+	display: inline-block;
+	margin-left: 5%;
+	font-size: 1.5em;
+	line-height: 2em;
+}
+
+#registroModal >div >div a{
+	background-image: url(../images/x.png);
+	background-position: 5%;
+	background-repeat: no-repeat;
+	color: rgba(000,000,000,0);	
+	height: 30px;
+	width: 30px;
+	float: right;
+	margin-right: 2%;
+	margin-top: 2%;
+}
+
+#registroModal >div >div:last-of-type {
+	margin-top: 2%;
+}
+	
+#registroModal >div >div:last-of-type input ,
+#registroModal >div >div:last-of-type label {
+	width: 50%;
+	margin-top: 3%;
+	margin-left: 25%;
+	font-size: 1em;
+	line-height: 1.8em;
+}
+
+#registroModal >div >div:last-of-type input{
+	border: inset 2px #FFF;	
+	border-radius: 15px;	
+	text-align: center;
+	background-image: url(../images/tipo.png);
+	background-position: 5%;
+	background-repeat: no-repeat;
+}
+
+#registroModal >div >div:last-of-type input~input~input{
+	background-image: url(../images/mail.png);
+}
+
+#registroModal >div >div:last-of-type input~input~input~input{
+	background-image: url(../images/candado.png);
+}
+
+#registroModal >div >div:last-of-type label {
+	width: 75%;
+	margin-left: 0%;
+}
+
+#registroModal > div > div:last-of-type #terminos{
+	width:5%;
+	margin-left: 25%;
+}
+
+#registroModal >div >div:last-of-type form>input:last-of-type{
+	background-color:#e48d10;
+	border: outset 1px #FFF;	
+	border-radius: 10%;	
+	text-decoration: none;
+	color: #FFF;
+	width: 50%;
+	display: inline-block;
+	height: 50%;
+	margin-left:25%;
+	vertical-align: bottom;
+	font-size: 1.5em;
+	text-align: center;
+	box-shadow: 10px 5px 5px black;
+	background-image: none;
+}
