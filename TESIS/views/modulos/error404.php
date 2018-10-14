@@ -6,6 +6,6 @@
 		<p>te invitamos a volver al home para empezar de vuelta.</p>
 	</div>
 	<div class="dosCol">
-		<img src="<?= $ruta ?>../views/images/higuain.jpg" alt="Higuain"/>
+		<img src="<?= $ruta ?>../public/images/higuain.jpg" alt="Higuain"/>
 	</div>
 </main>

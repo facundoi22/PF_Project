@@ -42,12 +42,17 @@ class FormValidator
         // Valido los inputs;
         $firmoTerminos = false;
         foreach( $this->campos as $nombreCampo => $valor){
+            if ($nombreCampo == 'terminos'){
+                $firmoTerminos = true;
+            }
             $errorActual = $this->validarCampo($nombreCampo, $valor);
             if ($errorActual){
                 $this->camposError[$nombreCampo] = $errorActual;
             }
         }
-
+        if (!$firmoTerminos){
+            $this->camposError['terminos'] = "No ha aceptado  los términos";
+        }
     }
 
 

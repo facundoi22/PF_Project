@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UsuarioController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Controller/UsuarioController.php">
+      <file leaf-file-name="EquipoController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Controller/EquipoController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="76" column="73" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="73" />
+            <state relative-caret-position="17">
+              <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
               <folding>
                 <element signature="e#42#69#0#PHP" expanded="true" />
               </folding>
@@ -33,73 +33,70 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="usuario.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="equipo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/modulos/equipo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+              <folding>
+                <marker date="1539552236048" expanded="true" signature="2322:2347" ph="..." />
+                <marker date="1539552236048" expanded="true" signature="2331:2347" ph="..." />
+                <marker date="1539552236048" expanded="true" signature="2711:2726" ph="..." />
+                <marker date="1539552236048" expanded="true" signature="2754:2903" ph="..." />
+                <marker date="1539552236048" expanded="true" signature="2768:2866" ph="..." />
+                <marker date="1539552236048" expanded="true" signature="2880:2903" ph="..." />
+                <marker date="1539552236048" expanded="true" signature="4915:4925" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Equipo.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Model/Equipo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-552">
+              <caret line="188" column="205" selection-start-line="188" selection-start-column="205" selection-end-line="188" selection-end-column="205" />
+              <folding>
+                <element signature="e#37#73#0#PHP" expanded="true" />
+                <marker date="1539552548332" expanded="true" signature="832:890" ph="INSERT INTO EQUIPOS... " />
+                <marker date="1539552548332" expanded="true" signature="1206:1260" ph="INSERT INTO JUGADORES... " />
+                <marker date="1539552548332" expanded="true" signature="1573:1625" ph="SELECT 'X' F... EQUIPOS" />
+                <marker date="1539552548332" expanded="true" signature="1961:2044" ph="SELECT 'X' F... JUGADORES" />
+                <marker date="1539552548332" expanded="true" signature="2359:2413" ph="INSERT INTO JUGADORES... " />
+                <marker date="1539552548332" expanded="true" signature="2648:2715" ph="SELECT NOMBR... EQUIPOS" />
+                <marker date="1539552548332" expanded="true" signature="3126:3187" ph="SELECT JUGAD... JUGADORES" />
+                <marker date="1539552548332" expanded="true" signature="3864:3929" ph="SELECT TORNE... EQUIPOS_TORNEO" />
+                <marker date="1539552548332" expanded="true" signature="4254:4313" ph="SELECT 'X' F... EQUIPOS_TORNEO" />
+                <marker date="1539552548332" expanded="true" signature="4571:4705" ph="SELECT A.JUG... JUGADORES" />
+                <marker date="1539552548332" expanded="true" signature="5947:6222" ph="SELECT A.EQU... EQUIPOS" />
+                <marker date="1539552548332" expanded="true" signature="7357:7504" ph="SELECT EQUIP... EQUIPOS" />
+                <marker date="1539552548332" expanded="true" signature="8243:8307" ph="UPDATE EQUIP... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="usuario.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/modulos/usuario.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <element signature="e#7#38#0#PHP" expanded="true" />
+                <marker date="1539551084353" expanded="true" signature="800:815" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Usuario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Model/Usuario.php">
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/modulos/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="206" column="40" selection-start-line="206" selection-start-column="27" selection-end-line="206" selection-end-column="40" />
-              <folding>
-                <element signature="e#37#73#0#PHP" expanded="true" />
-                <marker date="1539493258295" expanded="true" signature="1264:1332" ph="SELECT PASSW... USUARIOS" />
-                <marker date="1539493258295" expanded="true" signature="2104:2200" ph="SELECT NOMBR... USUARIOS" />
-                <marker date="1539493258295" expanded="true" signature="4075:4172" ph="INSERT INTO USUARIOS... " />
-                <marker date="1539493258295" expanded="true" signature="5062:5198" ph="UPDATE USUAR... " />
-                <marker date="1539493258295" expanded="true" signature="5758:5813" ph="SELECT 'X' F... USUARIOS" />
-                <marker date="1539493258295" expanded="true" signature="6167:6246" ph="SELECT 'X' F... AMIGOS" />
-                <marker date="1539493258295" expanded="true" signature="6636:6771" ph="SELECT 'X' F... AMIGOS" />
-                <marker date="1539493258295" expanded="true" signature="7180:7230" ph="INSERT INTO AMIGOS... " />
-                <marker date="1539493258295" expanded="true" signature="7644:7775" ph="DELETE FROM " />
-                <marker date="1539493258295" expanded="true" signature="8159:8217" ph="SELECT AMIGO... AMIGOS" />
-                <marker date="1539493258295" expanded="true" signature="8159:8295" ph="SELECT AMIGO... " />
-                <marker date="1539493258295" expanded="true" signature="8224:8295" ph="SELECT USUAR... AMIGOS" />
-                <marker date="1539493258295" expanded="true" signature="9491:9636" ph="SELECT USUAR... USUARIOS" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="z_usuario.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/modulos/z_usuario.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="31" />
+            <state relative-caret-position="323">
+              <caret line="64" column="35" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="35" />
               <folding>
                 <element signature="e#6#37#0#PHP" expanded="true" />
-                <marker date="1539451005605" expanded="true" signature="6246:6256" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Controller/HomeController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/modulos/header.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="40" column="59" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="59" />
-              <folding>
-                <marker date="1539462111332" expanded="true" signature="3391:3401" ph="..." />
+                <marker date="1539546841746" expanded="true" signature="3593:3640" ph="..." />
               </folding>
             </state>
           </provider>
@@ -108,8 +105,8 @@
       <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="136">
+              <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -120,13 +117,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Salerno/Core/Route.php" />
-        <option value="$PROJECT_DIR$/app/Salerno/Exception/ChatNoGrabadoException.php" />
-        <option value="$PROJECT_DIR$/app/Salerno/Exception/MensajeNoGrabadoException.php" />
-        <option value="$PROJECT_DIR$/app/Salerno/Exception/UsuarioNoGrabadoException.php" />
-        <option value="$PROJECT_DIR$/app/Salerno/Exception/AmigoNoEncontradoException.php" />
-        <option value="$PROJECT_DIR$/app/Salerno/Exception/MensajesNoLeidos.php" />
-        <option value="$PROJECT_DIR$/app/Salerno/Model/Posteo.php" />
         <option value="$PROJECT_DIR$/app/Salerno/Exception/AmigoNoGrabadoException.php" />
         <option value="$PROJECT_DIR$/DW4_SALERNO_FACUNDO_TP2.sql" />
         <option value="$PROJECT_DIR$/app/Salerno/Model/Usuario.php" />
@@ -146,9 +136,7 @@
         <option value="$PROJECT_DIR$/app/ProximaFecha/Exception/MensajeNoGrabadoException.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/Exception/MensajesNoLeidos.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/Exception/PosteoNoGrabadoException.php" />
-        <option value="$PROJECT_DIR$/app/ProximaFecha/Exception/UsuarioNoGrabadoException.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/Tools/DBConnectionInterface.php" />
-        <option value="$PROJECT_DIR$/app/ProximaFecha/Tools/FormValidator.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/Tools/Hash.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/Tools/Session.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/View/View.php" />
@@ -162,15 +150,24 @@
         <option value="$PROJECT_DIR$/views/modulos/footer.php" />
         <option value="$PROJECT_DIR$/views/modulos/header.php" />
         <option value="$PROJECT_DIR$/views/css/estilos.css" />
-        <option value="$PROJECT_DIR$/views/modulos/error404.php" />
-        <option value="$PROJECT_DIR$/app/ProximaFecha/Controller/HomeController.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/Tools/DBConnection.php" />
-        <option value="$PROJECT_DIR$/views/modulos/home.php" />
-        <option value="$PROJECT_DIR$/views/modulos/home.php" />
+        <option value="$PROJECT_DIR$/app/ProximaFecha/Model/Torneo.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/Model/Usuario.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/ProximaFecha/Tools/FormValidator.php" />
+        <option value="$PROJECT_DIR$/views/modulos/home.php" />
+        <option value="$PROJECT_DIR$/views/modulos/home.php" />
+        <option value="$PROJECT_DIR$/views/modulos/equipos.php" />
+        <option value="$PROJECT_DIR$/app/ProximaFecha/Exception/UsuarioNoGrabadoException.php" />
+        <option value="$PROJECT_DIR$/app/ProximaFecha/Exception/ArchivoNoEncontradoException.php" />
+        <option value="$PROJECT_DIR$/app/ProximaFecha/Exception/EquipoNoGrabadoException.php" />
         <option value="$PROJECT_DIR$/app/ProximaFecha/Controller/UsuarioController.php" />
+        <option value="$PROJECT_DIR$/app/ProximaFecha/Controller/HomeController.php" />
+        <option value="$PROJECT_DIR$/views/modulos/error404.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/views/modulos/usuario.php" />
+        <option value="$PROJECT_DIR$/app/ProximaFecha/Controller/EquipoController.php" />
+        <option value="$PROJECT_DIR$/views/modulos/equipo.php" />
+        <option value="$PROJECT_DIR$/app/ProximaFecha/Model/Equipo.php" />
       </list>
     </option>
   </component>
@@ -268,6 +265,10 @@
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -298,28 +299,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ProximaFecha" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sitio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TESIS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProximaFecha" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Tools" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -363,28 +342,6 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Core" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="sitio" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TESIS" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProximaFecha" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -402,11 +359,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\TESIS\app\ProximaFecha\Controller" />
+      <recent name="C:\wamp64\www\TESIS\app\ProximaFecha\Exception" />
+      <recent name="C:\wamp64\www\TESIS\app\ProximaFecha\Model" />
       <recent name="C:\wamp64\www\TESIS\views\modulos" />
       <recent name="C:\wamp64\www\SALERNO_FACUNDO_FINAL_PROG3\app\Salerno\Exception" />
-      <recent name="C:\wamp64\www\prog3\views\modulos" />
-      <recent name="C:\wamp64\www\prog3\app\Salerno\Exception" />
-      <recent name="C:\wamp64\www\prog3\app\Salerno\Model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\PROG3\public" />
@@ -504,32 +461,41 @@
       <workItem from="1539457719735" duration="498000" />
       <workItem from="1539458230502" duration="407000" />
       <workItem from="1539458640745" duration="4247000" />
-      <workItem from="1539487556607" duration="6543000" />
+      <workItem from="1539487556607" duration="20514000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="228643000" />
+    <option name="totallyTimeSpent" value="242614000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="702" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34114978" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3263158" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
@@ -552,17 +518,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Salerno/Tools/Validator.php" />
-    <entry file="file://$PROJECT_DIR$/app/Salerno/Tools/Auth.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.915/routes.php" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.268/routes.php" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_8.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="917" column="9" selection-start-line="917" selection-start-column="9" selection-end-line="917" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/AmigoNoGrabadoException.php" />
     <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
@@ -572,13 +527,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DW4_SALERNO_FACUNDO_TP2.sql" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="253" column="6" selection-start-line="253" selection-start-column="6" selection-end-line="253" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Core/Request.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1181">
@@ -593,80 +541,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/AmigoNoEncontradoException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/AmigoNoGrabadoException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/ApplicationException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/ChatNoGrabadoException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/InvalidURLException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/MensajeNoGrabadoException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/MensajesNoLeidos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/PosteoNoGrabadoException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/UsuarioNoGrabadoException.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Tools/DBConnectionInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Tools/FormValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -688,13 +566,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modulos/z_posteos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -745,14 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/css/estilos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2568" column="41" selection-start-line="2568" selection-start-column="41" selection-end-line="2568" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/modulos/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="346">
@@ -765,32 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modulos/miequipo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1539190775037" expanded="true" signature="4950:4960" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modulos/equipos.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modulos/error404.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -853,53 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/modulos/home.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-926">
-          <caret line="22" column="68" selection-start-line="22" selection-start-column="68" selection-end-line="22" selection-end-column="68" />
-          <folding>
-            <element signature="e#6#37#0#PHP" expanded="true" />
-            <marker date="1539493125151" expanded="true" signature="3637:3684" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/modulos/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="40" column="59" selection-start-line="40" selection-start-column="49" selection-end-line="40" selection-end-column="59" />
-          <folding>
-            <marker date="1539462111332" expanded="true" signature="3391:3401" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Controller/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Controller/UsuarioController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="76" column="73" selection-start-line="76" selection-start-column="60" selection-end-line="76" selection-end-column="73" />
-          <folding>
-            <element signature="e#42#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/modulos/z_usuario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -911,25 +701,208 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Model/Torneo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="111" column="35" selection-start-line="111" selection-start-column="35" selection-end-line="111" selection-end-column="35" />
+          <folding>
+            <marker date="1539534383143" expanded="true" signature="962:1086" ph="SELECT NOMBR... TORNEOS" />
+            <marker date="1539534383143" expanded="true" signature="1721:1786" ph="SELECT EQUIP... EQUIPOS_TORNEO" />
+            <marker date="1539534383143" expanded="true" signature="2549:2672" ph="SELECT A.EQU... EQUIPOS_TORNEO" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Model/Usuario.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="206" column="40" selection-start-line="206" selection-start-column="27" selection-end-line="206" selection-end-column="40" />
+        <state relative-caret-position="193">
+          <caret line="78" column="36" selection-start-line="78" selection-start-column="36" selection-end-line="78" selection-end-column="36" />
           <folding>
             <element signature="e#37#73#0#PHP" expanded="true" />
-            <marker date="1539493258295" expanded="true" signature="1264:1332" ph="SELECT PASSW... USUARIOS" />
-            <marker date="1539493258295" expanded="true" signature="2104:2200" ph="SELECT NOMBR... USUARIOS" />
-            <marker date="1539493258295" expanded="true" signature="4075:4172" ph="INSERT INTO USUARIOS... " />
-            <marker date="1539493258295" expanded="true" signature="5062:5198" ph="UPDATE USUAR... " />
-            <marker date="1539493258295" expanded="true" signature="5758:5813" ph="SELECT 'X' F... USUARIOS" />
-            <marker date="1539493258295" expanded="true" signature="6167:6246" ph="SELECT 'X' F... AMIGOS" />
-            <marker date="1539493258295" expanded="true" signature="6636:6771" ph="SELECT 'X' F... AMIGOS" />
-            <marker date="1539493258295" expanded="true" signature="7180:7230" ph="INSERT INTO AMIGOS... " />
-            <marker date="1539493258295" expanded="true" signature="7644:7775" ph="DELETE FROM " />
-            <marker date="1539493258295" expanded="true" signature="8159:8217" ph="SELECT AMIGO... AMIGOS" />
-            <marker date="1539493258295" expanded="true" signature="8159:8295" ph="SELECT AMIGO... " />
-            <marker date="1539493258295" expanded="true" signature="8224:8295" ph="SELECT USUAR... AMIGOS" />
-            <marker date="1539493258295" expanded="true" signature="9491:9636" ph="SELECT USUAR... USUARIOS" />
+            <marker date="1539534433228" expanded="true" signature="1516:1584" ph="SELECT PASSW... USUARIOS" />
+            <marker date="1539534433228" expanded="true" signature="2705:2767" ph="SELECT EQUIP... JUGADORES" />
+            <marker date="1539534433228" expanded="true" signature="3111:3278" ph="SELECT DISTI... TORNEOS" />
+            <marker date="1539534433228" expanded="true" signature="3631:3775" ph="SELECT DISTI... TORNEOS" />
+            <marker date="1539534433228" expanded="true" signature="4205:4317" ph="SELECT NOMBR... USUARIOS" />
+            <marker date="1539534433228" expanded="true" signature="6697:6812" ph="INSERT INTO USUARIOS... " />
+            <marker date="1539534433228" expanded="true" signature="7702:7838" ph="UPDATE USUAR... " />
+            <marker date="1539534433228" expanded="true" signature="8398:8453" ph="SELECT 'X' F... USUARIOS" />
+            <marker date="1539534433228" expanded="true" signature="8807:8886" ph="SELECT 'X' F... AMIGOS" />
+            <marker date="1539534433228" expanded="true" signature="9276:9411" ph="SELECT 'X' F... AMIGOS" />
+            <marker date="1539534433228" expanded="true" signature="9820:9870" ph="INSERT INTO AMIGOS... " />
+            <marker date="1539534433228" expanded="true" signature="10284:10415" ph="DELETE FROM " />
+            <marker date="1539534433228" expanded="true" signature="10799:10857" ph="SELECT AMIGO... AMIGOS" />
+            <marker date="1539534433228" expanded="true" signature="10799:10935" ph="SELECT AMIGO... " />
+            <marker date="1539534433228" expanded="true" signature="10864:10935" ph="SELECT USUAR... AMIGOS" />
+            <marker date="1539534433228" expanded="true" signature="12131:12276" ph="SELECT USUAR... USUARIOS" />
+            <marker date="1539534433228" expanded="true" signature="13031:13186" ph="SELECT USUAR... USUARIOS" />
+            <marker date="1539534433228" expanded="true" signature="13992:14059" ph="UPDATE USUAR... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modulos/z_posteos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="32" column="139" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="139" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/css/estilos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="2554" column="22" selection-start-line="2554" selection-start-column="1" selection-end-line="2554" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Tools/FormValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="120" column="7" selection-start-line="120" selection-start-column="7" selection-end-line="120" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modulos/equipos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/AmigoNoEncontradoException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/AmigoNoGrabadoException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/ApplicationException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/ArchivoNoEncontradoException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/ChatNoGrabadoException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/EquipoNoGrabadoException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/InvalidURLException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/MensajeNoGrabadoException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/MensajesNoLeidos.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/PosteoNoGrabadoException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Exception/UsuarioNoGrabadoException.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="284" column="36" selection-start-line="284" selection-start-column="26" selection-end-line="284" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modulos/error404.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="39" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Controller/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#42#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Controller/UsuarioController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="95" selection-end-column="10" />
+          <folding>
+            <element signature="e#42#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Controller/EquipoController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding>
+            <element signature="e#42#69#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -937,9 +910,78 @@
     <entry file="file://$PROJECT_DIR$/views/modulos/usuario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
             <element signature="e#7#38#0#PHP" expanded="true" />
+            <marker date="1539551084353" expanded="true" signature="800:815" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modulos/home.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="64" column="35" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="35" />
+          <folding>
+            <element signature="e#6#37#0#PHP" expanded="true" />
+            <marker date="1539546841746" expanded="true" signature="3593:3640" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modulos/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="72" />
+          <folding>
+            <marker date="1539462111332" expanded="true" signature="3391:3401" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="47" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/modulos/equipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+          <folding>
+            <marker date="1539552236048" expanded="true" signature="2322:2347" ph="..." />
+            <marker date="1539552236048" expanded="true" signature="2331:2347" ph="..." />
+            <marker date="1539552236048" expanded="true" signature="2711:2726" ph="..." />
+            <marker date="1539552236048" expanded="true" signature="2754:2903" ph="..." />
+            <marker date="1539552236048" expanded="true" signature="2768:2866" ph="..." />
+            <marker date="1539552236048" expanded="true" signature="2880:2903" ph="..." />
+            <marker date="1539552236048" expanded="true" signature="4915:4925" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProximaFecha/Model/Equipo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-552">
+          <caret line="188" column="205" selection-start-line="188" selection-start-column="205" selection-end-line="188" selection-end-column="205" />
+          <folding>
+            <element signature="e#37#73#0#PHP" expanded="true" />
+            <marker date="1539552548332" expanded="true" signature="832:890" ph="INSERT INTO EQUIPOS... " />
+            <marker date="1539552548332" expanded="true" signature="1206:1260" ph="INSERT INTO JUGADORES... " />
+            <marker date="1539552548332" expanded="true" signature="1573:1625" ph="SELECT 'X' F... EQUIPOS" />
+            <marker date="1539552548332" expanded="true" signature="1961:2044" ph="SELECT 'X' F... JUGADORES" />
+            <marker date="1539552548332" expanded="true" signature="2359:2413" ph="INSERT INTO JUGADORES... " />
+            <marker date="1539552548332" expanded="true" signature="2648:2715" ph="SELECT NOMBR... EQUIPOS" />
+            <marker date="1539552548332" expanded="true" signature="3126:3187" ph="SELECT JUGAD... JUGADORES" />
+            <marker date="1539552548332" expanded="true" signature="3864:3929" ph="SELECT TORNE... EQUIPOS_TORNEO" />
+            <marker date="1539552548332" expanded="true" signature="4254:4313" ph="SELECT 'X' F... EQUIPOS_TORNEO" />
+            <marker date="1539552548332" expanded="true" signature="4571:4705" ph="SELECT A.JUG... JUGADORES" />
+            <marker date="1539552548332" expanded="true" signature="5947:6222" ph="SELECT A.EQU... EQUIPOS" />
+            <marker date="1539552548332" expanded="true" signature="7357:7504" ph="SELECT EQUIP... EQUIPOS" />
+            <marker date="1539552548332" expanded="true" signature="8243:8307" ph="UPDATE EQUIP... " />
           </folding>
         </state>
       </provider>

@@ -24,8 +24,7 @@ use ProximaFecha\Model\Usuario;
 				}else {
 					echo "<img src='images/icons/UserJugador.png' alt='foto perfil' />";
 				}
-
-				echo "<a href='index.php?seccion=miusuario&usuario_id=".$usuarioActual->getUsuarioID()."' title='Ingresar'>Ver mi usuario </a>";
+				echo "<a href='usuarios/" .$usuarioActual->getUsuarioId() ."' title='Ingresar'>Ver mi usuario </a>";
 
 				echo "</div>";
 			}else{
@@ -63,7 +62,7 @@ use ProximaFecha\Model\Usuario;
 			</ul>
 		</div>
 		<div id='EquiposActuales'>
-			<h2><a href="index.php?seccion=equipos"> Mirá los equipos que ya participan! </a></h2>
+			<h2><a href="verEquipos"> Mirá los equipos que ya participan! </a></h2>
 		</div>
 		<div>
 			<h2>¿Que puedo hacer en PróximaFecha.com?</h2>

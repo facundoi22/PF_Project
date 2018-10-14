@@ -7,9 +7,11 @@ use ProximaFecha\Core\Route;
 use ProximaFecha\Model\Usuario;
 use ProximaFecha\Model\Chat;
 use ProximaFecha\Model\Posteo;
+use ProximaFecha\Model\Equipo;
 use ProximaFecha\Tools\Session;
 use ProximaFecha\Tools\FormValidator;
 use ProximaFecha\Exception\UsuarioNoGrabadoException;
+use ProximaFecha\Exception\EquipoNoGrabadoException;
 use ProximaFecha\Exception\AmigoNoGrabadoException;
 use ProximaFecha\Exception\MensajesNoLeidosException;
 use ProximaFecha\Exception\ChatNoGrabadoException;
@@ -70,17 +72,129 @@ class UsuarioController
         $ruta = "../";
         $routeParams = Route::getRouteParams();
         $usuario_id = $routeParams['usuario_id'];
-        if (Usuario::existeusuario($usuario_id)) {
-            $usuarioActual = new Usuario($usuario_id);
+        if ($usuario_id ){
+            if (Usuario::existeUsuario($usuario_id)) {
+                $usuario = new Usuario($usuario_id);
 
-            View::render('modulos/header',compact('ruta'));
-            View::render('modulos/usuario', compact('ruta','usuarioActual','usuario_id'));
-            View::render('modulos/footer',compact('ruta'));
+                View::render('modulos/header',compact('ruta'));
+                View::render('modulos/usuario', compact('ruta','usuario','usuario_id'));
+                View::render('modulos/footer',compact('ruta'));
 
-        } else{
-            header("Location: ../error404");
+            } else{
+                header("Location: ../error404");
+            };
+        } else {
+            if (Session::has("usuario")) {
+                $usuario = Session::get('usuario');
+                $usuario_id = $usuario->getUsuarioID();
+                View::render('modulos/header', compact('ruta'));
+                View::render('modulos/usuario', compact('ruta', 'usuario', 'usuario_id'));
+                View::render('modulos/footer', compact('ruta'));
+            } else {
+                header("Location: ../error404");
+            };
         };
     }
+
+    /**
+     * Método que controla el registro de nuevos usuarios en el sistema.
+     * @param Request $request
+     */
+    public function registrar(Request $request)
+    {
+        $inputs = $request->getData();
+        $error =0;
+        $errorActual = "";
+
+        $formValidator = new FormValidator( $inputs);
+
+        // Si hay algún campo en error, vuelvo al formulario, indicando que hay errores;
+        if ( !empty($formValidator->getCamposError()) ){
+            Session::set("camposError",$formValidator->getCamposError());
+            Session::set("campos",$formValidator->getCampos());
+            header("Location: ../public#registroModal");
+        } else {
+            Session::clearValue("camposError");
+            Session::clearValue("campos");
+
+            try {
+                $usuario_id = Usuario::CrearUsuario($inputs);
+            } catch ( UsuarioNoGrabadoException $exc){
+                echo "<pre>";
+                print_r($exc.getMessage());
+                echo "</pre>";
+                header("Location: error404");
+            }
+
+            $usuario = New Usuario($usuario_id);
+            Session::set('usuario',$usuario);
+            Session::set('logueado','S');
+            header("Location: usuarios/".$usuario_id);
+        }
+    }
+
+
+    /**
+     * Método que controla la creación de un posteo
+     * @param Request $request
+     */
+    public function crear(Request $request)
+    {
+        if (Session::has("usuario")){
+            $inputs = $request->getData();
+            $files = $request->getFiles();
+
+            try {
+                $nombre = $inputs['nombre'];
+                $capitan = $inputs['capitan'];
+                $equipo_id = Equipo::CrearEquipo($nombre, $capitan);
+
+            } catch (EquipoNoGrabadoException $exc){
+                echo "<pre>";
+                print_r($exc.getMessage());
+                echo "</pre>";
+                header("Location: ../error404");
+            }
+
+            if (isset($files['foto']['tmp_name']) && !empty($files['foto']['tmp_name'])) {
+                $archivo_tmp = $files['foto']['tmp_name'];
+
+                $original = imagecreatefromjpeg($archivo_tmp);
+                $ancho = imagesx($original);
+                $alto = imagesy($original);
+
+                // Copia 200 px
+                $alto_max= 200;
+                $ancho_max = round( $ancho *  $alto_max / $alto );
+
+                $copia = imagecreatetruecolor( $ancho_max, $alto_max );
+
+                imagecopyresampled( $copia, $original,
+                    0,0, 0,0,
+                    $ancho_max,$alto_max,
+                    $ancho,$alto);
+
+                $nombre_nuevo = "../../public/images/equipos/$equipo_id"."_logo_200.jpg";
+                imagejpeg( $copia , $nombre_nuevo);
+
+                // Copia 100 px
+                $alto_max= 100;
+                $ancho_max = round( $ancho *  $alto_max / $alto );
+                $copia = imagecreatetruecolor( $ancho_max, $alto_max );
+                imagecopyresampled( $copia, $original,
+                    0,0, 0,0,
+                    $ancho_max,$alto_max,
+                    $ancho,$alto);
+                $nombre_nuevo = "../../public/images/equipos/$equipo_id"."_logo_100.jpg";
+                imagejpeg( $copia , $nombre_nuevo);
+            }
+            header('Location: ../equipo/'.$equipo_id);
+        } else {
+            header("Location: ../public");
+        }
+    }
+
+
 
     /**
      * Método que muestra el usuario que recibe como parámetro
@@ -159,44 +273,7 @@ class UsuarioController
 
 
 
-    /**
-     * Método que controla el registro de nuevos usuarios en el sistema.
-     * @param Request $request
-     *
-    public function registrar(Request $request)
-    {
-        $inputs = $request->getData();
-        $error =0;
-        $errorActual = "";
 
-        $formValidator = new FormValidator( $inputs);
-
-        // Si hay algún campo en error, vuelvo al formulario, indicando que hay errores;
-        if ( !empty($formValidator->getCamposError()) ){
-            Session::set("camposError",$formValidator->getCamposError());
-
-            Session::set("campos",$formValidator->getCampos());
-            header("Location: ../public#registroModal");
-        } else {
-            Session::clearValue("camposError");
-            Session::clearValue("campos");
-
-            try {
-                $usuario_id = Usuario::CrearUsuario($inputs);
-
-            } catch ( UsuarioNoGrabadoException $exc){
-				echo "<pre>";
-				print_r($exc.getMessage());
-				echo "</pre>";         
-                header("Location: error404");
-            }
-            $usuario = New Usuario($usuario_id);
-            Session::set('usuario',$usuario);
-            Session::set('logueado','S');
-            header("Location: usuarios/".$usuario_id);
-        }
-
-    }
 
     /**
      * Método que controla la actualización de la foto del perfil de usuario.
@@ -271,54 +348,6 @@ class UsuarioController
                 }
                 header("Location: ../usuarios/".$usuario_id );
             }
-        } else {
-            header("Location: ../public");
-        }
-
-    }
-
-
-    /**
-     * Método que controla la creación de un posteo
-     * @param Request $request
-     *
-    public function crear(Request $request)
-    {
-        if (Session::has("usuario")){
-            $inputs = $request->getData();
-            $files = $request->getFiles();
-
-            try {
-                $posteo_id = Posteo::CrearPosteo($inputs);
-            } catch (PosteoNoGrabadoException $exc){
-                echo "<pre>";
-			    print_r($exc.getMessage());
-			    echo "</pre>";
-                header("Location: ../error404");
-            }
-
-            if (isset($files['foto']['tmp_name']) && !empty($files['foto']['tmp_name'])) {
-                $archivo_tmp = $files['foto']['tmp_name'];
-
-                $original = imagecreatefromjpeg($archivo_tmp);
-                $ancho = imagesx($original);
-                $alto = imagesy($original);
-
-                $alto_max = 300;
-                $ancho_max = round($ancho * $alto_max / $alto);
-
-                $copia = imagecreatetruecolor($ancho_max, $alto_max);
-
-                imagecopyresampled($copia, $original,
-                                    0, 0, 0, 0,
-                                    $ancho_max, $alto_max,
-                                    $ancho, $alto);
-
-                $nombre_nuevo = "../views/images/posteos/$posteo_id" . ".jpg";
-                imagejpeg($copia, $nombre_nuevo);
-            }
-
-            header("Location: ../#posteo".$posteo_id);
         } else {
             header("Location: ../public");
         }

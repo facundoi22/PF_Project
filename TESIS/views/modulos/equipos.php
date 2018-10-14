@@ -1,3 +1,7 @@
+<?php
+use ProximaFecha\Model\Equipo;
+?>
+
 <main>
 	<div id="slider">
 		<div id='divIzq'><h2>Estos equipos ya participan </h2></div>

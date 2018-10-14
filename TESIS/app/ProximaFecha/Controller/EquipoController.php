@@ -10,37 +10,43 @@ use ProximaFecha\Model\Posteo;
 use ProximaFecha\Model\Usuario;
 use ProximaFecha\Tools\Session;
 
-class HomeController
+class EquipoController
 {
 
-    /**
-     * Método que renderiza el Home
-     */
-    public function index()
-    {
-        $ruta = "";
-        View::render('modulos/header', compact('ruta'));
-/*        $posteos = Posteo::GetPosteos();
-        View::render('modulos/home', compact('ruta','posteos'));
-*/
-        View::render('modulos/home', compact('ruta'));
-        View::render('modulos/footer', compact('ruta'));
-    }
 
     /**
-     * Método que renderiza la vista de erorr en caso que algo falle
+     * Método que muestra los equipos existentes
      */
-    public function error404()
+    public function verEquipos()
     {
         $ruta = "";
-        View::render('modulos/header', compact('ruta'));
-        View::render('modulos/error404', compact('ruta'));
-        View::render('modulos/footer', compact('ruta'));
-
+        View::render('modulos/header',compact('ruta'));
+        View::render('modulos/equipos', compact('ruta'));
+        View::render('modulos/footer',compact('ruta'));
     }
 
 
+    /**
+     * Método que renderiza la vista de un Equipo en partícular
+     */
+    public function verEquipo()
+    {
+        $ruta = "../";
+        $routeParams = Route::getRouteParams();
+        $equipo_id = $routeParams['usuario_id'];
+        if (Equipo::existeEquipo($equipo_id)) {
+            $equipo = new Equipo($equipo_id);
+            $equipo->setJugadores();
+            Session::set("equipo_idActual",$equipo->getEquipoId());
 
+            View::render('modulos/header',compact('ruta'));
+            View::render('modulos/equipo', compact('ruta','equipo','equipo_id'));
+            View::render('modulos/footer',compact('ruta'));
+
+        } else{
+            header("Location: ../error404");
+        };
+    }
 
 
     /**
